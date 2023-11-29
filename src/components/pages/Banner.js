@@ -25,7 +25,7 @@ function Banner({
             environment
           </div>
           <div className="btn_container">
-            <button className="btn_contact_sales" onClick={() => setShowSendingFailed(true)}>Contact Sales</button>
+            <button className="btn_contact_sales" onClick={() => setShowContactUsModal(true)}>Contact Sales</button>
           </div>
         </div>
         <div className="brands position-relative">            
