@@ -1,0 +1,32 @@
+// Other imports
+@import "./base/variables";
+@import "./utils/mixins";
+@import "./base/typography";
+@import "./base/resets";
+@import "./base/cta";
+@import "./base/form";
+@import "./base/modal";
+
+// Imprting utilities
+@import "./utils/helpers";
+
+body {
+   // font-family: $font-primary;
+   // background: color($color-light, 100);
+   // color: color($color-dark);
+}
+
+.page {
+   min-height: 80vh;
+}
+
+.container {
+   padding-inline: 1rem;
+   width: auto;
+   margin-inline: auto;
+
+   @include responsive(md) {
+      max-width: 1300px;
+      margin-inline: auto;
+   }
+}

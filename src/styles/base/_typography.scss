@@ -1,0 +1,84 @@
+.heading {
+   &--one {
+      font-size: 60px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 110%; /* 66px */
+      padding-bottom: 6px;
+
+      @include responsive(md) {
+         font-size: 40px;
+      }
+   }
+
+   &--two {
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%; /* 38.4px */
+
+      @include responsive(md) {
+         font-size: 28px;
+      }
+   }
+
+   &--three {
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+
+      @include responsive(md) {
+         font-size: 19px;
+      }
+   }
+
+   &--fancy {
+      color: #4f7d6e;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%; /* 24px */
+      letter-spacing: 5px;
+      text-transform: uppercase;
+
+      @include responsive(md) {
+         font-size: 14px;
+      }
+   }
+}
+
+.para {
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 300;
+   line-height: 150%; /* 24px */
+
+   @include responsive(md) {
+      font-size: 14px;
+   }
+
+   &--sm {
+      font-size: 12px;
+   }
+
+   &--lg {
+      font-size: 18px;
+
+      @include responsive(md) {
+         font-size: 16px;
+      }
+   }
+
+   &--light {
+      opacity: 0.6;
+   }
+}
+
+.text-gradient {
+   @include text-gradient;
+}
+
+.font-bold {
+   font-weight: 700 !important;
+}

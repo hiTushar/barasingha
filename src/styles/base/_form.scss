@@ -1,0 +1,55 @@
+.form-group {
+    position: relative;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(54px);
+    width: 100%;
+ 
+    &.form-icon img {
+       position: absolute;
+       top: 50%;
+       left: 1.5rem;
+       transform: translateY(-50%);
+    }
+ 
+    &.form-icon {
+       :is(
+             input[type="text"],
+             input[type="search"],
+             input[type="number"],
+             input[type="file"],
+             textarea
+          ) {
+          padding-left: 4rem;
+          width: calc(100% - 5.5rem);
+       }
+    }
+ 
+    :is(
+          input[type="text"],
+          input[type="search"],
+          input[type="number"],
+          input[type="file"],
+          textarea
+       ) {
+       background: none;
+       width: calc(100% - 3rem);
+       border: 1px solid transparent;
+       outline: none;
+       box-shadow: none;
+       padding: 1rem 1.5rem;
+       line-height: 100%;
+       color: white;
+       border-radius: 1rem;
+ 
+       &::placeholder {
+          color: #778791;
+       }
+ 
+       &:focus {
+          outline: none;
+          box-shadow: none;
+          border: 1px solid rgba(53, 58, 100, 0.5);
+       }
+    }
+ }
