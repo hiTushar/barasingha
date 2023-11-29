@@ -1,0 +1,64 @@
+[
+    {
+       "title": "Products",
+       "children": [
+          {
+             "title": "Corporate web control",
+             "path": "/productspage"
+          },
+          {
+             "title": "Window Booster",
+             "path": "/productspage1"
+          },
+          {
+             "title": "End Point Security",
+             "path": "/productspage2"
+          },
+          {
+             "title": "Password Vault Manager",
+             "path": "/productspage3"
+          },
+          {
+             "title": "Secure RPD MAnager",
+             "path": "/productspage4"
+          },
+          {
+             "title": "Firewall",
+             "path": "/productspage5"
+          }
+       ]
+    },
+    {
+       "title": "Solutions",
+       "children": [
+          {
+             "title": "Healthcare",
+             "path": "/solutionspage"
+          },
+          {
+             "title": "Information Technology",
+             "path": "/solutionspage1"
+          },
+          {
+             "title": "Automobile",
+             "path": "/solutionspage2"
+          },
+          {
+             "title": "Government",
+             "path": "/solutionspage3"
+          }
+       ]
+    },
+    {
+       "title": "Case Studies",
+       "path": "/casestudy"
+    },
+    {
+       "title": "About",
+       "path": "/about"
+    },
+    {
+       "title": "Career",
+       "path": "/career"
+    }
+ ]

@@ -1,0 +1,84 @@
+.project_container {
+   margin-block: 180px 160px;
+   padding-bottom: 160px;
+
+   background: linear-gradient(to top, #000 0%, #00000000 100%);
+   @media screen and (max-width: 767px) {
+      margin-block: 120px;
+   }
+
+   .projects {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 3.5rem;
+      @media (max-width: 768px) {
+         grid-template-columns: 1fr;
+      }
+      .project-card, .project-card1 {
+         width: auto;
+         height:442px;
+         display: flex;
+         flex-direction: column;
+         gap: 0.5rem;
+         padding: 2.5rem;
+         border-radius: 1rem;
+         border: 1px solid rgba(#fff, 0.05);
+         background: radial-gradient(
+            157.56% 157.56% at 50% 65.71%,
+            rgba(255, 255, 255, 0.07) 0%,
+            rgba(0, 0, 0, 0) 100%
+         );
+         backdrop-filter: blur(54px);
+         @media (max-width: 768px) {
+            height: 336px;
+            align-items: center;
+         }
+         .image-card {
+            img {
+               width: 100%;
+               max-height: 294px !important;
+               border-radius: 0;
+               object-fit: contain;
+               aspect-ratio: 16/10;
+               height: auto;
+            }
+            @media (max-width: 768px) {
+               height: auto;
+               width: auto;
+            }
+         }
+
+         .heading {
+            font-size: 24px;
+            font-weight: 500;
+            max-width: 60%;
+            @media (max-width: 768px) {
+               max-width: 100%;
+               display: flex;
+               text-align: center;
+            }
+         }
+
+         .para {
+            max-width: 90%;
+            @media (max-width: 768px) {
+               display: flex;
+               text-align: center;
+            }
+         }
+
+         @media screen and (max-width: 400px) {
+            .heading {
+               max-width: 90%;
+            }
+         }
+      }
+      .project-card1{
+         @media (max-width: 768px) {
+            height: 385px;
+            align-items: center;
+         }
+      }
+   }
+}

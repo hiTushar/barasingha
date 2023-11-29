@@ -1,0 +1,168 @@
+.solution_suite {
+   display: flex;
+   .container {
+      width: 100%;
+      display: flex;
+      object-fit: contain;
+      box-sizing: border-box;
+      flex-direction: column;
+
+      @media (max-width: 768px) {
+         flex-direction: column;
+         justify-content: center;
+         gap: 32px;
+      }
+
+      .card_section_1 {
+         width: auto;
+         align-items: center;
+         gap: 20px;
+         display: flex;
+         justify-content: center;
+         flex-wrap: wrap;
+         text-align: center;
+         margin-top: 3.5rem;
+
+         @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+         }
+         .feature_card {
+            float: left;
+            display: flex;
+            width: 364.667px;
+            height: 227px;
+            padding: 20px;
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+            align-self: stretch;
+            border-radius: 16px;
+            background: linear-gradient(
+               244.42deg,
+               rgba(53, 58, 100, 0.5) -4.17%,
+               rgba(29, 32, 54, 0) 34.22%
+            );
+            background: linear-gradient(
+               360deg,
+               rgba(255, 255, 255, 0.02) -32.44%,
+               rgba(255, 255, 255, 0) 159.97%
+            );
+
+            backdrop-filter: blur(54px);
+            @media (max-width: 768px) {
+               width: auto;
+               height: auto;
+               padding: 12px;
+            }
+            .card_content {
+               display: block;
+               margin-left: auto;
+               margin-right: auto;
+               .image {
+                  display: flex;
+                  justify-content: center;
+               }
+               .heading {
+                  align-self: stretch;
+                  color: #f2f2f2;
+                  text-align: center;
+                  font-family: Manrope;
+                  font-size: 20px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: normal;
+                  padding: 16px 0;
+               }
+               .desc {
+                  color: #F1F1F1;
+                  text-align: center;
+                  font-family: Manrope;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 200;
+                  line-height: 150%; /* 21px */
+                  letter-spacing: 1px;
+               }
+            }
+         }
+      }
+      .card_section_2 {
+         width: auto;
+         gap: 20px;
+         display: flex;
+         padding-top: 32px;
+         justify-content: center;
+         @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+         }
+         .feature_card {
+            float: left;
+            display: flex;
+            width: 349.667px;
+            padding: 24px;
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+            align-self: stretch;
+            border-radius: 16px;
+
+            //border-image-source: linear-gradient(306.36deg, rgba(53, 58, 100, 0.5) -2.95%, rgba(29, 32, 54, 0) 26.25%);
+            //border-width: 1px linear-gradient(304.23deg, rgba(53, 58, 100, 0.5) -1.74%, rgba(29, 32, 54, 0) 27.11%),
+            //linear-gradient(55.59deg, rgba(53, 58, 100, 0.5) -1.75%, rgba(29, 32, 54, 0) 26.61%);
+            // background: linear-gradient(180deg, rgba(53, 58, 100, 0.5) -1.74%, rgba(29, 32, 54, 0) 27.11%);
+            // background-blend-mode: luminosity;
+
+            background-blend-mode: luminosity;
+            background: linear-gradient(
+               244.42deg,
+               rgba(53, 58, 100, 0.5) -4.17%,
+               rgba(29, 32, 54, 0) 34.22%
+            );
+            background: linear-gradient(
+               180deg,
+               rgba(255, 255, 255, 0.02) -32.44%,
+               rgba(255, 255, 255, 0) 159.97%
+            );
+
+            @media (max-width: 768px) {
+               width: auto;
+               height: auto;
+            }
+            .card_content {
+               display: block;
+               margin-left: auto;
+               margin-right: auto;
+               .image {
+                  display: flex;
+                  justify-content: center;
+               }
+               .heading {
+                  align-self: stretch;
+                  color: #f2f2f2;
+                  text-align: center;
+                  font-family: Manrope;
+                  font-size: 20px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: normal;
+                  padding: 16px 0;
+               }
+               .desc {
+                  align-self: stretch;
+                  color: #f1f1f1;
+                  text-align: center;
+                  font-family: Manrope;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 200;
+                  line-height: 150%; /* 21px */
+                  letter-spacing: 1px;
+               }
+            }
+         }
+      }
+   }
+}

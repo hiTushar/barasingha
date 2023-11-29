@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+.PrivacyPolicy_container {
+   //margin-block: 100px;
+   padding-bottom: 100px;
+   width: 100%;
+   background: linear-gradient(180deg, rgba(7, 14, 12, 0.00) 0%, #060D0B 100%);
+
+   @media screen and (max-width: 768px) {
+      margin-block: 80px;
+   }
+
+   .PrivacyPolicy_main {
+      .content {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         max-width: 793px;
+         padding: 0;
+
+         .privacy_policy_heading{
+            padding-top:72px;
+            color: #FDFDFF;
+            text-align: center;
+            font-family: Manrope;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%; /* 38.4px */
+         }
+         .opacity-3{
+            opacity: 0.3;
+         }
+
+         .opacity{
+            opacity: 0.6;
+         }
+
+         .personal_policy_details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .details {
+               margin-top: 3.5rem;
+               .heading {
+                  margin-bottom: 1rem;
+
+                  &--three {
+                     font-size: 1.5rem;
+                  }
+
+                  @media screen and (max-width: 768px) {
+                     &--three {
+                        font-size: 1.2rem;
+                     }
+                  }
+               }
+               .subtopics {
+                  .subtitle {
+                     color: #9a9fa1 !important;
+                     font-family: Manrope;
+                     font-size: 16px;
+                     font-weight: 700;
+                     line-height: 150%;
+                     margin-bottom: 16px;
+                  }
+
+                  ul {
+                     margin: 0px;
+                     padding: 0px;
+                     flex-direction: column;
+                     gap: 1rem;
+                     display:list-item
+
+                     li {
+                        list-style: disc !important;
+                        list-style-position: inside;
+                        display:list-item
+                     }
+                  }
+               }
+            }
+         }
+
+         .policy_details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .details {
+               margin-top: 3.5rem;
+               .heading {
+                  margin-bottom: 1rem;
+
+                  &--three {
+                     font-size: 1.5rem;
+                  }
+
+                  @media screen and (max-width: 768px) {
+                     &--three {
+                        font-size: 1.2rem;
+                     }
+                  }
+               }
+               .subtopics {
+                  .subtitle {
+                     color: #9a9fa1;
+                     font-family: Manrope;
+                     font-size: 16px;
+                     font-weight: 700;
+                     line-height: 150%;
+                     margin-bottom: 16px;
+                  }
+
+                  ul {
+                     margin: 0px;
+                     padding: 0px;
+                     display: flex;
+                     flex-direction: column;
+                     gap: 1rem;
+                  }
+               }
+               .help{
+                  color: #e5be20;
+                  background: none;
+                  border: none;
+               }
+            }
+         }
+      }
+   }
+}

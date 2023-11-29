@@ -1,0 +1,171 @@
+.available-career-container {
+   display: grid;
+   place-content: center;
+   height: initial !important;
+   margin-block: 160px;
+   @media screen and (max-width: 767px) {
+      width: auto;
+      flex-direction: column;
+      gap: 56px;
+      margin-block: 120px;
+   }
+   .available-career-positions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 56px;
+      @media screen and (max-width: 767px) {
+         padding: 0px;
+         flex-direction: column;
+         gap: 56px;
+      }
+      .career-image {
+         max-width: 450px;
+         flex: 1;
+
+         border-radius: 0px 16px 16px 0px;
+         // border: 1px solid #353a64;
+         // background: radial-gradient(
+         //    316.69% 130.58% at 118.36% -13.32%,
+         //    #131f27 0%,
+         //    #01121c 100%
+         // );
+         @media screen and (max-width: 767px) {
+            display: flex;
+            align-self: center;
+         }
+         img {
+            width: 100%;
+            height: auto;
+            @media (max-width: 768px) {
+               max-width: 100%;
+               max-height: 100%;
+            }
+         }
+      }
+
+      .apply-section {
+         flex: 1;
+         .join-team {
+            font-family: Manrope;
+            .available-text {
+               color: #d9d9d9;
+               font-size: 40px;
+               font-style: normal;
+               font-weight: 400;
+               line-height: 120%; /* 48px */
+            }
+            .join-our-team {
+               padding: 12px 0 24px 0;
+               align-self: stretch;
+               color: #fff;
+               font-size: 20px;
+               font-style: normal;
+               font-weight: 300;
+               line-height: 150%; /* 30px */
+               opacity: 0.6;
+            }
+            .apply-button {
+               padding-top: 24px;
+               padding: 32px 8px 32px 8px;
+               align-items: center;
+               border-radius: 4px;
+               background: #e5be20;
+               cursor: pointer;
+            }
+
+            button {
+               display: inline-block !important;
+            }
+
+            @media screen and (max-width: 768px) {
+               text-align: center;
+
+               .available-text {
+                  font-size: 36px;
+               }
+
+               .apply-button {
+                  margin-inline: auto;
+               }
+            }
+         }
+         .job-positions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0 2rem;
+            padding: 48px 0 24px 0;
+
+            @media screen and (max-width: 976px) {
+               grid-template-columns: 1fr;
+            }
+
+            .job-cards {
+               max-width: 300px;
+               width: 100%;
+               display: flex;
+               padding: 20px 0px;
+               align-items: center;
+               gap: 16px;
+               flex: 1 0 0;
+               border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+               border-image: linear-gradient(
+                  0.1turn,
+                  rgba(190, 198, 198, 0.4),
+                  #bec6c61a,
+                  rgba(56, 2, 155, 0)
+               );
+               border-image-slice: 1;
+
+               @media screen and (max-width: 768px) {
+                  max-width: initial;
+                  width: 100%;
+               }
+
+               .image {
+                  width: 42px !important;
+                  height: 42px !important;
+               }
+               .job-details {
+                  float: left;
+                  .job-title {
+                     color: #f2f2f2;
+                     text-align: center;
+                     font-family: Manrope;
+                     font-size: 16px;
+                     font-style: normal;
+                     font-weight: 500;
+                     line-height: 150%;
+                     text-align: left;
+                     margin-bottom: 0.1rem;
+                  }
+                  .exp{
+                     opacity: 0.5;
+                  }
+                  .years{
+                     opacity: 0.5;
+                  }
+               }
+            }
+         }
+         .see-all {
+            * {
+               color: #e5be20;
+            }
+            span {
+               border-bottom: 1px solid transparent;
+               line-height: 150%; /* 24px */
+            }
+            .arrow {
+               padding-left: 10px;
+            }
+
+            &:hover {
+               span {
+                  border-bottom: 1px solid #e5be20;
+               }
+            }
+         }
+      }
+   }
+}

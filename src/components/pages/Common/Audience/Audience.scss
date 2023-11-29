@@ -1,0 +1,140 @@
+.audiences_container {
+   padding: 88px 0;
+   background: linear-gradient(180deg, rgba(6, 13, 11, 0.00) 0%, #060D0B 78.54%);
+
+   @media screen and (max-width: 767px) {
+      margin-block: 120px;
+   }
+
+   .products_carousel {
+      margin-top: 3.5rem;
+   }
+}
+
+.audience-card {
+   display: flex;
+   width: 387px !important;
+   height:194px;
+   border-radius: 16px;
+   border: 1px solid #151729;
+   background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) -17.2%,
+      rgba(255, 255, 255, 0.07) 140.9%
+   );
+   backdrop-filter: blur(54px);
+   margin-right: 24px;
+   overflow: hidden;
+   @media screen and (max-width: 768px) {
+      width:356px !important;
+   }
+   .left_content {
+      position: relative;
+      .audience_image {
+              height: 204.336px !important;
+         object-fit: cover;
+         flex-shrink: 0;
+         opacity: 0.7;
+      }
+   }
+   .right_content {
+      float: right;
+      padding: 16px 16px 16px 0;
+      .company_logo {
+         flex-shrink: 0;
+         padding-bottom: 6px !important;
+         object-fit: contain;
+         width: 50.021px;
+         height: 18px;
+      }
+      .audience_image {
+         background: linear-gradient(135deg, #92ffc0 0%, #002661 100%);
+         mix-blend-mode: color;
+         width: 169px !important;
+    
+      }
+      .audience_view {
+         color: #F2F2F2;
+         font-family: Manrope;
+         font-size: 14px;
+         font-style: normal;
+         font-weight: 500;
+         line-height: 150%; /* 21px */
+         padding-top: 8px;
+         width:220px;
+      }
+      .audience_name {
+         color: #f2f2f2;
+         font-family: Manrope;
+         font-size: 10px;
+         font-style: normal;
+         font-weight: 700;
+         line-height: normal;
+         opacity: 0.3;
+         position: absolute;
+         bottom: 16px;
+      }
+   }
+}
+
+.products_carousel {
+   .owl-dots {
+      display: block !important;
+   }
+   .owl-dots button.owl-dot {
+      margin-top: 1.5rem;
+
+      @media screen and (max-width: 768px) {
+         margin-top: 0.5rem;
+      }
+
+      span {
+         width: 0.7rem;
+         height: 0.7rem;
+         margin-inline: 4px;
+         border-radius: 0;
+         clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+         opacity: 0.5;
+      }
+   }
+   .owl-dots button.owl-dot.active span {
+      background: #e5be20;
+      opacity: 1;
+   }
+   .owl-nav button {
+      width: 40px;
+      height: 40px;
+      padding: 12px !important;
+      border-radius: 100px !important;
+      border: 1px solid #04121B !important;
+      background: #101D24 !important;
+      box-shadow: 0px 0px 250px 0px rgba(0, 0, 0, 0.20);
+      backdrop-filter: blur(28px);
+      margin: 0 !important;
+      position: absolute;
+      top: calc(50% - 35px);
+   }
+      .owl-nav button span {
+      color: #F8F8F8;
+      opacity: 0.7;
+      font-size: 33px;
+      line-height: 20px;
+      }  
+      .owl-nav .owl-prev {
+         left: 130px;
+      }
+      .owl-nav .owl-prev {
+         left: 130px;
+      }
+      .owl-nav .owl-next {
+         right: 130px;
+      }
+      .owl-nav .owl-prev {
+         left: -20px;
+         top:75px;
+      }
+      .owl-nav .owl-next {
+         right: -20px;
+         top: 75px;
+      }
+}

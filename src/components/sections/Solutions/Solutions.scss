@@ -1,0 +1,165 @@
+.solutions_container {
+   padding-block: 100px;
+   width: 100%;
+
+   @media screen and (max-width: 768px) {
+      padding-block: 80px;
+   }
+   background: linear-gradient(180deg, #00111c 0%, #060d0b 21.02%);
+
+   .solutions_content_container {
+      .problem_card {
+         display: flex;
+         gap: 56px;
+         padding-bottom: 96px;
+         .row {
+            width: 100%;
+            flex-wrap: nowrap;
+         }
+         .left_card {
+            display: flex;
+            // padding: 100px 120px;
+            min-height: 500px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+            background: linear-gradient(
+               119deg,
+               rgba(0, 0, 0, 0) -55.58%,
+               rgba(226, 222, 241, 0.1) 100%
+            );
+            backdrop-filter: blur(28px);
+            // img{
+            //     height: 300px;
+            //     width: 280px;
+            //     @media screen and (max-width:769px){
+            //         height: 100px;
+            //         width: 100px;
+            //     }
+            // }
+            // @media screen and (max-width:769px){
+            //     height: auto;
+            //     width: auto;
+            // }
+         }
+         .right_card {
+            padding-top: 24px;
+            display: grid;
+            gap:16px;
+            .solution_link {
+               color: var(--Linear, #e5be20) !important;
+               width: fit-content;
+               gap:8px;
+               display: flex;
+
+               &:hover {
+                  border-bottom: 1px solid;
+               }
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 991px) {
+   .solutions_container
+      .solutions_content_container
+      .problem_card
+      .left_card
+      img {
+      width: 110px;
+   }
+
+   .solutions_container .solutions_content_container .problem_card .left_card {
+      min-height: 380px;
+      border-radius: 6px;
+   }
+   .solutions_container
+      .solutions_content_container
+      .problem_card
+      .right_card
+      .problem_type {
+      font-size: 26px;
+      padding: 20px 0;
+   }
+   .solutions_container
+      .solutions_content_container
+      .problem_card
+      .right_card
+      .problem_desc {
+      font-size: 16px;
+      padding-bottom: 30px;
+   }
+   .solutions_container .solutions_content_container .padding {
+      padding-bottom: 100px;
+   }
+   .solutions_container .solutions_content_container .problem_card .row{
+      .col-5{
+         width: 51.67%;
+      }
+      .col-6{
+         width:41%;
+      }
+      
+  }
+}
+
+@media screen and (max-width: 767px) {
+   .solutions_container .solutions_content_container .problem_line {
+      font-size: 24px;
+   }
+   .solutions_container .solutions_content_container .solutions_heading {
+      font-size: 12px;
+      padding-bottom: 10px;
+   }
+   .solutions_container .solutions_content_container .problem_card .right_card {
+      padding: 0;
+   }
+   .solutions_container
+      .solutions_content_container
+      .problem_card.reverse
+      .row {
+      flex-direction: column-reverse !important;
+   }
+   .solutions_container
+      .solutions_content_container
+      .problem_card
+      .right_card
+      .heading {
+      font-size: 1.2rem;
+      padding: 0;
+   }
+   .solutions_container
+      .solutions_content_container
+      .problem_card
+      .right_card
+      .para {
+      font-size: 12px;
+   }
+   .solutions_container
+      .solutions_content_container
+      .problem_card
+      .right_card
+      .solution_link {
+      margin-top: 1rem !important;
+      font-size: 14px;
+   }
+   .solutions_container
+      .solutions_content_container
+      .problem_card
+      .right_card
+      img {
+      width: 20px;
+   }
+   .solutions_container
+      .solutions_content_container
+      .problem_card
+      .right_card
+      .solution_link
+      img {
+      width: 10px;
+   }
+   .solutions_container .solutions_content_container .padding {
+      padding-bottom: 72px;
+   }
+}

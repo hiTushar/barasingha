@@ -1,0 +1,29 @@
+@import "/src/styles/utils/mixins";
+
+.hero {
+   margin-block: 100px;
+
+   @include responsive(md) {
+      margin-block: 80px;
+   }
+
+   .container {
+      .title-wrapper {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+
+         max-width: 1008px;
+         margin-inline: auto;
+
+         p {
+            max-width: 464px;
+         }
+
+         .padding-24{
+            padding-top: 24px;
+         }
+      }
+   }
+}

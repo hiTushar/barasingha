@@ -1,0 +1,25 @@
+{
+    "status":200,
+    "results":[
+        {
+            "career_position_image": "/globe2.svg",
+            "career_position_name": "Cybersecurity Expert",
+            "career_position_experience_required": "3+ years"
+        },
+        {
+            "career_position_image": "/broken.svg",
+            "career_position_name": "Data Engineer",
+            "career_position_experience_required": "5+ years"
+        },
+        {
+            "career_position_image": "/harddisk.svg",
+            "career_position_name": "Analyst",
+            "career_position_experience_required": "0 years"
+        },
+        {
+            "career_position_image": "/safebox.svg",
+            "career_position_name": "Security Engineer",
+            "career_position_experience_required": "5+ years"
+        }
+     ]
+}

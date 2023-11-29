@@ -1,0 +1,96 @@
+@import "../../../App.scss";
+
+.process_container {
+   background: #0d0d0d;
+
+   padding-block: 100px;
+   width: 100%;
+
+   @media screen and (max-width: 768px) {
+      padding-block: 80px;
+   }
+   position: relative;
+   z-index: 1;
+   overflow: hidden;
+   .process-ellipse {
+      border-radius: 100%;
+      opacity: 0.3;
+      background: linear-gradient(135deg, #81ffef 0%, #f067b4 100%);
+      width: 880px;
+      height: 880px;
+      position: absolute;
+      left: calc(50% - 440px);
+      bottom: 0;
+      filter: blur(250px);
+   }
+
+   .process_heading {
+      //display: flex;
+      color: #4f7d6e;
+      text-align: center;
+      font-family: Manrope;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%; /* 24px */
+      letter-spacing: 5px;
+      text-transform: uppercase;
+   }
+   .work {
+      color: #fdfdff;
+      text-align: center;
+      font-family: Manrope;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%; /* 38.4px */
+      padding: 10px 0 60px 0;
+   }
+   .video_container {
+      width: 1084.684px;
+      height: 685.701px;
+      max-width: 100%;
+      border-radius: 20px;
+      .video {
+         /* display: flex; */
+         width: 100%;
+         /* height: 685.701px; */
+         border-radius: 21.694px;
+         align-items: center;
+         border-radius: 20px;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+}
+
+@media (max-width: 991px) {
+   .process_container {
+      padding: 88px 0 70px;
+   }
+   .process_container .video_container {
+      height: 100%;
+      width: 100%;
+   }
+   .process_container .work {
+      padding-bottom: 50px;
+   }
+}
+
+@media (max-width: 767px) {
+   .process_container .video_container .video {
+      border-radius: 7px;
+   }
+   .process_container .process_heading {
+      font-size: 12px;
+   }
+   .process_container .work {
+      font-size: 24px;
+   }
+   .process_container .process-ellipse {
+      height: 384px;
+      width: 384px;
+      left: calc(50% - 192px);
+      filter: blur(94.48123168945312px);
+   }
+}

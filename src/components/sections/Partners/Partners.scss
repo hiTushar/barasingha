@@ -1,0 +1,101 @@
+@import "../../../App.scss";
+
+.partners_container {
+   background: #09100e;
+
+   padding-block: 100px;
+   width: 100%;
+
+   @media screen and (max-width: 768px) {
+      padding-block: 80px;
+   }
+   .partner_content_container {
+      @media screen and (max-width: 769px) {
+         padding: 0;
+         margin: 0 auto;
+      }
+      .heading {
+         display: flex;
+         color: #4f7d6e;
+         font-family: Manrope;
+         font-size: 16px;
+         font-style: normal;
+         font-weight: 600;
+         line-height: 150%; /* 24px */
+         letter-spacing: 5px;
+         text-transform: uppercase;
+         justify-content: center;
+      }
+      .sub_title {
+         color: #fdfdff;
+         text-align: center;
+         font-family: Manrope;
+         font-size: 32px;
+         font-style: normal;
+         font-weight: 700;
+         line-height: 120%; /* 38.4px */
+         padding-top: 10px;
+         padding-bottom: 56px;
+      }
+   }
+}
+
+.partner-card {
+   display: flex;
+   flex-direction: column;
+   // float: left;
+   display: flex;
+   height: 170px;
+   // width: 299.667px;
+   padding: 32px;
+   gap: 32px;
+   margin: 0 10px;
+   align-self: stretch;
+   border-radius: 16px;
+   background: linear-gradient(153deg, #111815 0%, #0f1311 98.89%);
+   border: 1px solid #0f1a1654;
+   justify-content: center;
+
+   .partner_logo {
+      width: 96px;
+      height: 42px;
+   }
+   .blog_heading {
+      align-self: stretch;
+      color: #f2f2f2;
+      font-family: Manrope;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      line-height: 150%; /* 27px */
+      opacity: 0.6;
+   }
+   .para{
+      text-align: center;
+   }
+   
+}
+
+@media screen and (max-width: 767px) {
+   .partner-card {
+      padding: 20px 10px;
+      gap: 25px;
+      text-align: center;
+      margin: 0 2px;
+      border-radius: 24px;
+   }
+   .partner-card .blog_heading {
+      font-size: 16px;
+   }
+   .partners_container .partner_content_container .heading {
+      font-size: 12px;
+   }
+   .partners_container .partner_content_container .sub_title {
+      font-size: 24px;
+   }
+   .partners_container {
+      padding-inline: 2rem !important;
+      width: calc(100% - 4rem);
+   }
+}

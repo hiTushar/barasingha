@@ -1,0 +1,25 @@
+{
+    "status":200,
+    "results":[
+        { 
+            "partner_logo_url": "/forbes.svg",
+            "partner_description": "Protected by NPAV since 2016 more than 4,000 Endpoints."
+        },
+        { 
+            "partner_logo_url": "/nasdaq.svg",
+            "partner_description": "Protected by NPAV since 2017 more than 9,000 endpoints."
+        },
+        { 
+            "partner_logo_url": "/forbes.svg",
+            "partner_description": "Protected by NPAV since 2016 more than 4,000 Endpoints."
+        },
+        { 
+            "partner_logo_url": "/nasdaq.svg",
+            "partner_description": "Protected by NPAV since 2018 more than 7,000 endpoints."
+        },
+        { 
+            "partner_logo_url": "/forbes.svg",
+            "partner_description": "Protected by NPAV since 2016 more than 4,000 Endpoints." 
+        }
+     ]
+}

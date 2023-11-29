@@ -1,0 +1,23 @@
+{
+    "status":200,
+    "results":[
+        {
+            "blog_type": "Article",
+            "blog_title": "Most believe they’re ransomware-ready, real-world data says otherwise.",
+            "blog_date": "7th December 2022",
+            "blog_image_url": "/postdetail"
+        },
+        { 
+            "blog_type": "Reports",
+            "blog_title": "Blockchain-based access control framework for the IOT endpoint", 
+            "blog_date": "7th December 2022",
+            "blog_image_url": "/postdetail"
+        },
+        { 
+            "blog_type": "Survey",
+            "blog_title": "Cybercrime: the case of obfuscated malware", 
+            "blog_date": "7th December 2022",
+            "blog_image_url": "/postdetail"
+        }
+    ]
+}

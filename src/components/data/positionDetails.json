@@ -1,0 +1,59 @@
+{
+    "status" : 200,
+    "results" : [
+        {
+           "id": 1,
+           "tabTitle": "Security Analysis and Operations",
+           "positions": [
+              {
+                 "jobName": "Chief Information Security Officer (CISO)",
+                 "location": "Pune, Maharashtra",
+                 "exp": "3+ Years of experience",
+                 "buttons": ["APPLY NOW", "SAVE"],
+                 "jobType": "full-time",
+                 "desc": "Barasingha is a Digital Security company offering Embedded Financial Infrastructure for “Banking, Issuance & Payment” as a service. We are the only full stack financial infrastructure company to be your one stop solution for providing innovative customer experience for payment acquiring, issuing, accounts, lending, withdrawal, deposit, remittance, insurance, customer KYC. We are the only switching infrastructure provider that is architected on the latest technology stack and is fully micro-services enabled, distributed and cloud native, allowing fully elastic cloud deployment, thus reducing infra-costs significantly. We operate from four locations across the country with our head office in Bhubaneswar, Odisha where we have more than 400 employees, out of which 350+ are software engineers. iServeU has been awarded as Best Leading Fintech of the Year by Odisha Fintech Festival. We believe in overall development and empowerment of our employees. On a consistent basis to encourage."
+              },
+              {
+                 "jobName": "Security Consultant",
+                 "location": "Pune, Maharashtra",
+                 "exp": "2 – 8 years",
+                 "buttons": ["APPLY NOW", "SAVE"],
+                 "jobType": "Remote",
+                 "desc": "Must have - Industrial security , security management , security operation To drive and administer effective Security Operations for protection of company assets, crime control and develop a safe and secure working environment at AOR in collaboration with internal and external stakeholders."
+              },
+              {
+                 "jobName": "Compliance Officer",
+                 "location": "Pune, Maharashtra",
+                 "exp": "2 – 8 years",
+                 "buttons": ["Notify me"],
+                 "jobType": "Remote",
+                 "desc": "This is a full-time on-site role for a Compliance Officer. The Compliance Officer will be responsible for ensuring regulatory compliance, developing and implementing compliance policies and procedures, monitoring compliance risks, identifying compliance issues, and liaising with regulatory bodies."
+              }
+           ]
+        },
+        {
+           "id": 2,
+           "tabTitle": "Management & Leadership",
+           "positions": [
+              {
+                 "jobName": "Security Consultant",
+                 "location": "Pune, Maharashtra",
+                 "exp": "2 – 8 years",
+                 "buttons": ["APPLY NOW", "SAVE"],
+                 "jobType": "Remote",
+                 "desc": "Must have - Industrial security , security management , security operation To drive and administer effective Security Operations for protection of company assets, crime control and develop a safe and secure working environment at AOR in collaboration with internal and external stakeholders."
+              }
+              , {
+                "jobName": "Chief Information Security Officer (CISO)",
+                "location": "Pune, Maharashtra",
+                "exp": "3+ Years of experience",
+                "buttons": ["APPLY NOW", "SAVE"],
+                "jobType": "full-time",
+                "desc": "Barasingha is a Digital Security company offering Embedded Financial Infrastructure for “Banking, Issuance & Payment” as a service. We are the only full stack financial infrastructure company to be your one stop solution for providing innovative customer experience for payment acquiring, issuing, accounts, lending, withdrawal, deposit, remittance, insurance, customer KYC. We are the only switching infrastructure provider that is architected on the latest technology stack and is fully micro-services enabled, distributed and cloud native, allowing fully elastic cloud deployment, thus reducing infra-costs significantly. We operate from four locations across the country with our head office in Bhubaneswar, Odisha where we have more than 400 employees, out of which 350+ are software engineers. iServeU has been awarded as Best Leading Fintech of the Year by Odisha Fintech Festival. We believe in overall development and empowerment of our employees. On a consistent basis to encourage."
+             }
+           ]
+        }
+  
+  
+     ]
+}

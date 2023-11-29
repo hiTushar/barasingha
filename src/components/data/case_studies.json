@@ -1,0 +1,29 @@
+{
+    "status" : 200,
+    "results" : [
+        {
+            "case_study_icon_url" : "/globe.svg",
+            "case_study_title" : "Cybersecurity Best Practices for Construction Sites",
+            "case_study_description" : "Net Protector defends your Office Network from all viruses, worm and spyware attacks and keeps your business lifeline, Network and PCs, running smoothly and securely.",
+            "case_study_link_url" : "/postDetail"
+        },
+        {
+            "case_study_icon_url" : "/folderbug.svg",
+            "case_study_title" : "Common Cyber Attacks in the Construction Industry",
+            "case_study_description" : "Net Protector defends your Office Network from all viruses, worm and spyware attacks and keeps your business lifeline, Network and PCs, running smoothly and securely.",
+            "case_study_link_url" : "/postDetail"
+        },
+        {
+            "case_study_icon_url" : "/profile.svg",
+            "case_study_title" : "Cybersecurity Best Practices for Construction Sites",
+            "case_study_description" : "We are passionate about our customers and devoted to their success. We know that customer trust and confidence is earned, not given, with every interaction, every delivery, and every time we solve a customer problem.",
+            "case_study_link_url" : "/postDetail"
+        },
+        {
+            "case_study_icon_url" : "/broken.svg",
+            "case_study_title" : "Benefits of Implementing NPAV in Construction Projects",
+            "case_study_description" : "Our holistic approach to supporting Scaliens includes comprehensive health coverage, dental and vision insurance, mental healthcare services, and more. PTO policies and accommodating schedules ensure you'll get time off when you need it to relax and recharge.<br /><br />Note that our offerings may vary by region as we strive to respond to the unique needs of Scaliens around the globe.",
+            "case_study_link_url" : "/postDetail"
+        }
+    ]
+}

@@ -1,0 +1,77 @@
+.search_container {
+   margin-block: 100px;
+
+   @media screen and (max-width: 768px) {
+      margin-block: 80px;
+   }
+
+   .search {
+      max-width: 705px;
+      margin-inline: auto;
+      input[type="search"]::-webkit-search-decoration,
+      input[type="search"]::-webkit-search-cancel-button,
+      input[type="search"]::-webkit-search-results-button,
+      input[type="search"]::-webkit-search-results-decoration { display: none; }
+   }
+
+   .projects {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 3.5rem;
+      position: relative;
+      @media (max-width: 768px) {
+         grid-template-columns: 1fr;
+      }
+
+      .project-card {
+         display: flex;
+         padding: 56px;
+         flex-direction: column;
+         align-items: flex-start;
+         //gap: 32px;
+         align-self: stretch;
+
+         border-radius: 16px;
+         border: 1px solid rgba(53, 58, 100, 0.3);
+         background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.02) -32.44%,
+            rgba(255, 255, 255, 0) 159.97%
+         );
+         backdrop-filter: blur(54px);
+
+         .heading {
+            width: 90%;
+         }
+
+         .heading,
+         .para {
+            margin: 0;
+         }
+
+         a {
+            color: #e5be20 !important;
+
+            &:hover {
+               border-bottom: 1px solid;
+            }
+         }
+
+         @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+         }
+         .padding-32{
+            padding-top:32px;
+         }
+         .padding-20{
+            padding-top:20px;
+         }
+      }
+
+      .faq-saphere-box.faq-saphere2 {
+         left: 85%;
+         top: -5%;
+      }
+   }
+}

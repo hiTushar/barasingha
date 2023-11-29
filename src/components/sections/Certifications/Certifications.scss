@@ -1,0 +1,96 @@
+@import "../../../App.scss";
+
+.certifications_container {
+   background: #060d0b;
+   position: relative;
+   padding-block: 100px;
+   width: 100%;
+
+   @media screen and (max-width: 768px) {
+      padding-block: 80px;
+   }
+   .certificate-container {
+      margin-top: 3.5rem;
+
+      .certificate_card {
+         padding: 2rem;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+         gap: 0.5rem;
+         position: relative;
+         overflow: hidden;
+         border-radius: 24px;
+         border: 1px solid #212624b5;
+         background: linear-gradient(
+               0deg,
+               rgba(0, 0, 0, 0.05),
+               rgba(0, 0, 0, 0.05)
+            ),
+            linear-gradient(
+               180deg,
+               rgba(255, 255, 255, 0.5) -584.64%,
+               rgba(255, 255, 255, 0) 100%
+            );
+         .certificate_image {
+            height: 5rem;
+            max-width: 7rem;
+            object-fit: contain;
+            // object-fit: cover;
+            margin-bottom: 1rem;
+            align-self: center;
+            display: flex;
+            // background: lightgray -1.245px -1.315px / 101.709% 104.102% no-repeat;
+            mix-blend-mode: luminosity;
+         }
+      }
+
+      .certificate-row {
+         display: flex;
+         justify-content: center;
+         gap: 1rem;
+         text-align: center;
+
+         & > div {
+            flex: 1;
+         }
+
+         .heading {
+            margin: 0;
+         }
+
+         .para {
+            width: 80%;
+         }
+      }
+   }
+}
+
+.gap {
+   gap: 32px;
+   display: flex;
+}
+
+@media screen and (max-width: 769px) {
+   .certifications_container
+      .certificate-container
+      .certificate_card
+      .certificate_name {
+      font-size: 22px;
+      padding-bottom: 16px;
+   }
+   .certifications_container .certificate-container .certificate_card {
+      min-height: 208px;
+   }
+   .certifications_container
+      .certificate-container
+      .certificate_card
+      .certificate_desc {
+      font-size: 16px;
+      padding: 0;
+   }
+   .certifications_container {
+      padding: 88px 0;
+   }
+}

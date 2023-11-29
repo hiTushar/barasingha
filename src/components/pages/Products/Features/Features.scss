@@ -1,0 +1,177 @@
+.features_container {
+   margin-block: 180px 160px;
+
+   @media screen and (max-width: 767px) {
+      margin-block: 120px;
+   }
+
+   .features {
+      margin-top: 3.5rem;
+
+      .tabs-wrapper {
+         position: relative;
+         max-width: 700px;
+         margin-inline: auto;
+         border-bottom: 1px solid rgba($color: #fff, $alpha: 0.1);
+
+         &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 100%;
+            background: linear-gradient(to left, #01121c 0%, #01121c00 100%);
+            pointer-events: none;
+         }
+
+         .tabs-btn {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+
+            .btn {
+               padding: 0 !important;
+               color: white;
+               min-width: initial;
+               opacity: 0.5;
+               font-size: 0.8rem;
+               transition: all;
+               pointer-events: all;
+
+               &.btn-prev {
+                  margin-left: -1.5rem;
+               }
+               &.btn-next {
+                  margin-right: -1.5rem;
+               }
+
+               &:hover {
+                  color: #e5be20;
+                  opacity: 1;
+               }
+            }
+         }
+      }
+      // Styling Tabs
+      .tabs {
+         display: flex;
+         justify-content: flex-start;
+         align-items: center;
+         gap: 0.5rem;
+         width: 100%;
+
+         -webkit-overflow-scrolling: touch;
+         scrollbar-width: none;
+         overflow-x: scroll;
+         user-select: none;
+         -webkit-user-select: none;
+         scroll-behavior: smooth;
+
+         &::-webkit-scrollbar {
+            display: none;
+         }
+         button {
+            all: initial;
+            font-family: inherit;
+            color: inherit;
+            padding: 0.8rem;
+            cursor: pointer;
+            white-space: nowrap;
+            width: fit-content;
+
+            &:hover {
+               color: #e5be20;
+            }
+
+            &[disabled] {
+               color: #e5be20;
+               border-bottom: 2px solid #e5be20;
+            }
+         }
+
+         .saperator-wrapper {
+            display: grid;
+            place-content: center;
+            @media screen and (max-width: 767px) {
+               margin-left: 145px;
+            }
+         }
+         .saperator {
+            display: inline-block;
+            width: 1px;
+            height: 1rem;
+            opacity: 0.2;
+            background: #f2f2f2;
+         }
+      }
+
+      .content {
+         padding: 0;
+         width: 100%;
+         margin-top: 3.5rem;
+      }
+
+      // Tab Item
+      .tab-item {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         gap: 70px;
+         align-items: center;
+
+         @media screen and (max-width: 991px) {
+            gap: 48px;
+         }
+         @media screen and (max-width: 768px) {
+            grid-template-columns: 1fr;
+            gap: 32px;
+         }
+
+         .image-wrapper {
+            display: grid;
+            place-content: center;
+            padding: 2rem;
+
+            border-radius: var(--layout-marking-none, 0px) 16px 16px
+               var(--layout-marking-none, 0px);
+            border: 1px solid rgba($color: #fff, $alpha: 0.05);
+            border-left: none;
+            background: radial-gradient(
+               316.69% 130.58% at 118.36% -13.32%,
+               #131f27 0%,
+               #01121c 100%
+            );
+         }
+
+         .tab-content {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1rem;
+
+            .heading {
+               font-weight: 400;
+            }
+
+            .link {
+               color: #e5be20 !important;
+               margin-top: 1rem;
+
+               &:hover span {
+                  border-bottom: 1px solid #e5be20;
+               }
+
+               img {
+                  margin-left: 0.5rem;
+               }
+            }
+         }
+      }
+   }
+}

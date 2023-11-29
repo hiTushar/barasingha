@@ -1,0 +1,120 @@
+.about_why-barasingha-wrapper {
+    //margin-block: 200px 160px;
+    padding-top: 64px;
+    padding:56px, 120px, 88px, 120px;
+    background: linear-gradient(180deg, rgba(1, 18, 28, 0) 0%, #060D0B 100%);
+    
+    @media screen and (max-width: 767px) {
+       //margin-block: 120px;
+    }
+
+    .cubeImage{
+         position: absolute;
+         right: 120px;
+         top: 444px;
+         @media screen and (max-width: 767px) {
+            position: absolute;
+            right: 19px;
+            top: 340px;
+            height: 81px;
+            width: 94px;
+         }
+    }
+ 
+    .title-wrapper {
+       p {
+          max-width: 500px;
+          margin-inline: auto;
+       }
+    }
+    .WhyHow_why_how_carousel{
+    margin-block: 3.5rem;
+      padding: 0 120px;
+      @media screen and (max-width: 767px) {
+        padding:32px;
+      }
+   }
+    .benefits-container {
+       padding-top: 100px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-wrap: wrap;
+       gap: 3rem 5rem;
+       .benefits {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          flex: 1;
+          align-self: stretch;
+          min-width: 200px;
+          .benefits-card {
+             display: flex;
+             flex-direction: column;
+             gap: 0.5rem;
+ 
+             img {
+                max-width: 4rem;
+                aspect-ratio: 1 / 1;
+             }
+             .heading {
+                margin-top: 1.75rem;
+             }
+             .para {
+                font-size: 1rem !important;
+                margin-bottom: 0.5rem;
+             }
+             .link {
+                * {
+                   color: #e5be20;
+                }
+                span {
+                   border-bottom: 1px solid transparent;
+                   line-height: 150%; /* 24px */
+                   @media screen and (max-width: 767px) {
+                     float: left;
+                  }
+                }
+                .arrow {
+                   padding-left: 10px;
+                   @media screen and (max-width: 767px) {
+                     height: 10px;
+                     width: 10px;
+                     float: left;
+                     padding-top: 10px;
+                  }
+                }
+ 
+                &:hover {
+                   span {
+                      border-bottom: 1px solid #e5be20;
+                   }
+                }
+             }
+          }
+       }
+    }
+ }
+ 
+ .about_why-barasingha-wrapper  {
+   .owl-dots button.owl-dot {
+      margin-top: 1.5rem;
+
+      @media screen and (max-width: 768px) {
+         margin-top: 0.5rem;
+      }
+
+      span {
+         width: 0.7rem;
+         height: 0.7rem;
+         margin-inline: 4px;
+         border-radius: 0;
+         clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+         opacity: 0.5;
+      }
+   }
+   .owl-dots button.owl-dot.active span {
+      background: #e5be20;
+      opacity: 1;
+   }
+}

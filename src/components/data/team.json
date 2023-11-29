@@ -1,0 +1,33 @@
+{
+    "status":200,
+    "results":[
+        {
+            "team_member_image_url": "/img_rahul.png",
+            "team_member_name": "Rahul Patil",
+            "team_member_position": "Development Expert",
+            "team_member_rating": 3,
+            "team_member_about": "Tunes up the system extensively. Removes unnecessary resource logs and creates a clean working environment."
+         },
+         {
+            "team_member_image_url":  "/img_siddhant.png",
+            "team_member_name": "Siddhant Sarma",
+            "team_member_position": "Data Security Expert",
+            "team_member_rating": 5,
+            "team_member_about": "The NPAV platform has exceeded our expectations in terms of security and user-friendliness."
+         },
+         {
+            "team_member_image_url":  "/img_rajvi.png",
+            "team_member_name": "Rajvi Kothari",
+            "team_member_position": "SRE Engineer S3",
+            "team_member_rating": 4,
+            "team_member_about": "NPAV has been instrumental in safeguarding our company's sensitive information."
+         },
+         {
+            "team_member_image_url":  "/img_rahul.png",
+            "team_member_name": "Rahul Patil",
+            "team_member_position": "Development Expert",
+            "team_member_rating": 3,
+            "team_member_about": "Tunes up the system extensively. Removes unnecessary resource logs and creates a clean working environment."
+         }
+     ]
+}
