@@ -9,7 +9,7 @@
    z-index: 999;
    max-width: auto;
    // padding: 0px 120px;
-   backdrop-filter: blur(100px);
+   backdrop-filter: blur(50px);
 }
 
 .navbar-logo {
@@ -155,7 +155,7 @@
       0px 243px 146px 0px rgba(0, 0, 0, 0.05),
       0px 432px 173px 0px rgba(0, 0, 0, 0.01),
       1px 676px 189px 0px rgba(0, 0, 0, 0);
-   backdrop-filter: blur(50px);
+   backdrop-filter: blur(10px);
    padding: 24px;
    .menu-column {
       // float: left;
