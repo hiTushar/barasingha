@@ -28,12 +28,10 @@
             align-self: stretch;
             border-radius: 16px;
             border: 1px solid rgba(21, 23, 41, 1);
-            background-color: #081923;
             backdrop-filter: blur(28px);
             min-height: 250px;padding: 32px;
-            background-image: url('../../../../media/hatching.png');
+            background-image: url('../../../../media/hatching.svg');
             background-size: contain;
-            background-blend-mode: color-dodge;
             @media (max-width: 768px) {
                width: auto;
                height: auto;
@@ -187,10 +185,8 @@
          }
          .feature_card_recommended {
             border: 3px solid #4f7d6e;
-            background: rgba(13, 29, 39, 1);
-            background-image: url('../../../../media/hatching.png'),linear-gradient(180deg, #1A2933 0%, #0C1C25 100%);
+            background-image: url('../../../../media/hatching.svg'),linear-gradient(180deg, #1A2933 0%, #0C1C25 100%);
             background-size: contain;
-            background-blend-mode: color-dodge;
             backdrop-filter: blur(54px);
             padding-bottom: 10px;
             float: left;
