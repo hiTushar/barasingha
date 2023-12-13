@@ -1,23 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Packages.scss';
 import icon1 from '../../../media/icon.svg';
 import icon2 from '../../../media/icon-1.svg';
 import icon3 from '../../../media/icon-2.svg';
 import icon4 from '../../../media/icon-3.svg';
 import shield from '../../../media/shield.svg';
-import pattern1 from '../../../media/pattern1.webp';
-import pattern2 from '../../../media/pattern 2.webp';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-import greenshield from '../../../media/greenshield.svg'
-import noisePng from "../../../media/noise.webp";
+import greenshield from '../../../media/greenshield.svg';
 
-const partners = [
-   { image: "forbes", line: 'Protected by NPAV since 2016 more than 4,000 Endpoints.' },
-   { image: "nasdaq", line: 'Protected by NPAV since 2017 more than 9,000 endpoints' },
-   { image: "forbes", line: 'Protected by NPAV since 2016more than 4,000 Endpoints.' }
-];
 const options = {
    responsive: {
       0: {
@@ -76,9 +68,6 @@ function Packages() {
 
    return (
       <div className="package_container">
-         <img className='pattern1 pattern start-0 bottom-0' src={pattern1} />
-         <img className='pattern2 pattern end-0 top-0' src={pattern2} />
-
          <div className="custom-container">
             <div className="package_heading">PRODUCTS AND PACKAGES</div>
             <div className="trust">Globally Trusted Among Users</div>

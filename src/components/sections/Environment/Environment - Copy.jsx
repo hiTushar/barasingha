@@ -26,21 +26,6 @@ const cardsData = [
     },
 ]
 
-function useWindowSize() {
-    const [size, setSize] = useState([0, 0]);
-
-    useLayoutEffect(() => {
-        function updateSize() {
-            setSize([window.innerWidth, window.innerHeight]);
-        }
-        window.addEventListener('resize', updateSize);
-        updateSize();
-        return () => window.removeEventListener('resize', updateSize);
-    }, []);
-
-    return size;
-}
-
 const Card = (props) => {
     return (
         <div className="env_card">
@@ -57,7 +42,8 @@ const Card = (props) => {
 }
 
 const Environment = (props) => {
-
+    
+    // eslint-disable-next-line no-unused-vars
     const [size, setSize] = useState([0, 0]);
 
     useLayoutEffect(() => {
@@ -75,24 +61,6 @@ const Environment = (props) => {
         }
         return false;
     }
-
-    const settings = {
-        dots: false,
-        infinite: true,
-        autoPlay: true,
-        speed: 500,
-        autoplaySpeed: 5000,
-        cssEase: "linear",
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        swipeToSlide: true, // Enable swipe to slide
-        variableWidth: false, // Allow variable width for slides
-        centerMode: true,
-        draggable: true,
-        initialSlide: 1,
-        pauseOnHover: true,
-        // centerPadding: '140px',
-    };
 
     // var settings = {
     // className: "center",
