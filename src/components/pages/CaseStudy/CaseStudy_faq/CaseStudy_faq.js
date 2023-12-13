@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './CaseStudy_faq.scss';
 import video from "../../../../media/ball.mp4";
 import video2 from "../../../../media/faq-ball.mp4";
-import { Link } from 'react-router-dom';
 import ContactUsModal from 'components/pages/Forms/ContactUs';
 
 function Faq() {

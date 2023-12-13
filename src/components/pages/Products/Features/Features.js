@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
 import malware from "../../../../media/malware.png";
 import PlayFilled from "../../../../media/PlayFilled.svg";
 import './Features.scss';

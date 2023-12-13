@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import './mobilemenu.scss';
 import MobileMenuItem from './MobileMenuItem';
 import MenuItems from './mobile-menu.json';

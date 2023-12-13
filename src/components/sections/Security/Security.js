@@ -7,6 +7,7 @@ import blogsData from "../../data/blogs.json";
 
 function Security() {
 
+   // eslint-disable-next-line no-unused-vars
    const [resize, setResize] = useState(false);
 
    const [blogs, setBlogData] = useState([]);

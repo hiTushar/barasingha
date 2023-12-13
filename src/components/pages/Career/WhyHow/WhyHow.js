@@ -4,7 +4,6 @@ import arrow from "../../../../media/arrow.svg";
 import profile from "../../../../media/profile.svg";
 import computer from "../../../../media/computer.svg";
 import analysis from "../../../../media/analysis.svg";
-import { Link } from 'react-router-dom';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';

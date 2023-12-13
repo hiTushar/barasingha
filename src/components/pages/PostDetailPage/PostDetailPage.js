@@ -1,10 +1,8 @@
 import React from "react";
 import "./PostDetailPage.scss";
-import backArrow from "../../../media/ArrowLeftOutlined.svg";
 import caseStudyData from "./PostDetailPageData.js";
 import cyber from "../../../media/cyber_attack.svg";
 import transfer from "../../../media/data_transfer.svg";
-import sideArrow from "../../../media/side_arrow.svg";
 import { Button } from 'components/Button';
 
 export const PostDetailPage = () => {
@@ -31,7 +29,7 @@ export const PostDetailPage = () => {
                                     {topic &&
                                        topic.points.map((point, index) => <li>{point}</li>)}
                                  </ul>
-                                 {index == 0 && (
+                                 {index === 0 && (
                                     <img
                                        className="cyber"
                                        src={cyber}

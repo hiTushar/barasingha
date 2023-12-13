@@ -9,9 +9,6 @@ const ContactUsModal = ({closeContactUsModal}) => {
 
   const[showSuccessModal, setShowSuccessModal] =useState(false);
   const [showContactModal, setShowContactModal] = useState(true);
-
-  const closeSuccessModal = () => setShowSuccessModal(false);
-  const closeContactModal = () => setShowContactModal(false);
     
     return(
       <>
