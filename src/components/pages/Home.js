@@ -31,7 +31,7 @@ function Home({
          <Environment />
          <div className="env_video_container">
             <div className="env_video">
-               <video src={video} autoPlay loop muted playsInline></video>
+               <video disableRemotePlayback src={video} autoPlay loop muted playsInline></video>
             </div>
          </div >
          <Security />

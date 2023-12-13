@@ -40,7 +40,7 @@ function Banner({
         </div>
       </div>
         <div className="video_container">
-          <video src={video1} autoPlay loop muted playsInline/>
+          <video disableRemotePlayback src={video1} autoPlay loop muted playsInline/>
         </div>
     </div>
   );

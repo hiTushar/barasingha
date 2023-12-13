@@ -149,3 +149,7 @@ body {
       padding: 0 32px;
    }
 }
+
+video::-internal-media-controls-overlay-cast-button {
+   display: none;
+}

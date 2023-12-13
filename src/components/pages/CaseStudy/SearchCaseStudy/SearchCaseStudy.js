@@ -31,7 +31,7 @@ function Search() {
          ))}
             <div className="faq-saphere-box faq-saphere2">
                <div className="video-box">
-                  <video src={video2} autoPlay loop muted playsInline></video>
+                  <video disableRemotePlayback src={video2} autoPlay loop muted playsInline></video>
                </div>
             </div>
          </div>

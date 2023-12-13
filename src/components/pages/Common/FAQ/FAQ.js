@@ -88,12 +88,12 @@ function Faq() {
 
             <div className="faq-saphere-box faq-saphere1">
                <div className="video-box">
-                  <video src={video} autoPlay loop muted playsInline></video>
+                  <video disableRemotePlayback src={video} autoPlay loop muted playsInline></video>
                </div>
             </div>
             <div className="faq-saphere-box faq-saphere2">
                <div className="video-box">
-                  <video src={video2} autoPlay loop muted playsInline></video>
+                  <video disableRemotePlayback src={video2} autoPlay loop muted playsInline></video>
                </div>
             </div>
          </div>

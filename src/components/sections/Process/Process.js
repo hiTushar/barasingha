@@ -9,7 +9,7 @@ function Process() {
             <div className="process_heading">PROCESS</div>
             <div className="work">How it Works?</div>
             <div className="video_container mx-auto">
-               <video className="video" src={video} autoPlay loop muted playsInline/>
+               <video disableRemotePlayback className="video" src={video} autoPlay loop muted playsInline/>
             </div>
             <div className="process-ellipse"></div>
          </div>
