@@ -1,8 +1,8 @@
 import React from 'react';
 import './Certifications.scss';
 import westcoast from '../../../media/westcoast.svg';
-import opswat from '../../../media/opswat.png';
-import times from '../../../media/times.png';
+import opswat from '../../../media/opswat.webp';
+import times from '../../../media/times.webp';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';

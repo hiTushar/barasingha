@@ -3,7 +3,7 @@ import "./Environment.scss";
 import passwordSvg from "../../../media/password.svg"
 import flashDriveSvg from "../../../media/flashDisk.svg"
 import DBSVG from '../../../media/DBSVG.svg'
-import noisePng from "../../../media/noise.png"
+import noisePng from "../../../media/noise.webp"
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';

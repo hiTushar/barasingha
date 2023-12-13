@@ -1,6 +1,6 @@
 import React from 'react';
 import './Process.scss';
-import video from '../../../media/process.mp4'
+import video from '../../../media/process.webm'
 
 function Process() {
    return (

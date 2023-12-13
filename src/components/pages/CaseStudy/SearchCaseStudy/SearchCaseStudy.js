@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './SearchCaseStudy.scss';
-import video2 from "../../../../media/faq-ball.mp4";
+import video2 from "../../../../media/faq-ball.webm";
 import iconSearchOutlined from '../../../../media/iconSearchOutlined.svg';
 import caseStudyData from "../../../data/case_studies.json";
 

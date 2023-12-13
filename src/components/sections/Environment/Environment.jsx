@@ -3,7 +3,7 @@ import "./Environment.scss";
 import passwordSvg from "../../../media/password.svg"
 import flashDriveSvg from "../../../media/flashDisk.svg"
 import DBSVG from '../../../media/Database.svg'
-import noisePng from "../../../media/noise.png";
+import noisePng from "../../../media/noise.webp";
 import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';

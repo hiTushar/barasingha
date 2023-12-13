@@ -2,38 +2,38 @@
     "status":200,
     "results":[
         { 
-            "audience_image_url": "/user_profile_1.png",
-            "audience_logo": "/audience_logo.png",
+            "audience_image_url": "/user_profile_1.webp",
+            "audience_logo": "/audience_logo.webp",
             "audience_view": "The Barasingha has been a huge part of helping me grow my business.",
             "audience_name": "By Julie Sweet"
         },
         { 
-            "audience_image_url": "/user_profile_2.png",
-            "audience_logo": "/audience_logo.png",
+            "audience_image_url": "/user_profile_2.webp",
+            "audience_logo": "/audience_logo.webp",
             "audience_view": "My busy schedule leaves little, if any, time for blogging and social media. The Barasingha has been a huge part of helping me grow my business.",
             "audience_name": "By Sheila McGee"
         },
         { 
-            "audience_image_url": "user_profile_3.png",
-            "audience_logo": "/audience_logo.png",
+            "audience_image_url": "user_profile_3.webp",
+            "audience_logo": "/audience_logo.webp",
             "audience_view": "NPAV offer expertise in every stage of the product lifecycle through.",
             "audience_name": "By Siddharth Kabra"
         },
         { 
-            "audience_image_url": "/user_profile_1.png",
-            "audience_logo": "/audience_logo.png",
+            "audience_image_url": "/user_profile_1.webp",
+            "audience_logo": "/audience_logo.webp",
             "audience_view": "The Barasingha has been a huge part of helping me grow my business.",
             "audience_name": "By Julie Sweet"
         },
         { 
-            "audience_image_url": "/user_profile_2.png",
-            "audience_logo": "/audience_logo.png",
+            "audience_image_url": "/user_profile_2.webp",
+            "audience_logo": "/audience_logo.webp",
             "audience_view": "Protected by NPAV since 2017 more than 9,000 endpoints",
             "audience_name": "By Sheila McGee"
         },
         { 
-            "audience_image_url": "/user_profile_3.png",
-            "audience_logo": "/audience_logo.png",
+            "audience_image_url": "/user_profile_3.webp",
+            "audience_logo": "/audience_logo.webp",
             "audience_view": "The Barasingha has been a huge part of helping me grow my business.",
             "audience_name": "By Siddharth Kabra"
         }

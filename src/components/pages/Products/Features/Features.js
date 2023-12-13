@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import malware from "../../../../media/malware.png";
+import malware from "../../../../media/malware.webp";
 import PlayFilled from "../../../../media/PlayFilled.svg";
 import './Features.scss';
 

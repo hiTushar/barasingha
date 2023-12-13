@@ -1,9 +1,9 @@
 import React from 'react';
 import './products_Applications.scss';
-import placeholder1 from "../../../../media/placeholder_img_2.png";
-import placeholder2 from "../../../../media/placeholder_img_1.png";
-import placeholder3 from "../../../../media/placeholder_img_3.png";
-import placeholder4 from "../../../../media/placeholder_img_4.png";
+import placeholder1 from "../../../../media/placeholder_img_2.webp";
+import placeholder2 from "../../../../media/placeholder_img_1.webp";
+import placeholder3 from "../../../../media/placeholder_img_3.webp";
+import placeholder4 from "../../../../media/placeholder_img_4.webp";
 
 function Applications() {
    return (

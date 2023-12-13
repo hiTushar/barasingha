@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import Banner from '../../components/pages/Banner';
-import video from "../../media/ball.mp4";
+import video from "../../media/ball.webm";
 import Loader from '../../components/Loader';
 
 const Environment = lazy(() => import('../../components/sections/Environment/Environment'));

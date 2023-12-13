@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from "../../../Button";
 import arrow from "../../../../media/arrow.svg";
-import career_image from "../../../../media/career_placeholder.png";
+import career_image from "../../../../media/career_placeholder.webp";
 import './Position.scss';
 import { Link } from 'react-router-dom';
 import ContactUsModal from 'components/pages/Forms/ContactUs';

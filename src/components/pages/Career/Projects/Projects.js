@@ -1,9 +1,9 @@
 import React from 'react';
 import './Projects.scss';
-import project1 from "../../../../media/career_project_1.png";
-import project2 from "../../../../media/career_project_2.png";
-import project3 from "../../../../media/career_project_3.png";
-import project4 from "../../../../media/career_project_4.png";
+import project1 from "../../../../media/career_project_1.webp";
+import project2 from "../../../../media/career_project_2.webp";
+import project3 from "../../../../media/career_project_3.webp";
+import project4 from "../../../../media/career_project_4.webp";
 
 function Applications() {
    return (

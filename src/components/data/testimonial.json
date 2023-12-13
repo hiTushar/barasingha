@@ -2,28 +2,28 @@
     "status":200,
     "results":[
         {
-            "testimonial_image_url": "/img_rahul.png",
+            "testimonial_image_url": "/img_rahul.webp",
             "testimonial_name": "Rahul Patil",
             "testimonial_position": "Development Expert",
             "testimonial_rating": 3,
             "testimonial_about": "Tunes up the system extensively. Removes unnecessary resource logs and creates a clean working environment."
          },
          {
-            "testimonial_image_url":  "/img_siddhant.png",
+            "testimonial_image_url":  "/img_siddhant.webp",
             "testimonial_name": "Siddhant Sarma",
             "testimonial_position": "Data Security Expert",
             "testimonial_rating": 5,
             "testimonial_about": "The NPAV platform has exceeded our expectations in terms of security and user-friendliness."
          },
          {
-            "testimonial_image_url":  "/img_rajvi.png",
+            "testimonial_image_url":  "/img_rajvi.webp",
             "testimonial_name": "Rajvi Kothari",
             "testimonial_position": "SRE Engineer S3",
             "testimonial_rating": 4,
             "testimonial_about": "NPAV has been instrumental in safeguarding our company's sensitive information."
          },
          {
-            "testimonial_image_url":  "/img_rahul.png",
+            "testimonial_image_url":  "/img_rahul.webp",
             "testimonial_name": "Rahul Patil",
             "testimonial_position": "Development Expert",
             "testimonial_rating": 3,

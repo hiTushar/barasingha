@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './FAQ.scss';
-import video from "../../../../media/ball.mp4";
-import video2 from "../../../../media/faq-ball.mp4";
+import video from "../../../../media/ball.webm";
+import video2 from "../../../../media/faq-ball.webm";
 import ContactUsModal from 'components/pages/Forms/ContactUs';
 
 function Faq() {

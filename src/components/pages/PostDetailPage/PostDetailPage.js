@@ -1,7 +1,7 @@
 import React from "react";
 import "./PostDetailPage.scss";
 import caseStudyData from "./PostDetailPageData.js";
-import cyber from "../../../media/cyber_attack.svg";
+import cyber from "../../../media/cyber_attack.webp";
 import transfer from "../../../media/data_transfer.svg";
 import { Button } from 'components/Button';
 

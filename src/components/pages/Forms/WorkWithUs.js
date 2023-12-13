@@ -1,5 +1,5 @@
 import './WorkWithUs.scss';
-import head from '../../../media/ExtractedHead3.png';
+import head from '../../../media/ExtractedHead3.webp';
 import close from '../../../media/closeoutlined.svg';
 
 const WorkWithUs = ({closeWorkWithUsModal}) => {

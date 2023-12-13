@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Security.scss';
-import headImg from "../../../media/Extracted-Head 3 (1).png";
-import noisePng from "../../../media/noise.png";
+import headImg from "../../../media/Extracted-Head 3 (1).webp";
+import noisePng from "../../../media/noise.webp";
 import { Link } from 'react-router-dom';
 import blogsData from "../../data/blogs.json";
 

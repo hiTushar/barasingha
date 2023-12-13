@@ -1,6 +1,6 @@
 import React from 'react';
 import './banner.scss';
-import video1 from '../../media/video1.mp4'
+import video1 from '../../media/video1.webm'
 import npav from '../../media/Net Protector Antivirus _ Download best antivirus for pc_Download npav.-0 1.svg'
 import opswat from '../../media/OPSWAT B B&W 1.svg'
 import microsoft from '../../media/microsoft.svg'

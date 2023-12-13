@@ -5,13 +5,13 @@ import icon2 from '../../../media/icon-1.svg';
 import icon3 from '../../../media/icon-2.svg';
 import icon4 from '../../../media/icon-3.svg';
 import shield from '../../../media/shield.svg';
-import pattern1 from '../../../media/pattern1.png';
-import pattern2 from '../../../media/pattern 2.png';
+import pattern1 from '../../../media/pattern1.webp';
+import pattern2 from '../../../media/pattern 2.webp';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import greenshield from '../../../media/greenshield.svg'
-import noisePng from "../../../media/noise.png";
+import noisePng from "../../../media/noise.webp";
 
 const partners = [
    { image: "forbes", line: 'Protected by NPAV since 2016 more than 4,000 Endpoints.' },
