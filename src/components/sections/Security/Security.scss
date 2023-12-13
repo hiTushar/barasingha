@@ -52,7 +52,7 @@
       rgba(0, 31, 41, 0.75) 0%,
       #022032 100%
    ) !important;
-   backdrop-filter: blur(54px) !important;
+   backdrop-filter: blur(10px) !important;
 }
 //     .blog-card.a2{
 // background:  linear-gradient(180deg, rgba(255, 255, 255, 0.00) -17.2%, rgba(255, 255, 255, 0.07) 115.79%),radial-gradient(185.16% 185.16% at 50% 0%, rgba(0, 31, 41, 0.75) 0%, #022032 100%);
@@ -138,8 +138,8 @@
             z-index: 1;
             border-radius: 1rem;
             border: 1px solid #151729ab;
-            -webkit-backdrop-filter: blur(54px);
-            backdrop-filter: blur(54px);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
             background: linear-gradient(
                180deg,
                rgba(255, 255, 255, 0) -17.2%,

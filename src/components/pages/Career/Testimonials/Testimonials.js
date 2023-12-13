@@ -50,7 +50,7 @@ function Testimonials() {
                <OwlCarousel
                   items={getCurrentDimension() ? 1 : 3}
                   className="owl-theme"
-                  loop={false}
+                  loop={true}
                   nav={getCurrentDimension() ? false : true}
                   dots={true}
                   margin={10}
