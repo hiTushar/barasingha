@@ -386,7 +386,7 @@ function Packages() {
                   //autoplay={true}
                   autoplaySpeed={1000}
                   dots={true}
-                  margin={getCurrentDimension() ? 10 : 32}
+                  margin={getCurrentDimension() ? 100 : 32}
                   stagePadding={getCurrentDimension() ? 10 : 32}
                >
                   <div className="individual_package_card d-flex align-items-center">
