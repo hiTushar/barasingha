@@ -31,7 +31,7 @@
          );
          backdrop-filter: blur(10px);
          @media (max-width: 768px) {
-            height: 336px;
+            height: 450px;
             align-items: center;
          }
          .image-card {
@@ -76,7 +76,7 @@
       }
       .project-card1{
          @media (max-width: 768px) {
-            height: 385px;
+            height: 450px;
             align-items: center;
          }
       }
