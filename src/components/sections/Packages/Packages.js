@@ -69,11 +69,6 @@ function Packages() {
       }
    }, [])
 
-   const stopPropagation = (e) => {
-      e.stopPropagation();
-   };
-
-
    return (
       <section className="package_container">
          <div className="title-wrapper">
@@ -95,7 +90,7 @@ function Packages() {
                   onChanged={handleCarouselChange}
                >
                   {[...Array(10)].map((list, key) => (
-                     <div className="package_card">
+                     <div className="package_card" key={key}>
                         {/* <img src={noisePng} className='noise-img position-absolute' /> */}
                         <div className="noise-img"></div>
                         <div className="ellipse ellipse-one"></div>
@@ -386,7 +381,7 @@ function Packages() {
                   items={getCurrentDimension() ? 1 : 2}
                   loop
                   nav={true}
-                  infinite={true}
+                  // infinite={true}
                   speed={1000}
                   //autoplay={true}
                   autoplaySpeed={1000}
@@ -522,27 +517,3 @@ function Packages() {
 }
 
 export default Packages;
-
-
-
-const SliderComponent = ({ icon, shield }) => (
-   <div>
-      <div className="noise-img"></div>
-      <div className="ellipse ellipse-two"></div>
-      <div className="mobile_feature_name">End Point Security Package</div>
-      <div className="mobile_para">Corporate web control allows you to secure the network by block ingunwanted sites and limiting the network access.</div>
-      <div className="item-mob">
-         <div className="row">
-            <div className="col-9 mx-auto">
-               <img src={icon} alt={icon} />
-            </div>
-            <div className="col-12">
-               <div className="heading heading--three mb-2">Corporate web control</div>
-               <div className="para pt-2 d-flex"><img className="shield me-2" src={shield} alt={"shield"} /><span>Windows, Mac & Android</span></div>
-               <div className="para pt-2 d-flex"><img className="shield me-2" src={shield} alt={"shield"} /><span>Sensitive data encryption</span></div>
-               <div className="para pt-2 d-flex"><img className="shield me-2" src={shield} alt={"shield"} /><span>Detailed and Summary Report</span></div>
-            </div>
-         </div>
-      </div>
-   </div>
-)
