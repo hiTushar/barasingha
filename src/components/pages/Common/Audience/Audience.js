@@ -38,7 +38,7 @@ function Audience() {
    }
    return (
       <div className="audiences_container">
-         <div className="audience_content_container container">
+         <div className="audience_content_container component-container">
             <div className="title-wrapper">
                <h6 className="heading heading--fancy text-center">Audience</h6>
                <h2 className="heading heading--two text-center">What Do Our Clients Think?</h2>

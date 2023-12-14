@@ -16,7 +16,7 @@
       }
       .project-card {
          width: auto;
-         height: 475px;
+         // height: 475px;
          display: flex;
          flex-direction: column;
          gap: 0.5rem;
@@ -29,7 +29,7 @@
             rgba(0, 0, 0, 0) 100%
          );
          @media (max-width: 768px) {
-            height: 350px;
+            // height: 350px;
             align-items: center;
          }
          backdrop-filter: blur(10px);

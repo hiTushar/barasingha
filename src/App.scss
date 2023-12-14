@@ -38,6 +38,18 @@ body {
    }
 }
 
+.component-container {
+   padding-inline: 2rem;
+   width: auto;
+   margin-inline: auto;
+   max-width: 1200px !important;
+
+   @include responsive(md) {
+      max-width: 1200px !important;
+      margin-inline: auto;
+   }
+}
+
 // Hiding scrollbar
 .body {
    -ms-overflow-style: none; /* Internet Explorer 10+ */

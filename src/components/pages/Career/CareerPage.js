@@ -13,7 +13,7 @@ export default function CareerPage() {
       <>
          {/* Hero of the page */}
          <section className="hero">
-            <div className="container">
+            <div className="component-container">
                <div className="title-wrapper">
                   <div className="heading heading--fancy text-center">CYBER SECURITY</div>
                   <div className="heading heading--one text-gradient text-center">

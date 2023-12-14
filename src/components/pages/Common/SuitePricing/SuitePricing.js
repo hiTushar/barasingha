@@ -23,7 +23,7 @@ function SuitePricing() {
 
    return (
       <div className="products_suite_container">
-         <div className="content_container container">
+         <div className="content_container component-container">
             <div className="title-wrapper">
                <h6 className="heading heading--fancy text-center">Energize Valuation</h6>
                <h3 className="heading heading--two text-center">Suite Pricing</h3>

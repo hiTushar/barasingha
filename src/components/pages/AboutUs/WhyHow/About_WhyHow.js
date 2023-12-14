@@ -25,7 +25,7 @@ function WhyHow() {
 
    return (
       <section className='about_why-barasingha-wrapper'>
-         <div className="container">
+         <div className="component-container">
             <img className="cubeImage" src={cube} alt="cube"/>
             <div className="title-wrapper">
                <h6 className="heading heading--fancy text-center">WHY & HOW</h6>

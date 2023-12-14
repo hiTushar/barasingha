@@ -38,7 +38,7 @@ function Position() {
    //  };
 
    return (
-      <div className="available-career-container container">
+      <div className="available-career-container component-container">
          <div className="available-career-positions ">
             <div className="career-image">
                <img src={career_image} alt={"career_image"} className="image" />

@@ -74,7 +74,7 @@ function Features() {
 
    return (
       <div className="features_container">
-         <div className="container">
+         <div className="component-container">
             <div className="title-wrapper">
                <h6 className="heading heading--fancy text-center">Details</h6>
                <h2 className="heading heading--two text-center my-2">Features</h2>

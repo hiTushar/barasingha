@@ -24,7 +24,7 @@ function WhyHow() {
 
    return (
       <section className='why-barasingha-wrapper'>
-         <div className="container">
+         <div className="component-container">
             <div className="title-wrapper">
                <h6 className="heading heading--fancy text-center">WHY & HOW</h6>
                <h2 className="heading heading--two text-center my-2">Why Choose Barasingha?</h2>

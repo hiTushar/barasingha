@@ -11,7 +11,7 @@ export default function AboutUs() {
       <>
          {/* Hero of the page */}
          <section className="hero">
-            <div className="container">
+            <div className="component-container">
                <div className="title-wrapper">
                   <div className="heading heading--fancy text-center">OUR STORY</div>
                   <div className="heading heading--one text-gradient text-center">

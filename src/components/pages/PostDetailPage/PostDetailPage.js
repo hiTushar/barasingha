@@ -11,7 +11,7 @@ export const PostDetailPage = () => {
 
    return (
       <div className="PostDetailPage_container">
-         <div className="container">
+         <div className="component-container">
             <div className="PostDetailPage_main">
                <div className="content">
                   <div className="survey">SURVEY RESEARCH</div>

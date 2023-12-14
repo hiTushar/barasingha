@@ -8,7 +8,7 @@ import placeholder4 from "../../../../media/placeholder_img_4.webp";
 function Applications() {
    return (
       <div className="project_container">
-         <div className="container">
+         <div className="component-container">
             <div className="title-wrapper">
                <h6 className="heading heading--fancy text-center">Applications</h6>
                <h2 className="heading heading--two text-center my-2">Supercharge Your Infrastructure By</h2>

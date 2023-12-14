@@ -10,7 +10,7 @@ export default function CaseStudy() {
    return (
       <>
          <main className="casestudy">
-            <section className="casestudy-title container">
+            <section className="casestudy-title component-container">
                <div className="casestudy-title">
                   <h6 className="heading heading--fancy">Curious Cases</h6>
                   <h1 className="heading heading--one text-gradient">

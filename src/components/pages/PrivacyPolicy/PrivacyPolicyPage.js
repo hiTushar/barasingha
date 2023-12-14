@@ -15,7 +15,7 @@ export const PrivacyPolicyPage = () => {
    return (
       data && (
          <div className="PrivacyPolicy_container">
-            <div className="PrivacyPolicy_main container">
+            <div className="PrivacyPolicy_main component-container">
                <div className="content">
                   <div className="title-wrapper">
                      <h1 className="privacy_policy_heading text-center">{data.title}</h1>

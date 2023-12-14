@@ -50,7 +50,7 @@ function CareerDetailsPage() {
 
    return (
       <div className="career_details_container">
-         <div className="container">
+         <div className="component-container">
             <div className="title-wrapper">
                <h6 className="career_details_title">Available Career Positions</h6>
                <h2 className="career_details_join_team">Join our team and help us build a secure future</h2>

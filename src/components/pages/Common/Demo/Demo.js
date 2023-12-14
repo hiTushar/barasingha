@@ -7,7 +7,7 @@ function Demo({ setShowContactUsModal = () => { } }) {
    return (
       <div className="demo_container">
          <div className='bg'></div>
-         <div className="demo_content_container container">
+         <div className="demo_content_container component-container">
             <div className="left_content">
                <h2 className="heading heading--two">Want to Try This Solution?</h2>
                <p className="para para--lg para--light">Meet the needs of your business with Security solutions to evolve your organization</p>

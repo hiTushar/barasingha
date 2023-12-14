@@ -50,7 +50,7 @@ function Navbar({ showBackdrop = () => { }, hideBackdrop = () => { }, backdropIs
    return (
       <>
          <nav className='navbar sticky-top'>
-            <div className='container position-relative d-flex w-100 justify-content-between align-items-center'>
+            <div className='component-container position-relative d-flex w-100 justify-content-between align-items-center'>
                <Link activeClassName="active" to="/" className='navbar-logo'>
                   <img src={logo} className='navbar-logo-image' alt='logo'></img>
                   <img src={brandName} className='navbar-logo-brandname' alt='brandname'></img>

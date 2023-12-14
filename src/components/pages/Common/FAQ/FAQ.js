@@ -38,7 +38,7 @@ function Faq() {
 
    return (
       <div className="faq-section position-relative overflow-hidden">
-         <div className="custom-container container">
+         <div className="custom-container component-container">
             <div className="title-wrapper">
                <h6 className="text-center heading heading--fancy">Frequently Asked Questions</h6>
                <h2 className="text-center heading heading--two">Have Doubts?</h2>
