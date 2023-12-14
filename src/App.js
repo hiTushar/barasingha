@@ -41,10 +41,10 @@ function App() {
   const showBackdrop = () => { setBackdropIsVisible(true) }
 
   return (
-    <>
+    <div className='main-container'>
       <Router>
 
-          <div className='main-wrapper'>
+          <div className='body-wrapper'>
             {
               backdropIsVisible
                 ? <div className='backdrop'></div>
@@ -134,7 +134,7 @@ function App() {
         {showWrongPassword && <WrongPassword closeWrongPassword={closeWrongPassword} />}
 
       </Router>
-    </>
+    </div>
   );
 }
 
