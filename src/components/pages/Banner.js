@@ -16,7 +16,7 @@ function Banner({
 
   return (
     <div className="banner-container">
-      <div className="custom-container">
+      <div className="component-container">
         <div className="section_1">
           <div className="deploy_title">Deploy NPAV’s</div>
           <h1 className="heading py-2">Multi-layered cloud augmented technologies</h1>
