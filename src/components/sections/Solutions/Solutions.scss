@@ -55,6 +55,12 @@
                &:hover {
                   border-bottom: 1px solid;
                }
+               
+               @media screen and (max-width: 430px) {
+                  .text {
+                     font-size: 12px;
+                  }
+               }
             }
          }
       }
