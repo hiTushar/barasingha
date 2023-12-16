@@ -84,7 +84,7 @@
             padding: 0.8rem;
             cursor: pointer;
             white-space: nowrap;
-            min-width: none;
+            min-width: min-content;
             width: fit-content;
 
             &:hover {
