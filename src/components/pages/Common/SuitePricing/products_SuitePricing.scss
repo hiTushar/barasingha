@@ -140,8 +140,9 @@
                   font-style: normal;
                   font-weight: 700;
                   line-height: normal;
-                  @media (max-width: 768px) {
+                  @media (max-width: 430px) {
                      font-size: 30px;
+                     text-align: center;
                   }
                }
                .year {
@@ -155,6 +156,16 @@
                   line-height: normal;
                   padding-left: 12px;
                   padding-top: 16px;
+                  min-width: fit-content;
+                  @media (max-width: 430px) {
+                     font-size: 14px;
+                  }
+               }
+               
+               @media (max-width: 430px) {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
                }
             }
             .btn_container {
@@ -165,6 +176,7 @@
                align-self: stretch;
                border-radius: 4px;
                background: var(--Linear, #e5be20);
+               width: 100%;
                .demo {
                   color: #111;
                   font-family: Manrope;
@@ -311,9 +323,10 @@
                   font-style: normal;
                   font-weight: 700;
                   line-height: normal;
-                  @media (max-width: 768px) {
+                  @media (max-width: 430px) {
                      width:100%;
                      font-size: 30px;
+                     text-align: center;
                   }
                }
 
@@ -328,9 +341,16 @@
                   line-height: normal;
                   padding-left: 12px;
                   padding-top: 16px;
-                  @media (max-width: 768px) {
+                  min-width: fit-content;
+                  @media (max-width: 430px) {
                      font-size: 14px;
                   }
+               }
+
+               @media (max-width: 430px) {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
                }
             }
             .btn_container {
@@ -341,6 +361,7 @@
                align-self: stretch;
                border-radius: 4px;
                background: var(--Linear, #e5be20);
+               width: 100%;
                .demo {
                   color: #111;
                   font-family: Manrope;
