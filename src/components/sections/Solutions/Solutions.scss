@@ -49,14 +49,15 @@
             .solution_link {
                color: var(--Linear, #e5be20) !important;
                width: fit-content;
+               min-width: 160px;
                gap:8px;
-               display: flex;
-
+               display: flex; 
                &:hover {
                   border-bottom: 1px solid;
                }
                
                @media screen and (max-width: 430px) {
+                  min-width: 100px;
                   .text {
                      font-size: 12px;
                   }
