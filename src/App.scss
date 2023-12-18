@@ -135,14 +135,13 @@ body::-webkit-scrollbar {
    position: absolute;
    width: 100%;
    height: -webkit-fill-available;
-   -webkit-backdrop-filter: blur(7px);
-   backdrop-filter: blur(21px);
+   -webkit-backdrop-filter: blur(10px);
+   backdrop-filter: blur(10px);
    background: linear-gradient(
       180deg,
       rgba(1, 18, 29, 0.7) 0%,
       rgba(0, 0, 0, 0.29) 100%
    );
-   backdrop-filter: blur(7px);
    z-index: 9;
 }
 
