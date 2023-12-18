@@ -179,7 +179,8 @@
 
    .package_details_container {
       padding-top: 56px;
-
+      max-width: 1600px;
+      margin: 0 auto;
       .package_card {
          display: flex;
          overflow: hidden;
