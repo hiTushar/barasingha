@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ProductBanner from './ProductBanner/ProductsBanner';
 import Features from '../Products/Features/Features';
 import Applications from '../Common/Applications/Applications';
@@ -9,7 +9,9 @@ import Faq from '../Common/FAQ/FAQ';
 
 function ProductsPage({ setShowContactUsModal = () => { } }) {
 
-   window.scrollTo({ top: 0, behavior: 'smooth' })
+   useEffect(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+   }, [])
    
    return (
       <>

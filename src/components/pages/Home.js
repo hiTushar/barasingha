@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import Banner from '../../components/pages/Banner';
 import video from "../../media/ball.webm";
 import Loader from '../../components/Loader';
@@ -20,7 +20,9 @@ function Home({
                setShowWrongPassword = () => {} 
             }) {
 
-   window.scrollTo({ top: 0, behavior: 'smooth' })
+   useEffect(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+   }, [])
    
    return (
       <>

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import fulltime from "../../../media/fulltime.svg";
 import remote from "../../../media/remote.svg";
 import arrowDown from "../../../media/arrowdown.svg";
@@ -8,7 +8,9 @@ import positionDetailsData from "../../data/positionDetails.json";
 
 function CareerDetailsPage() {
 
-   window.scrollTo({ top: 0, behavior: 'smooth' })
+   useEffect(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+   }, [])
 
    const [currentTab, setCurrentTab] = useState('1');
    const careerNav = useRef(null);

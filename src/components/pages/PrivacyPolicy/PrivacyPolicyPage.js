@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ContactUsModal from "../Forms/ContactUs";
 import "./PrivacyPolicyPage.scss";
 import PrivacyPolicyData from "./PrivacyPolicyPageData";
 
 export const PrivacyPolicyPage = () => {
 
-   window.scrollTo({ top: 0, behavior: 'smooth' });
+   useEffect(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+   }, [])
 
    const[showContactUsModal, setShowContactUsModal] =useState(false);
 

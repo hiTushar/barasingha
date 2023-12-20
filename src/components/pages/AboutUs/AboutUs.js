@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './AboutUs.scss';
 import WhyHow from "./WhyHow/About_WhyHow";
 import Team from "./Team/Team.js";
 
 export default function AboutUs() {
 
-   window.scrollTo({ top: 0, behavior: 'smooth' })
+   useEffect(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+   }, [])
    
    return (
       <>

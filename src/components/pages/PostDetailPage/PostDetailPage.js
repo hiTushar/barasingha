@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./PostDetailPage.scss";
 import caseStudyData from "./PostDetailPageData.js";
 import cyber from "../../../media/cyber_attack.webp";
@@ -7,7 +7,9 @@ import { Button } from 'components/Button';
 
 export const PostDetailPage = () => {
 
-   window.scrollTo({ top: 0, behavior: 'smooth' })
+   useEffect(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+   }, [])
 
    return (
       <div className="PostDetailPage_container">

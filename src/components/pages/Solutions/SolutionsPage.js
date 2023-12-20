@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import SolutionBanner from '../Solutions/SolutionBanner/SolutionBanner';
 import SolutionSuite from '../Solutions/SolutionSuite/SolutionSuite';
 import Applications from '../Common/Applications/Applications';
@@ -9,7 +9,9 @@ import Faq from '../Common/FAQ/FAQ';
 
 function SolutionsPage({ setShowContactUsModal = () => { } }) {
 
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, [])
     
     return (
         <>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './career.scss';
 import Position from "./Position/Position";
 import WhyHow from "./WhyHow/WhyHow";
@@ -7,7 +7,9 @@ import Projects from "./Projects/Projects";
 
 export default function CareerPage() {
 
-   window.scrollTo({ top: 0, behavior: 'smooth' })
+   useEffect(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+   }, [])
    
    return (
       <>

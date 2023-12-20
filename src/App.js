@@ -65,7 +65,7 @@ function App() {
               <Route 
                 exact
                 path='/'
-                component={() => <Home 
+                render={() => <Home 
                                     setShowContactUsModal={setShowContactUsModal}
                                     setShowWentWrong={setShowWentWrong}
                                     setShowPage404={setShowPage404}
@@ -77,49 +77,49 @@ function App() {
               <Route
                 exact
                 path='/career'
-                component={() => <Career setShowContactUsModal={setShowContactUsModal} />}
+                render={() => <Career setShowContactUsModal={setShowContactUsModal} />}
               />
               
               <Route
                 exact
                 path='/PostDetail'
-                component={() => <PostDetailPage setShowContactUsModal={setShowContactUsModal}
+                render={() => <PostDetailPage setShowContactUsModal={setShowContactUsModal}
               />} />
               
               <Route
                 exact
                 path='/PrivacyPolicy'
-                component={() => <PrivacyPolicyPage setShowContactUsModal={setShowContactUsModal}
+                render={() => <PrivacyPolicyPage setShowContactUsModal={setShowContactUsModal}
               />} />
               
               <Route
                 exact
                 path='/solutionspage'
-                component={() => <SolutionsPage setShowContactUsModal={setShowContactUsModal}
+                render={() => <SolutionsPage setShowContactUsModal={setShowContactUsModal}
               />} />
               
               <Route
                 exact
                 path='/productspage'
-                component={() => <ProductsPage setShowContactUsModal={setShowContactUsModal} />}
+                render={() => <ProductsPage setShowContactUsModal={setShowContactUsModal} />}
               />
               
               <Route
                 exact
                 path='/about'
-                component={() => <About setShowContactUsModal={setShowContactUsModal} />}
+                render={() => <About setShowContactUsModal={setShowContactUsModal} />}
               />
               
               <Route
                 exact
                 path='/casestudy'
-                component={() => <CaseStudy setShowContactUsModal={setShowContactUsModal} />}
+                render={() => <CaseStudy setShowContactUsModal={setShowContactUsModal} />}
               />
               
               <Route
                 exact
                 path='/careerdetailspage'
-                component={() => <CareerDetailsPage setShowContactUsModal={setShowContactUsModal} />}
+                render={() => <CareerDetailsPage setShowContactUsModal={setShowContactUsModal} />}
               />
 
             </Switch>

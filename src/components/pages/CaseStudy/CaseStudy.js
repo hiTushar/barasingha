@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './CaseStudy.scss';
 import Faq from '../Common/FAQ/FAQ';
 import Search from "../CaseStudy/SearchCaseStudy/SearchCaseStudy";
 
 export default function CaseStudy() {
 
-   window.scrollTo({ top: 0, behavior: 'smooth' })
+   useEffect(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+   }, [])
    
    return (
       <>
