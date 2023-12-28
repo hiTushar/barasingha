@@ -13,7 +13,7 @@ function MobileMenuItem({ item, handleClick }) {
             <div className={`menu-item ${open ? "open" : " "}`}>
                <div className='menu-title' onClick={() => setOpen(!open)}>
                   <span>{item.title}
-                     <i className={open ? "pi pi-angle-down" : "pi pi-angle-up"} ></i>
+                     <i className={!open ? "pi pi-angle-down" : "pi pi-angle-up"} ></i>
                   </span>
                </div>
             </div>
