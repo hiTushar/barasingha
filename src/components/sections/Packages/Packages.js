@@ -44,8 +44,8 @@ function Packages() {
    }
 
    function handleCarouselChange(event) {
-      const prevActiveIndex = event.item.index - 1
       const currentIndex = event.item.index
+      const prevActiveIndex = currentIndex ? event.item.index - 1 : event.item.count - 1;
       const nextActiveIndex = event.item.index + 1
 
       const currentItem = document.querySelectorAll('.owl-item')[currentIndex]
@@ -53,20 +53,17 @@ function Packages() {
       const nextItem = document.querySelectorAll('.owl-item')[nextActiveIndex]
 
       if (currentItem) currentItem.style.transform = ''
-      // if (prevItem) prevItem.style.transform = 'perspective(1000px) rotateY(10deg)'        
-      // if (prevItem) prevItem.style.transform = 'perspective(1000px) rotateY(-10deg)'
       if (prevItem) prevItem.style.transform = 'perspective(1000px) rotateY(20deg) translate(130px, 0) scale3d(1, 0.9, 1)'
       if (nextItem) nextItem.style.transform = 'perspective(1000px) rotateY(-20deg) translate(-130px, 0) scale3d(1, 0.9, 1)'
    }
 
    React.useEffect(() => {
-      const items = document.querySelectorAll('.owl-item')
-      const activeIndex = Array.from(items)?.findIndex((item) => item.classList.contains('active'))
-
-      if (activeIndex) {
-         const lastItem = items[activeIndex - 1]
-         lastItem.style.transform = 'perspective(1000px) rotateY(20deg) translate(130px, 0) scale3d(1, 0.9, 1)'
-      }
+      // const items = document.querySelectorAll('.owl-item')
+      // const activeIndex = Array.from(items)?.findIndex((item) => item.classList.contains('active'))
+      // if (activeIndex) {
+      //    const lastItem = items[activeIndex - 1]
+      //    lastItem.style.transform = 'perspective(1000px) rotateY(20deg) translate(130px, 0) scale3d(1, 0.9, 1)'
+      // }
    }, [])
 
    return (
