@@ -37,7 +37,7 @@ function Packages() {
 
 
    function getCurrentDimension() {
-      if (window.innerWidth < 767) {
+      if (window.innerWidth < 1150) {
          return true;
       }
       return false;
@@ -52,9 +52,19 @@ function Packages() {
       const prevItem = document.querySelectorAll('.owl-item')[prevActiveIndex]
       const nextItem = document.querySelectorAll('.owl-item')[nextActiveIndex]
 
-      if (currentItem) currentItem.style.transform = ''
-      if (prevItem) prevItem.style.transform = 'perspective(1000px) rotateY(20deg) translate(130px, 0) scale3d(1, 0.9, 1)'
-      if (nextItem) nextItem.style.transform = 'perspective(1000px) rotateY(-20deg) translate(-130px, 0) scale3d(1, 0.9, 1)'
+      if (currentItem) {
+         currentItem.style.transform = '';
+         currentItem.querySelector('.package_card > .package_card__overlay').style = 'display: none';
+      }
+      if (prevItem) {
+         prevItem.style.transform = 'perspective(1000px) rotateY(20deg) translate(130px, 0) scale3d(1, 0.9, 1)';
+         prevItem.querySelector('.package_card > .package_card__overlay').style = 'display: block';
+      }
+      if (nextItem) {
+         nextItem.style.transform = 'perspective(1000px) rotateY(-20deg) translate(-130px, 0) scale3d(1, 0.9, 1)';
+         nextItem.querySelector('.package_card > .package_card__overlay').style = 'display: block';
+      }
+      
    }
 
    React.useEffect(() => {
@@ -81,7 +91,7 @@ function Packages() {
                   loop
                   nav={true}
                   dots={false}
-                  margin={0}
+                  margin={15}
                   stagePadding={getCurrentDimension() ? 0 : 150}
                   responsiveClass={true}
                   onChanged={handleCarouselChange}
@@ -144,6 +154,7 @@ function Packages() {
                               </div>
                            </div>
                         </div>
+                        <div className='package_card__overlay'></div>
                      </div>
                   ))}
                </OwlCarousel>
@@ -335,45 +346,6 @@ function Packages() {
          }
          <div className="individual_package_container">
             <div className="container">
-               {/* <OwlCarousel
-                       items={2}
-                       className="owl-theme"
-                       loop
-                       nav
-                       margin={8} >
-                       <div className="individual_package_card">
-                           <div className="left_content">
-                               <img className="indiv_image" src={globe} alt={"globe"}></img>
-                           </div>
-                           <div className="right_content">
-                           <div className="selling_block">FAST SELLING</div>
-                           <div className="green_shield"><img src={greenshield} alt={"greenshield"}/></div>
-                           <div className="green_shield"><img src={greenshield} alt={"greenshield"}/></div>
-                           <div className="green_shield"><img src={greenshield} alt={"greenshield"}/></div>
-                           <div className="security_stage">Premium Security</div>
-                           <div className="indiv_feature mb-2">End Point Security</div>
-                           <div className="para para--light"><img className="shield" src={shield} alt={"shield"}/>Windows, Mac & Android</div>
-                           <div className="para para--light"><img className="shield"src={shield} alt={"shield"}/>Sensitive data encryption</div>
-                           <div className="para para--light"><img className="shield" src={shield} alt={"shield"}/>Detailed and Summary Report</div>
-                           </div>
-                       </div>
-                       <div className="individual_package_card">
-                           <div className="left_content">
-                               <img className="indiv_image" src={globe} alt={"globe"}></img>
-                           </div>
-                           <div className="right_content">
-                           <div className="selling_block">FAST SELLING</div>
-                           <div className="green_shield"><img src={greenshield} alt={"greenshield"}/></div>
-                           <div className="green_shield"><img src={greenshield} alt={"greenshield"}/></div>
-                           <div className="green_shield"><img src={greenshield} alt={"greenshield"}/></div>
-                           <div className="security_stage">Premium Security</div>
-                           <div className="indiv_feature mb-2">End Point Security</div>
-                           <div className="para para--light"><img className="shield" src={shield} alt={"shield"}/>Windows, Mac & Android</div>
-                           <div className="para para--light"><img className="shield"src={shield} alt={"shield"}/>Sensitive data encryption</div>
-                           <div className="para para--light"><img className="shield" src={shield} alt={"shield"}/>Detailed and Summary Report</div>
-                           </div>
-                       </div>
-                       </OwlCarousel> */}
                <OwlCarousel
                   items={getCurrentDimension() ? 1 : 2}
                   loop
