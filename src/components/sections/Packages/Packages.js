@@ -91,7 +91,7 @@ function Packages() {
                   loop
                   nav={true}
                   dots={false}
-                  margin={15}
+                  margin={5}
                   stagePadding={getCurrentDimension() ? 0 : 150}
                   responsiveClass={true}
                   onChanged={handleCarouselChange}
@@ -345,7 +345,6 @@ function Packages() {
             </div>
          }
          <div className="individual_package_container">
-            <div className="container">
                <OwlCarousel
                   items={getCurrentDimension() ? 1 : 2}
                   loop
@@ -479,7 +478,6 @@ function Packages() {
                      </div>
                   </div>
                </OwlCarousel>
-            </div>
          </div>
       </section >
    );

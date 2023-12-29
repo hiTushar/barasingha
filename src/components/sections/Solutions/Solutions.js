@@ -19,7 +19,7 @@ function Solutions() {
                   <h2 className="heading heading--two text-center">Problem Areas We Solve</h2>
                </div>
                <div className="problem_card mt-5">
-                  <div className="row">
+                  <div className="problem_card__row">
                      <div className=" col-5">
                         <div className="left_card">
                            <img src={problem1} alt={problem1} title={problem1} />
@@ -39,7 +39,7 @@ function Solutions() {
                </div>
 
                <div className="problem_card my-5">
-                  <div className="row">
+                  <div className="problem_card__row">
                      <div className="col-6">
                         <div className="right_card pe-lg-4">
                            <img src={krook} alt={krook} title={krook} className='mb-4' />
@@ -60,7 +60,7 @@ function Solutions() {
                </div>
 
                <div className="problem_card">
-                  <div className="row">
+                  <div className="problem_card__row">
                      <div className=" col-5">
                         <div className="left_card">
                            <img src={problem3} alt={problem3} title={problem3} />

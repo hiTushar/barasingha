@@ -179,7 +179,7 @@
 
    .package_details_container {
       padding-top: 56px;
-      max-width: 1430px;
+      max-width: 1500px;
       margin: 0 auto;
       .package_card {
          display: flex;
@@ -345,7 +345,8 @@
 
    .individual_package_container {
       padding-top: 40px;
-
+      max-width: 1270px;
+      margin: 0 auto;
       .individual_package_card {
          background-image: url("../../../media/hatching.svg");
          background-size: contain;

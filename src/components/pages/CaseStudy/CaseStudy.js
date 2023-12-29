@@ -24,7 +24,7 @@ export default function CaseStudy() {
                </div>
             </section>
             <section className="casestudy-search">
-               <div className="container">
+               <div className="component-container">
                   <Search/>
                </div>
             </section>

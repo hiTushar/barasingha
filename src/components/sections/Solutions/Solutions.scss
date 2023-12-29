@@ -12,9 +12,10 @@
          display: flex;
          gap: 56px;
          padding-bottom: 96px;
-         .row {
+         .problem_card__row {
             width: 100%;
-            flex-wrap: nowrap;
+            display: flex;
+            justify-content: space-between;
          }
          .left_card {
             display: flex;
@@ -100,7 +101,7 @@
    .solutions_container .solutions_content_container .padding {
       padding-bottom: 100px;
    }
-   .solutions_container .solutions_content_container .problem_card .row{
+   .solutions_container .solutions_content_container .problem_card .problem_card__row {
       .col-5{
          width: 51.67%;
       }

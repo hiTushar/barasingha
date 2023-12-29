@@ -49,39 +49,40 @@ function Team() {
                <h2 className="heading heading--two text-center my-2">Meet The Team</h2>
             </div>
             <div className='about_carousel'>
-               <OwlCarousel
-                  items={getCurrentDimension() ? 1 : 3}
-                  className="owl-theme"
-                  loop={false}
-                  nav={getCurrentDimension() ? false : true}
-                  dots={true}
-                  margin={10}
-                  //stagePadding={getCurrentDimension() ? 32 : 112} 
-                  >
-                  {team.map((teammember, index) => (
-                     <div className="testimonial-card" key={index}>
-                        <div className='testimonial-person'>
-                           <img className="image" src={`${teammember.team_member_image_url}`} alt={"logo"} />
-                           <div>
-                              <h3 className='heading heading--three'>{teammember.team_member_name}</h3>
-                              <p className='para para--sm para--light'>{teammember.team_member_position}</p>
+               <div className='component-container'>
+                  <OwlCarousel
+                     items={getCurrentDimension() ? 1 : 3}
+                     className="owl-theme"
+                     loop={false}
+                     nav={getCurrentDimension() ? false : true}
+                     dots={true}
+                     margin={10}
+                     //stagePadding={getCurrentDimension() ? 32 : 112} 
+                     >
+                     {team.map((teammember, index) => (
+                        <div className="testimonial-card" key={index}>
+                           <div className='testimonial-person'>
+                              <img className="image" src={`${teammember.team_member_image_url}`} alt={"logo"} />
+                              <div>
+                                 <h3 className='heading heading--three'>{teammember.team_member_name}</h3>
+                                 <p className='para para--sm para--light'>{teammember.team_member_position}</p>
+                              </div>
+                              <div className='rating'>
+                                 {Array.apply(null, { length: teammember.team_member_about }).map((e, i) => (
+                                    <img className="image" src={StarFilled} alt={"⭐️"} />
+                                 ))}
+                                 {Array.apply(null, { length: 5 - teammember.team_member_about }).map((e, i) => (
+                                    <img className="image" src={StarOutlined} alt={"⭐️"} />
+                                 ))}
+                              </div>
                            </div>
-                           <div className='rating'>
-                              {Array.apply(null, { length: teammember.team_member_about }).map((e, i) => (
-                                 <img className="image" src={StarFilled} alt={"⭐️"} />
-                              ))}
-                              {Array.apply(null, { length: 5 - teammember.team_member_about }).map((e, i) => (
-                                 <img className="image" src={StarOutlined} alt={"⭐️"} />
-                              ))}
-                           </div>
+                           <p className="para mt-4">{teammember.team_member_about}</p>
                         </div>
-                        <p className="para mt-4">{teammember.team_member_about}</p>
-                     </div>
-                  ))}
-               </OwlCarousel>
+                     ))}
+                  </OwlCarousel>
+               </div>
             </div>
          </div>
-
       </div>
    )
 }
