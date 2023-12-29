@@ -86,7 +86,7 @@ body::-webkit-scrollbar {
    background: linear-gradient(180deg, #000 12.08%, rgba(0, 0, 0, 0) 110.57%);
 }
 .env_video_container {
-   position: relative;
+   position: sticky;
    top: 10%;
    left: 15%;
    max-width: 350px;
@@ -156,7 +156,6 @@ body::-webkit-scrollbar {
 
 @media screen and (max-width: 991px) {
    .env_video_container {
-      position: sticky;
       max-width: 250px;
       top: 6%;
    }
@@ -167,7 +166,6 @@ body::-webkit-scrollbar {
 
 @media screen and (max-width: 767px) {
    .env_video_container {
-      position: sticky;
       margin-top: 0;
       transform: rotate(180deg) translate(60%, -2%);
       // margin-bottom: -650px;
