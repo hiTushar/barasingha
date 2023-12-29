@@ -2,6 +2,7 @@ import React, { Suspense, lazy, useEffect } from 'react';
 import Banner from '../../components/pages/Banner';
 import video from "../../media/ball.webm";
 import Loader from '../../components/Loader';
+import cube from "../../media/cubeAbout.svg";
 
 const Environment = lazy(() => import('../../components/sections/Environment/Environment'));
 const Security = lazy(() => import('../../components/sections/Security/Security'));
@@ -35,11 +36,16 @@ function Home({
          <Suspense fallback={<Loader />}>
             <Environment />
          </Suspense>
-         <div className="env_video_container">
-            <div className="env_video">
-               <video disableRemotePlayback src={video} autoPlay loop muted playsInline></video>
+         <div className='home_media_container'>
+            <div className="env_video_container">
+               <div className="env_video">
+                  <video disableRemotePlayback src={video} autoPlay loop muted playsInline></video>
+               </div>
+            </div >
+            <div className='comet_image_container'>
+               <img src={cube} alt={'comet cube'} />
             </div>
-         </div >
+         </div>
          <Suspense fallback={<Loader />}>
             <Security />
          </Suspense>

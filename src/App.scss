@@ -85,10 +85,16 @@ body::-webkit-scrollbar {
    width: 100%;
    background: linear-gradient(180deg, #000 12.08%, rgba(0, 0, 0, 0) 110.57%);
 }
+.home_media_container {
+   width: 100%;
+   position: relative;
+   min-height: 250px;
+}
+
 .env_video_container {
-   position: sticky;
-   top: 10%;
-   left: 15%;
+   position: absolute;
+   top: 40px;
+   left: 100px;
    max-width: 350px;
    max-height: 350px;
    transform: rotate(180deg);
@@ -101,6 +107,11 @@ body::-webkit-scrollbar {
       mix-blend-mode: color;
    }
 }
+.comet_image_container {
+   position: absolute;
+   right: 380px
+}
+
 .App {
    text-align: center;
 }
@@ -172,6 +183,9 @@ body::-webkit-scrollbar {
    }
    .custom-container {
       padding: 0 32px;
+   }
+   .comet_image_container {
+      display: none;
    }
 }
 
