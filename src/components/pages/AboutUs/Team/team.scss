@@ -30,7 +30,7 @@
     padding: 2rem;
     text-align: center;
     margin-inline: 0.5rem;
-    height: 252px;
+   //  height: 252px;
     @media screen and (max-width: 767px) {
       // width:294px;
     }
@@ -70,7 +70,7 @@
  
  @media screen and (max-width: 767px) {
     .testimonial-card {
-       padding: 20px 10px;
+       padding: 20px 20px;
        gap: 25px;
        text-align: center;
        margin: 0 2px;
