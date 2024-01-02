@@ -169,7 +169,7 @@ function Navbar({ showBackdrop = () => { }, hideBackdrop = () => { }, backdropIs
                   {click ? <img src={cross} alt={cross} title={cross}></img>
                      : <img src={bars} alt={bars} title={bars}></img>}
                </div>
-               {click && <MobileMenu handleClick={handleClick} />}
+               {click && <MobileMenu openContactUs={() => setShowContactUsModal(true)} handleClick={handleClick} />}
             </div>
          </nav>
 
