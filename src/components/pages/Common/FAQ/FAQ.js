@@ -84,7 +84,10 @@ function Faq() {
                   </div>
                </div>
             </div>
-            <p className='text-center faq-foot-text para'>Didn't find the answer you are looking for? <div className="contact" onClick={() => setShowContactUsModal(true)}>Contact our support</div></p>
+            <div className='text-center faq-foot-text para'>
+               <p>Didn't find the answer you are looking for?</p> 
+               <p className="contact" onClick={() => setShowContactUsModal(true)}>Contact our support</p>
+            </div>
 
             <div className="faq-saphere-box faq-saphere1">
                <div className="video-box">
