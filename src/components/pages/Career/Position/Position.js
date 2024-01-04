@@ -4,7 +4,7 @@ import arrow from "../../../../media/arrow.svg";
 import career_image from "../../../../media/career_placeholder.webp";
 import './Position.scss';
 import { Link } from 'react-router-dom';
-import ContactUsModal from 'components/pages/Forms/ContactUs';
+import WorkModal from 'components/pages/Forms/Work';
 
 import positionsData from '../../../data/career.json';
 
@@ -49,11 +49,11 @@ function Position() {
                   <div className="para para--lg para--light my-3 mb-4">Join our team and help us build a secure future</div>
                   <Button buttonStyle='apply-now' onClick={() => setShowContactUsModal(true)}>APPLY NOW</Button>
                </div>
-               {showContactUsModal && <ContactUsModal closeContactUsModal={closeContactUsModal}/>}
+               {showContactUsModal && <WorkModal closeContactUsModal={closeContactUsModal}/>}
                {/* Jobs */}
                <div className="job-positions">
-               {positions.map((position) => (
-                      <div className="job-cards">
+               {positions.map((position, index) => (
+                  <div className="job-cards" key={index}>
                       <img src={`${position.career_position_image}`} alt="globe" title="globe" className='image' />
                       <div className="job-details">
                          <div className="job-title">{position.career_position_name}</div>
