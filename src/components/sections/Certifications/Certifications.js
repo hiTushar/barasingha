@@ -24,7 +24,7 @@ function Certifications() {
 
    return (
       <div className="certifications_container">
-         <div className="container">
+         <div className="component-container">
             <div className="certification_content_container">
                <div className="title-wrapper">
                   <h6 className="heading heading--fancy text-center">Appreciations</h6>

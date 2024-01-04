@@ -40,7 +40,7 @@ function Partners() {
    return (
       <div className="partners_container position-relative">
          <div className="partner_content_container">
-            <div className="container">
+            <div className="component-container">
                <div className="heading">Collaboration</div>
                <div className="sub_title">Our Partners</div>
             </div>

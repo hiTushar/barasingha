@@ -39,7 +39,7 @@ function Security() {
 
    return (
       <div className="security_main_container">
-         <div className="container">
+         <div className="component-container">
             <div className="security_main_contents_container">
                <div className="content_container_left">
                   <div className="title-wrapper">

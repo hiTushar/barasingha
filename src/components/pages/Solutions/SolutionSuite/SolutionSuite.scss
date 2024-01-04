@@ -1,11 +1,15 @@
 .solution_suite {
    display: flex;
-   .container {
+   .solution_suite_container {
       width: 100%;
       display: flex;
       object-fit: contain;
       box-sizing: border-box;
       flex-direction: column;
+      padding-inline: 2rem;
+      width: auto;
+      margin-inline: auto;
+      max-width: 1200px !important;
 
       @media (max-width: 768px) {
          flex-direction: column;

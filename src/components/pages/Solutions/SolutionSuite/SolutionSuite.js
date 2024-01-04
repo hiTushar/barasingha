@@ -9,7 +9,7 @@ import maintenance from '../../../../media/maintenance.svg';
 function SolutionSuite() {
    return (
       <section className="solution_suite">
-         <div className="container">
+         <div className="solution_suite_container">
             <div className="title-wrapper">
                <h6 className="heading heading--fancy text-center">WHY BARASINGHA</h6>
                <h2 className="heading heading--two text-center">Solution Suite</h2>

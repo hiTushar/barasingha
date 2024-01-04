@@ -96,7 +96,7 @@ const Environment = (props) => {
 
    return (
       <section className="env__main_container">
-         <div className="container">
+         <div className="component-container">
             <div className="env__main_contents_container">
                <div className="row align-items-center">
                   <div className="col">
