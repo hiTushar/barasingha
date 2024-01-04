@@ -6,6 +6,7 @@ import plug from '../../../../media/plug.svg';
 import fire from '../../../../media/fire.svg';
 import windows from '../../../../media/windows.svg';
 import check from '../../../../media/check.svg';
+import network from '../../../../media/nw_manager.svg'
 import ContactUsModal from 'components/pages/Forms/ContactUs';
 
 function SuitePricing() {
@@ -87,6 +88,9 @@ function SuitePricing() {
                         </div>
                         <div className="feature_content">
                            <div className="image"><img src={plug} alt="plug" /></div><div className="feature">Secure RDP Manager</div>
+                        </div>
+                        <div className="feature_content">
+                           <div className="image"><img src={network} alt="network" /></div><div className="feature">Smart Network Manager</div>
                         </div>
                         <div className="feature_content">
                            <div className="image"><img src={fire} alt="fire" /></div><div className="feature">Firewall</div>
