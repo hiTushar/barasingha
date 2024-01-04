@@ -52,17 +52,20 @@ function Packages() {
       const prevItem = document.querySelectorAll('.owl-item')[prevActiveIndex]
       const nextItem = document.querySelectorAll('.owl-item')[nextActiveIndex]
 
-      if (currentItem) {
+      if(currentItem) {
          currentItem.style.transform = '';
-         currentItem.querySelector('.package_card > .package_card__overlay').style = 'display: none';
+         if(currentItem.querySelector('.package_card > .package_card__overlay'))
+            currentItem.querySelector('.package_card > .package_card__overlay').style = 'display: none';
       }
-      if (prevItem) {
+      if(prevItem) {
          prevItem.style.transform = 'perspective(1000px) rotateY(20deg) translate(130px, 0) scale3d(1, 0.9, 1)';
-         prevItem.querySelector('.package_card > .package_card__overlay').style = 'display: block';
+         if(prevItem.querySelector('.package_card > .package_card__overlay'))
+            prevItem.querySelector('.package_card > .package_card__overlay').style = 'display: block';
       }
-      if (nextItem) {
+      if(nextItem) {
          nextItem.style.transform = 'perspective(1000px) rotateY(-20deg) translate(-130px, 0) scale3d(1, 0.9, 1)';
-         nextItem.querySelector('.package_card > .package_card__overlay').style = 'display: block';
+         if(nextItem.querySelector('.package_card > .package_card__overlay'))
+            nextItem.querySelector('.package_card > .package_card__overlay').style = 'display: block';
       }
       
    }
