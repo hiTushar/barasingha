@@ -52,7 +52,7 @@
    line-height: 130%;
    gap: 2px;
    letter-spacing: 0.5px;
-
+   cursor: pointer;
    &.active {
       color: #e5be20 !important;
    }
@@ -79,6 +79,10 @@
    grid-template-columns: 1fr 1fr 1fr;
    gap: 1rem;
 }
+.menu-container.solutions {
+   left: calc(50% - 247px);
+}
+
 .menu-container.solutions .menu-row {
    grid-template-columns: 1fr 2fr;
 
@@ -130,11 +134,11 @@
 
 //Products Menu
 .menu-container {
-   left: calc(50% - 200px);
+   left: calc(50% - 100px);
    top: 46px;
    display: none;
    position: absolute;
-   width: 800px;
+   width: 900px;
    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
    z-index: 1;
    border-radius: 16px;
@@ -168,7 +172,8 @@
       // align-self: stretch;
       // border-radius: 10px;
       .menu-content {
-         aspect-ratio: 1 / 1;
+         position: relative;
+         min-height: 230px;
          display: flex;
          padding: 24px;
          flex-direction: column;
@@ -199,9 +204,27 @@
          &.active {
             color: #e5be20 !important;
          }
+
+         .menu-content-link {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+         }
+
+         .menu-content-arrow {
+            position: absolute;
+            right: 24px;
+            bottom: 24px;
+            width: 14px !important;
+            display: none;
+         }
       }
       .menu-content:hover {
          background: rgba(255, 255, 255, 0.03);
+         .menu-content-arrow {
+            display: block
+         }
       }
       a{
          color: #f2f2f2 !important;
@@ -291,9 +314,7 @@
 }
 
 .menu-container a {
-   float: none;
    color: black;
-   padding: 12px 16px;
    text-decoration: none;
    display: block;
    text-align: left;

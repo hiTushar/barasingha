@@ -19,6 +19,7 @@ import website from '../media/Website.svg';
 import bars from '../media/bars.svg';
 import cross from '../media/cross.svg';
 import MobileMenu from './MobileMenu';
+import LinkArrow from '../media/arrow.svg';
 
 function Navbar({ showBackdrop = () => { }, hideBackdrop = () => { }, backdropIsVisible = false, setShowContactUsModal = () => { }, ...props }) {
 
@@ -66,33 +67,43 @@ function Navbar({ showBackdrop = () => { }, hideBackdrop = () => { }, backdropIs
                      <div className="menu-container">
                         <div className="menu-row">
                            <div className='menu-column'>
-                              <Link to="/productspage" className='menu-content mb-3'>
-                                 <img src={globe} alt="globe" title="globe" />
-                                 <span className="heading heading--three">Corporate Web Control</span>
-                              </Link>
+                              <div className='mb-3 menu-content'>
+                                 <Link to="/productspage">
+                                    <div className='menu-content-link'>
+                                       <img src={globe} alt="globe" title="globe" />
+                                       <span className="heading heading--three">Corporate Web Control</span>
+                                    </div>
+                                    <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
+                                 </Link>
+                              </div>
                               <div className='menu-content'>
                                  <img src={broken} alt="broken" title="broken" />
                                  <span className="heading heading--three">Windows Booster</span>
+                                 <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
                               </div>
                            </div>
                            <div className='menu-column'>
                               <div className='menu-content mb-3'>
                                  <img src={creditcard} alt="creditcard" title="creditcard" />
                                  <span className="heading heading--three">End Point Security</span>
+                                 <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
                               </div>
                               <div className='menu-content'>
                                  <img src={safebox} alt="safebox" title="safebox" />
                                  <span className="heading heading--three">Password Vault Manager</span>
+                                 <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
                               </div>
                            </div>
                            <div className='menu-column'>
                               <div className='menu-content mb-3'>
                                  <img src={hacker} alt="hacker" title="hacker" />
                                  <span className="heading heading--three">Secure RDP Manager</span>
+                                 <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
                               </div>
                               <div className='menu-content'>
                                  <img src={server} alt="server" title="server" />
                                  <span className="heading heading--three">Firewall</span>
+                                 <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
                               </div>
                            </div>
                         </div>
@@ -124,22 +135,28 @@ function Navbar({ showBackdrop = () => { }, hideBackdrop = () => { }, backdropIs
                               <div className="menu-sub-row">
                                  <div className='menu-column'>
                                     <Link to='/solutionspage' className='menu-content mb-3'>
-                                       <img src={sirine} alt="sirine" title="sirine" />
-                                       <div className='heading heading--three'>Threat hunting and blocking</div>
+                                       <div className='menu-content-link'>
+                                          <img src={sirine} alt="sirine" title="sirine" />
+                                          <div className='heading heading--three'>Threat hunting and blocking</div>
+                                          <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
+                                       </div>
                                     </Link>
                                     <div className='menu-content'>
                                        <img src={hacker2} alt="hacker2" title="hacker2" />
                                        <div className='heading heading--three'>Protecting personally identifiable data</div>
+                                       <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
                                     </div>
                                  </div>
                                  <div className='menu-column'>
                                     <div activeClassName="active" to="" className='menu-content mb-3'>
                                        <img src={website} alt="website" title="website" />
                                        <div className='heading heading--three'>Behaviour detection and repeat offenders</div>
+                                       <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
                                     </div>
                                     <div activeClassName="active" to="" className='menu-content'>
                                        <img src={protection} alt="protection" title="protection" />
                                        <div className='heading heading--three'>New forms of ransomware</div>
+                                       <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
                                     </div>
                                  </div>
                               </div>
