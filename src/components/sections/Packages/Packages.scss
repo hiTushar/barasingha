@@ -181,6 +181,7 @@
       padding-top: 56px;
       max-width: 1500px;
       margin: 0 auto;
+      position: relative;
       .package_card {
          display: flex;
          overflow: hidden;
@@ -241,17 +242,19 @@
                padding: 0;
             }
          }
-         &__overlay {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            z-index: 5;
-            width: 100%;
-            height: 100%;
-            background: -moz-linear-gradient(90deg, rgba(1,18,28,0) 0%, rgba(1,18,28,1) 10%, rgba(1,18,28,1) 90%, rgba(1,18,28,0) 100%);
-            background: -webkit-linear-gradient(90deg, rgba(1,18,28,0) 0%, rgba(1,18,28,1) 10%, rgba(1,18,28,1) 90%, rgba(1,18,28,0) 100%);
-            background: linear-gradient(90deg, rgba(1,18,28,0) 0%, rgba(1,18,28,1) 10%, rgba(1,18,28,1) 90%, rgba(1,18,28,0) 100%);
-         }
+      }
+      .package_details__overlay {
+         pointer-events: none;
+         position: absolute;
+         top: 0px;
+         left: 0px;
+         z-index: 5;
+         width: 100%;
+         height: 100%;
+         background: rgb(1, 18, 28);
+         background: -moz-linear-gradient(90deg, rgba(1, 18, 28,1) 2%, rgba(1, 18, 28,0) 6%, rgba(1, 18, 28,0) 94%, rgba(1, 18, 28,1) 98%);
+         background: -webkit-linear-gradient(90deg, rgba(1, 18, 28,1) 2%, rgba(1, 18, 28,0) 6%, rgba(1, 18, 28,0) 94%, rgba(1, 18, 28,1) 98%);
+         background: linear-gradient(90deg, rgba(1, 18, 28,1) 2%, rgba(1, 18, 28,0) 6%, rgba(1, 18, 28,0) 94%, rgba(1, 18, 28,1) 98%);   
       }
    }
 
@@ -459,6 +462,7 @@
             }
          }
       }
+      padding-inline: 2rem;
    }
 }
 

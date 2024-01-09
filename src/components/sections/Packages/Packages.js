@@ -54,20 +54,13 @@ function Packages() {
 
       if(currentItem) {
          currentItem.style.transform = '';
-         if(currentItem.querySelector('.package_card > .package_card__overlay'))
-            currentItem.querySelector('.package_card > .package_card__overlay').style = 'display: none';
       }
       if(prevItem) {
          prevItem.style.transform = 'perspective(1000px) rotateY(20deg) translate(130px, 0) scale3d(1, 0.9, 1)';
-         if(prevItem.querySelector('.package_card > .package_card__overlay'))
-            prevItem.querySelector('.package_card > .package_card__overlay').style = 'display: block';
       }
       if(nextItem) {
          nextItem.style.transform = 'perspective(1000px) rotateY(-20deg) translate(-130px, 0) scale3d(1, 0.9, 1)';
-         if(nextItem.querySelector('.package_card > .package_card__overlay'))
-            nextItem.querySelector('.package_card > .package_card__overlay').style = 'display: block';
       }
-      
    }
 
    React.useEffect(() => {
@@ -157,10 +150,10 @@ function Packages() {
                               </div>
                            </div>
                         </div>
-                        <div className='package_card__overlay'></div>
                      </div>
                   ))}
                </OwlCarousel>
+               <div className='package_details__overlay'></div>
             </div>
             : <div className="package_details_container_mobile">
                <SlikSlider {...slickMob} dots={false}>
