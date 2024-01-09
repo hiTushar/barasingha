@@ -34,6 +34,14 @@
             height: 400px;
             align-items: center;
          }
+         &:hover {
+            background: radial-gradient(
+               185.16% 185.16% at 50% 0%,
+               rgba(0, 31, 41, 0.75) 0%,
+               #022032 100%
+            ) !important;
+         }
+
          .image-card {
             img {
                width: 100%;

@@ -22,7 +22,7 @@ function Applications() {
                      <img src={placeholder1} className="align" alt="securitysuite" />
                   </div>
                </div>
-               <div className="project-card1">
+               <div className="project-card">
                   <h3 className="heading heading--three padding-16">Secure remote access for teachers and students</h3>
                   <p className="para para--light">Give physicians, administrators, developers, and contractors secure and streamlined access to internal systems.</p>
                   <div className="image-card">
