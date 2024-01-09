@@ -44,22 +44,25 @@ function Partners() {
                <div className="heading">Collaboration</div>
                <div className="sub_title">Our Partners</div>
             </div>
-            <OwlCarousel
-               items={getCurrentDimension() ? 1 : 3}
-               className="owl-theme"
-               loop={true}
-               nav={false}
-               dots={true}
-               margin={10}
-               navContainerClass="owl-nav"
-               stagePadding={getCurrentDimension() ? 0 : 120} >
-               {partners.map((partner, index) => (
-                  <div className="partner-card" key={index}>
-                     <img className="partner_logo" src={`${partner.partner_logo_url}`} alt={"logo"}/>
-                     <p className= "para para--light desc">{partner.partner_description}</p>
-                  </div>
-               ))}
-            </OwlCarousel>
+            <div className='partner-carousel-container'>
+               <OwlCarousel
+                  items={getCurrentDimension() ? 1 : 3}
+                  className="owl-theme"
+                  loop={true}
+                  nav={false}
+                  dots={true}
+                  margin={10}
+                  navContainerClass="owl-nav"
+                  stagePadding={getCurrentDimension() ? 0 : 120} >
+                  {partners.map((partner, index) => (
+                     <div className="partner-card" key={index}>
+                        <img className="partner_logo" src={`${partner.partner_logo_url}`} alt={"logo"}/>
+                        <p className= "para para--light desc">{partner.partner_description}</p>
+                     </div>
+                  ))}
+               </OwlCarousel>
+               <div className='partner-carousel-overlay'></div>
+            </div>
          </div>
 
       </div>
