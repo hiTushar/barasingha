@@ -92,6 +92,10 @@
       background: -moz-linear-gradient(90deg, rgba(9,16,14,1) 2%, rgba(9,16,14,0) 6%, rgba(9,16,14,0) 94%, rgba(9,16,14,1) 98%);
       background: -webkit-linear-gradient(90deg, rgba(9,16,14,1) 2%, rgba(9,16,14,0) 6%, rgba(9,16,14,0) 94%, rgba(9,16,14,1) 98%);
       background: linear-gradient(90deg, rgba(9,16,14,1) 2%, rgba(9,16,14,0) 6%, rgba(9,16,14,0) 94%, rgba(9,16,14,1) 98%);
+   
+      @media screen and (max-width: 450px) {
+         display: none;
+      } 
    }
 }
 
@@ -114,6 +118,6 @@
    }
    .partners_container {
       padding-inline: 2rem !important;
-      width: calc(100% - 4rem);
+      // width: calc(100% - 4rem);
    }
 }
