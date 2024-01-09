@@ -8,23 +8,24 @@ linear-gradient(0deg, #022439, #022439);
    @include responsive(md) {
       margin-block: 80px;
    }
+   .title-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      max-width: 1008px;
+      margin-inline: auto;
 
-   .container {
-      .title-wrapper {
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         flex-direction: column;
+      div:nth-child(1) {
+         margin-bottom: 16px;
+      }
 
-         max-width: 1008px;
-         margin-inline: auto;
+      div:nth-child(2) {
+         margin-bottom: 40px;
+      }
 
-         p {
-            max-width: 464px;
-         }
-         .padding-24{
-            padding-top: 2rem !important;
-         }
+      p {
+         max-width: 464px;
       }
    }
 }

@@ -19,7 +19,7 @@ export default function AboutUs() {
                   <div className="heading heading--one text-gradient text-center">
                   Revolution
                   </div>
-                  <p className="para para--lg para--light text-center padding-24">NPAV offers comprehensive cyber security solutions across products</p>
+                  <p className="para para--lg para--light text-center">NPAV offers comprehensive cyber security solutions across products</p>
                </div>
             </div>
          </section>
