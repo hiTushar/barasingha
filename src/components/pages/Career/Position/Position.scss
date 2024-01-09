@@ -76,6 +76,10 @@
 
             button {
                display: inline-block !important;
+               padding: 8px 32px !important;
+               span {
+                  z-index: 5 !important;
+               }
             }
 
             @media screen and (max-width: 768px) {
