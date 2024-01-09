@@ -28,7 +28,7 @@
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
       margin-block: 3.5rem;
-
+      position: relative;
       @media screen and (max-width: 768px) {
          grid-template-columns: 1fr;
       }
@@ -129,12 +129,12 @@ ul.tab-content-list li {
 }
 
 .faq-saphere-box.faq-saphere1 {
-   top: 20%;
-   left: 2%;
+   top: -80px;
+   left: -80px;
 }
 .faq-saphere-box.faq-saphere2 {
-   right: 5%;
-   bottom: 10%;
+   bottom: -80px;
+   right: -80px;
 }
 .faq-saphere-box.faq-saphere1 .video-box {
    background: linear-gradient(

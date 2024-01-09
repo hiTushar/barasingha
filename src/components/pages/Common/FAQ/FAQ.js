@@ -83,22 +83,23 @@ function Faq() {
                      ))}
                   </div>
                </div>
+               <div className="faq-saphere-box faq-saphere1">
+                  <div className="video-box">
+                     <video disableRemotePlayback src={video} autoPlay loop muted playsInline></video>
+                  </div>
+               </div>
+               <div className="faq-saphere-box faq-saphere2">
+                  <div className="video-box">
+                     <video disableRemotePlayback src={video2} autoPlay loop muted playsInline></video>
+                  </div>
+               </div>
             </div>
             <div className='text-center faq-foot-text para'>
                <p>Didn't find the answer you are looking for?</p> 
                <p className="contact" onClick={() => setShowContactUsModal(true)}>Contact our support</p>
             </div>
 
-            <div className="faq-saphere-box faq-saphere1">
-               <div className="video-box">
-                  <video disableRemotePlayback src={video} autoPlay loop muted playsInline></video>
-               </div>
-            </div>
-            <div className="faq-saphere-box faq-saphere2">
-               <div className="video-box">
-                  <video disableRemotePlayback src={video2} autoPlay loop muted playsInline></video>
-               </div>
-            </div>
+           
          </div>
          {showContactUsModal && <ContactUsModal closeContactUsModal={closeContactUsModal}/>}
       </div>
