@@ -3,7 +3,7 @@
    // background-image: url('../../../../media/pattern 2.png'), url('../../../../media/pattern1.png');
    // background-position: left, right;
    // background-repeat: no-repeat;background-position: contain;
-   background-color: #01121C;
+   background-color: #09100E;
    position: relative;
    z-index: 1;
    @media screen and (max-width: 769px) {
@@ -56,7 +56,7 @@
    bottom: 0;
    left: 0;
    right: 0;
-   background-image: url('../../../media/pattern 2.webp'), url('../../../media/pattern1.webp');
+   background: url('../../../media/pattern 2.webp'), url('../../../media/pattern1.webp');
    opacity: 0.3;
    background-position: left, right;
    background-repeat: no-repeat;background-position: contain;
