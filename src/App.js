@@ -123,9 +123,9 @@ function App() {
               />
 
             </Switch>
+            <Footer setShowContactUsModal={setShowContactUsModal} />
           </div>
 
-        <Footer setShowContactUsModal={setShowContactUsModal} />
 
         {showContactUsModal && <ContactUsModal closeContactUsModal={closeContactUsModal} />}
         {showWentWrong && <WentWrong closeWentWrong={closeWentWrong}/>}
