@@ -396,7 +396,7 @@ function Packages() {
                                  <div className="security_stage ms-2">Standard Security</div>
                               </div>
                               <div className="indiv_feature mb-2">Firewall</div>
-                              <div className="para para--light">Smart Network Manager is a tool for system admins to manage each Windows PC in the network without actually visiting the PC</div>
+                              <div className="para para--light">Smart Network Manager is a tool for system admins to manage each Windows PC in the network without actually visiting</div>
                            </div>
                         </div>
                      </div>
@@ -444,7 +444,7 @@ function Packages() {
                                  <div className="security_stage ms-2">Standard Security</div>
                               </div>
                               <div className="indiv_feature mb-2">Secure RDP Manager</div>
-                              <div className="para para--light">Smart Network Manager is a tool for system admins to manage each Windows PC in the network without actually visiting the PC</div>
+                              <div className="para para--light">Smart Network Manager is a tool for system admins to manage each Windows PC in the network without actually visiting</div>
                            </div>
                         </div>
                      </div>
