@@ -1,6 +1,6 @@
 .features_container {
    margin-block: 180px 160px;
-
+   overflow: hidden;
    @media screen and (max-width: 767px) {
       margin-block: 120px;
    }
@@ -91,6 +91,10 @@
                color: #e5be20;
             }
 
+            &:active {
+               border: none !important;
+            }
+            
             &[disabled] {
                color: #e5be20;
                border-bottom: 2px solid #e5be20;
@@ -173,6 +177,27 @@
                }
             }
          }
+      }
+   }
+   .bg {
+      position: absolute;
+      max-width: 400px;
+      height: 300px;
+      z-index: 5;
+      top: -50px;
+      bottom: 0;
+      left: 900px;
+      right: 0px;
+      opacity: 0.3;
+      background-repeat: no-repeat;
+      background-position:right;
+      pointer-events: none;
+      overflow: hidden;
+      img { 
+         height: auto;
+         max-width: none;
+         position: absolute;
+         left: -50px
       }
    }
 }

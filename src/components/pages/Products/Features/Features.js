@@ -1,7 +1,8 @@
 import React, { useState, useRef } from 'react';
-import malware from "../../../../media/malware.webp";
+import placeholder3 from "../../../../media/placeholder_img_3.webp";
 import PlayFilled from "../../../../media/PlayFilled.svg";
 import './Features.scss';
+import pattern from '../../../../media/pattern1.webp';
 
 function Features() {
    const [currentTab, setCurrentTab] = useState('1');
@@ -14,7 +15,7 @@ function Features() {
          title: 'Root cause analysis cyber threat at its worst',
          description: 'All NPAV endpoints, including endpoints and mobiles, can be managed from our cloud-based unified management console Smart Network Manager.',
          link: "https://www.google.com",
-         image: malware
+         image: placeholder3
       },
       {
          id: 2,
@@ -22,7 +23,7 @@ function Features() {
          title: '2 - Root cause analysis cyber threat at its worst',
          description: 'All NPAV endpoints, including endpoints and mobiles, can be managed from our cloud-based unified management console Smart Network Manager.',
          link: "https://www.google.com",
-         image: malware
+         image: placeholder3
       },
       {
          id: 3,
@@ -30,7 +31,7 @@ function Features() {
          title: '3 - Root cause analysis cyber threat at its worst',
          description: 'All NPAV endpoints, including endpoints and mobiles, can be managed from our cloud-based unified management console Smart Network Manager.',
          link: "https://www.google.com",
-         image: malware
+         image: placeholder3
       },
       {
          id: 4,
@@ -38,7 +39,7 @@ function Features() {
          title: '4 - Root cause analysis cyber threat at its worst',
          description: 'All NPAV endpoints, including endpoints and mobiles, can be managed from our cloud-based unified management console Smart Network Manager.',
          link: "https://www.google.com",
-         image: malware
+         image: placeholder3
       },
       {
          id: 5,
@@ -46,7 +47,7 @@ function Features() {
          title: '4 - Root cause analysis cyber threat at its worst',
          description: 'All NPAV endpoints, including endpoints and mobiles, can be managed from our cloud-based unified management console Smart Network Manager.',
          link: "https://www.google.com",
-         image: malware
+         image: placeholder3
       },
       {
          id: 6,
@@ -54,7 +55,7 @@ function Features() {
          title: '4 - Root cause analysis cyber threat at its worst',
          description: 'All NPAV endpoints, including endpoints and mobiles, can be managed from our cloud-based unified management console Smart Network Manager.',
          link: "https://www.google.com",
-         image: malware
+         image: placeholder3
       },
       {
          id: 7,
@@ -62,7 +63,7 @@ function Features() {
          title: '4 - Root cause analysis cyber threat at its worst',
          description: 'All NPAV endpoints, including endpoints and mobiles, can be managed from our cloud-based unified management console Smart Network Manager.',
          link: "https://www.google.com",
-         image: malware
+         image: placeholder3
       },
    ];
    const handleTabClick = (e) => {
@@ -74,7 +75,7 @@ function Features() {
 
    return (
       <div className="features_container">
-         <div className="component-container">
+         <div className="component-container position-relative">
             <div className="title-wrapper">
                <h6 className="heading heading--fancy text-center">Details</h6>
                <h2 className="heading heading--two text-center my-2">Features</h2>
@@ -104,9 +105,9 @@ function Features() {
                         {currentTab === `${tab.id}` &&
                            <div className='tab-item'>
                               {/* Image */}
-                              <div className="image-wrapper">
-                                 <img src={malware} alt="malware" />
-                              </div>
+                              {/* <div className="image-wrapper"> */}
+                                 <img src={placeholder3} alt="malware" />
+                              {/* </div> */}
                               <div className="tab-content">
                                  <h2 className="heading heading--two">
                                     {tab.title}
@@ -124,6 +125,9 @@ function Features() {
                      </div>
                   )}
                </div>
+            </div>
+            <div className='bg'>
+               <img src={pattern} alt='pattern' />
             </div>
          </div>
       </div>
