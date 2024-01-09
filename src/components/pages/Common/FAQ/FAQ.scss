@@ -32,6 +32,9 @@
       @media screen and (max-width: 768px) {
          grid-template-columns: 1fr;
       }
+      li {
+         list-style-type: disc;
+      }
    }
    .nav-card {
       padding: 24px;
