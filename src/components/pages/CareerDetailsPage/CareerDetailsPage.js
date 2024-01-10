@@ -4,9 +4,9 @@ import fulltime from "../../../media/fulltime.svg";
 import remote from "../../../media/remote.svg";
 import arrowDown from "../../../media/arrowdown.svg";
 import './CareerDetailsPage.scss';
-import WorkWithUs from '../Forms/WorkWithUs';
 import positionDetailsData from "../../data/positionDetails.json";
 import LinkArrow from '../../../media/arrow.svg';
+import WorkModal from '../Forms/Work';
 
 function CareerDetailsPage() {
 
@@ -142,7 +142,7 @@ function CareerDetailsPage() {
                </div>
             </div>
          </div>
-         {showWorkWithUsModal && <WorkWithUs closeWorkWithUsModal={closeWorkWithUsModal} />}
+         {showWorkWithUsModal && <WorkModal closeContactUsModal={closeWorkWithUsModal} />}
       </div>
    );
 }
