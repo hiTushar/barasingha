@@ -4,9 +4,13 @@ import caseStudyData from "./PostDetailPageData.js";
 import cyber from "../../../media/cyber_attack.webp";
 import transfer from "../../../media/data_transfer.svg";
 import { Button } from 'components/Button';
+import LinkArrow from '../../../media/arrow.svg';
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 export const PostDetailPage = () => {
 
+   const history = useHistory();
+   
    useEffect(() => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
    }, [])
@@ -16,6 +20,9 @@ export const PostDetailPage = () => {
          <div className="component-container">
             <div className="PostDetailPage_main">
                <div className="content">
+                  <div className="content-back-button" onClick={() => history.goBack()}>
+                     <img src={LinkArrow} alt={'back button'} /> 
+                  </div>
                   <div className="survey">SURVEY RESEARCH</div>
                   <div className="CaseStudy_details">
                      <h1 className="heading heading--one blogHeading">{caseStudyData && caseStudyData.title}</h1>
@@ -71,8 +78,8 @@ export const PostDetailPage = () => {
                      </div>
                   </div>
                   <div className="buttons">
-                     <Button buttonStyle="btn--outline">Previous</Button>
-                     <Button buttonStyle="button2">Read Next</Button>
+                     <Button buttonStyle="btn--outline">PREVIOUS</Button>
+                     <Button buttonStyle="button2">READ NEXT</Button>
                   </div>
                </div>
             </div>

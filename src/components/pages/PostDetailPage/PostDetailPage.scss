@@ -28,6 +28,14 @@
          max-width: 794px;
          padding: 0;
 
+         .content-back-button {
+            position: relative;
+            top: -50px;
+            cursor: pointer;
+            img {
+               transform: rotate(225deg);
+            }
+         }
          .backArrow {
             width: 24px;
             height: 24px;
