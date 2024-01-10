@@ -111,7 +111,7 @@
             caret-color: #E5BE20;
             border-radius: 8px;
             padding: 16px;
-            background: rgba(55, 69, 79, 1);
+            background: #13222D;
             color: #FFF;
             font-size: 12px;
             &:focus {
@@ -121,10 +121,11 @@
          .form-field-textarea {
             box-sizing: border-box;
             width: 100%;
+            resize: none;
             border: none;
             caret-color: #E5BE20;
             color: #FFF;
-            background: rgba(55, 69, 79, 1);
+            background: #13222D;
             border-radius: 8px;
             padding: 16px;
             font-size: 12px;
@@ -148,6 +149,7 @@
             border-radius: 4px;
             background:#E5BE20;
             font-size: 12px;
+            letter-spacing: 0.24px;
             @media (max-width: 768px) {
                width: 100%;
             }
