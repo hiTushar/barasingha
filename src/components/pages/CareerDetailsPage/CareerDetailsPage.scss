@@ -5,30 +5,37 @@
        //margin-block: 120px;
        padding: 1px;
     }
-    .container {
-       .title-wrapper {
-          .career_details_title {
-             color: #fdfdff;
-             text-align: center;
-             font-family: Manrope;
-             font-size: 32px;
-             font-style: normal;
-             font-weight: 700;
-             line-height: 120%; /* 38.4px */
-             padding-bottom: 10px;
-          }
-          .career_details_join_team {
-             color: #fff;
-             text-align: center;
-             font-family: Manrope;
-             font-size: 16px;
-             font-style: normal;
-             font-weight: 500;
-             line-height: 150%; /* 24px */
-             opacity: 0.3;
-          }
-       }
-    }
+   .title-wrapper {
+      display: flex;
+      .title-link-arrow {
+         align-self: center;
+         transform: rotate(225deg);
+         cursor: pointer;
+      }
+      .title-header {
+         flex: 1;
+         .career_details_title {
+            color: #fdfdff;
+            text-align: center;
+            font-family: Manrope;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%; /* 38.4px */
+            padding-bottom: 10px;
+         }
+         .career_details_join_team {
+            color: #fff;
+            text-align: center;
+            font-family: Manrope;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 150%; /* 24px */
+            opacity: 0.3;
+         }
+      }
+   }
  
     .career_details {
        margin-top: 3.5rem;

@@ -1,16 +1,20 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import fulltime from "../../../media/fulltime.svg";
 import remote from "../../../media/remote.svg";
 import arrowDown from "../../../media/arrowdown.svg";
 import './CareerDetailsPage.scss';
 import WorkWithUs from '../Forms/WorkWithUs';
 import positionDetailsData from "../../data/positionDetails.json";
+import LinkArrow from '../../../media/arrow.svg';
 
 function CareerDetailsPage() {
 
    useEffect(() => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
    }, [])
+
+   const history = useHistory();
 
    const [currentTab, setCurrentTab] = useState('1');
    const careerNav = useRef(null);
@@ -54,8 +58,13 @@ function CareerDetailsPage() {
       <div className="career_details_container">
          <div className="component-container">
             <div className="title-wrapper">
-               <h6 className="career_details_title">Available Career Positions</h6>
-               <h2 className="career_details_join_team">Join our team and help us build a secure future</h2>
+               <div className='title-link-arrow' onClick={() => history.goBack()}>
+                  <img src={LinkArrow} alt={'arrow'} />
+               </div>
+               <div className='title-header'>
+                  <h6 className="career_details_title">Available Career Positions</h6>
+                  <h2 className="career_details_join_team">Join our team and help us build a secure future</h2>
+               </div>
             </div>
 
             <div className='career_details'>
