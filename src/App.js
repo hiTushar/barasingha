@@ -21,6 +21,7 @@ import WentWrong from 'components/pages/Errors/WentWrong/WentWrong';
 import Page404 from 'components/pages/Errors/Page404/Page404';
 import SendingFailed from 'components/pages/Errors/SendingFailed/SendingFailed';
 import WrongPassword from 'components/pages/Errors/WrongPassword/WrongPassword';
+import PathNotFound from 'components/pages/PathNotFound/PathNotFound';
 
 function App() {
 
@@ -121,7 +122,10 @@ function App() {
                 path='/careerdetailspage'
                 render={() => <CareerDetailsPage setShowContactUsModal={setShowContactUsModal} />}
               />
-
+              <Route 
+                path='*'
+                render={() => <PathNotFound setShowPage404={setShowPage404}/>}
+              />
             </Switch>
             <Footer setShowContactUsModal={setShowContactUsModal} />
           </div>
