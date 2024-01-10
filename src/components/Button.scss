@@ -2,8 +2,11 @@
    --primary: #fff;
 }
 
-.btn {
-   padding: 10px 16px !important;
+.barasingha-btn {
+   font-size: 12px;
+   letter-spacing: 0.24px;
+   font-weight: 800;
+   padding: 8px 24px !important;
    border-radius: 2px;
    outline: none;
    border: none;
@@ -50,6 +53,7 @@
    background-color: transparent;
    color: var(--primary) !important;
    border: 1px solid var(--primary) !important;
+   border-radius: 4px !important;
    transition: all 0.3s ease-out !important;
 
    &:hover {
@@ -58,8 +62,8 @@
 }
 
 .btn--medium {
-   padding: 8px 20px;
-   font-size: 18px;
+   // padding: 8px 20px;
+   // font-size: 18px;
 }
 
 .btn--large {

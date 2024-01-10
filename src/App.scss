@@ -10,6 +10,10 @@
 // Imprting utilities
 @import "./styles/utils/helpers";
 
+* {
+   font-family: "Manrope", sans-serif;
+}
+
 *,
 ::after,
 ::before {
@@ -17,7 +21,6 @@
 }
 
 body {
-   font-family: "Manrope", sans-serif;
    background: linear-gradient(
          0deg,
          rgba(0, 0, 0, 0.5) 0%,
