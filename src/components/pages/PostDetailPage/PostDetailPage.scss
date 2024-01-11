@@ -12,14 +12,8 @@
       flex-direction: column;
       align-items: center;
       width: auto;
-
-      margin-block: 100px;
+      margin-block: 75px;
       width: 100%;
-
-      @media screen and (max-width: 768px) {
-         margin-block: 80px;
-      }
-
       .content {
          display: flex;
          flex-direction: column;
@@ -70,10 +64,8 @@
          .CaseStudy_details {
             width: 100%;
             .blogHeading {
-               text-align: left;
-               width: 80%;
-               font-size: 2.5rem;
-               font-weight: 600;
+               font-size: 32px;
+               font-weight: 700;
             }
 
             a:has(.btn--primary),
@@ -95,7 +87,6 @@
                   img {
                      width: 100%;
                      height: auto;
-                     border-radius: 0 !important;
                   }
                   .subtopic_title {
                      color: #f2f2f2;
@@ -112,7 +103,6 @@
                      margin: 0;
                      padding: 0;
                      li {
-                        color: #9a9fa1;
                         font-family: Manrope;
                         font-size: 16px;
                         font-weight: 400;
@@ -122,31 +112,40 @@
                   }
                   .cyber {
                      margin-top: 56px;
-                     max-width: 794px;
-                     max-height: 361px;
                      border-radius: 8px;
+                     height: 200px;
+                     object-fit: cover;
+
+                     @media all and (min-width: 768px) {
+                        height: auto;
+                        width: 100%;
+                     }
                   }
                }
 
                .extra_data {
                   display: flex;
                   gap: 56px;
-                  @media screen and (max-width: 768px) {
-                     flex-direction: column;
-                  }
+                  flex-direction: column;
 
+                  @media all and (min-width: 768px) {
+                     flex-direction: row;
+                  }
 
                   .transfer {
-                     max-width: 320px;
-                     max-height: 320px;
                      border-radius: 8px;
+                     @media all and (min-width: 768px) {
+                        flex: 1;
+                     }
                   }
                   .group {
+                     @media all and (min-width: 768px) {
+                        flex: 1.5;
+                     }
                      .text {
                         display: flex;
                         flex-direction: column;
                         gap: 30px;
-                        max-width: 418px;
                         color: #9a9fa1;
                         font-family: Manrope;
                         font-size: 16px;
