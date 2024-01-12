@@ -1,18 +1,20 @@
 .faq-section {
-   padding-block: 100px 80px;
-
-   @media screen and (max-width: 767px) {
-      padding-block: 80px;
-   }
-
+   padding-top: 50px;
    background-image: linear-gradient(#000000, #000000f0, #00000000);
    background: #09100e;
    z-index: 1;
-   .faq-box {
-      padding-top: 72px;
-   }
-   .tab-pills-box {
-      gap: 12px;
+
+   .title-wrapper {
+      h6 {
+         font-size: 12px;
+         @media all and (min-width: 992px) {
+            font-size: 16px;
+         }
+      }
+      h2 {
+         font-size: 18x;
+         font-weight: 700;
+      }
    }
    .tab-content {
       border-radius: 16px;
@@ -20,27 +22,216 @@
       background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(10px);
       padding: 32px;
-      /* flex: 1 1 auto; */
    }
 
    .faqRow {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
       gap: 1rem;
       margin-block: 3.5rem;
       position: relative;
-      @media screen and (max-width: 768px) {
-         grid-template-columns: 1fr;
+
+      .allFaq {
+         display: flex;
+         flex-direction: column;
+         gap: 12px;
+         position: relative;
+      }
+
+      .tab-content-inner-box {
+         gap: 32px;
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+
+         .tab-content-text {
+            color: #f2f2f2;
+            font-family: Manrope;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 170%; /* 27.2px */
+
+            @media all and (min-width: 400px) {
+               font-size: 14px;
+            }
+
+            @media all and (min-width: 992px) {
+               font-size: 16px;
+            }
+         }
+
+         .tab-content-list {
+            margin-bottom: 0px;
+         
+            li {
+               color: #f2f2f2;
+               font-family: Manrope;
+               font-size: 12px;
+               font-style: normal;
+               font-weight: 500;
+               line-height: 170%; /* 30.6px */
+
+               @media all and (min-width: 400px) {
+                  font-size: 14px;
+               }
+
+               @media all and (min-width: 992px) {
+                  font-size: 16px;
+               }
+            }
+         }
+
+         .tab-content-fade-text {
+            color: #fff;
+            font-family: Manrope;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 150%; /* 24px */
+            opacity: 0.5;
+
+            @media all and (min-width: 400px) {
+               font-size: 14px;
+            }
+
+            @media all and (min-width: 992px) {
+               font-size: 16px;
+            }
+         }
       }
       li {
          list-style-type: disc;
       }
-   }
-   .nav-card {
-      padding: 24px;
-      justify-content: space-between;
-      align-items: center;
-      flex: 1;
+      .nav-card {
+         padding: 18px;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         gap: 5px;
+         border-radius: 16px;
+         border: 1px solid #151729;
+         background: rgba(255, 255, 255, 0.01);
+         backdrop-filter: blur(10px);
+         cursor: pointer;
+         color: #f2f2f2;
+         font-style: normal;
+         font-weight: 500;
+         line-height: normal;
+
+         @media all and (min-width: 992px) {
+            width: 50%;
+            flex: 1;
+         }
+
+         &.active {
+            background: rgba(255, 255, 255, 0.05);
+            
+            .tab-arrow {
+               img {
+                  transform: rotate(-90deg);
+                  opacity: 1;
+
+                  @media all and (min-width: 992px) {
+                     transform: rotate(0deg);
+                  }
+               }
+            }
+         }
+
+         .tab-title {
+            font-size: 16px;
+
+            @media all and (min-width: 400px) {
+               font-size: 18px;
+            }
+         }
+         .tab-arrow {
+            width: 22px;
+            flex: 0 0 22px;
+            align-self: center;
+            img {
+               opacity: 0.1;
+               transform: rotate(90deg);
+               @media all and (min-width: 992px) {
+                  transform: rotate(0deg);
+               }
+            }
+         }
+      }
+      .tab-pane {
+         border-radius: 16px;
+         border: 1px solid rgba(44, 45, 61, 0);
+         background: rgba(255, 255, 255, 0.05);
+         backdrop-filter: blur(10px);
+         padding: 32px;
+         margin-top: 12px;
+         @media all and (min-width: 992px) {
+            position: absolute;
+            right: 0px;
+            top: -12px;
+            width: calc(50% - 12px);
+            height: 100%;
+         }
+
+         &.view-tab {
+            display: block;
+         }
+
+         &.hide-tab {
+            display: none;
+            @media all and (min-width: 992px) {
+               // display: block;
+            }
+         }
+      }
+      .faq-saphere-box {
+         position: absolute;
+         height: 250px;
+         width: 250px;
+         z-index: -1;
+         mix-blend-mode: screen;
+         transform: rotate3d(-1, 0, 0, 180deg);
+
+         &.faq-saphere1 {
+            top: -50px;
+            left: -50px;
+            width: 150px;
+            height: 150px;
+            .video-box {
+               background: linear-gradient(
+                     0deg,
+                     rgba(0, 0, 0, 0.7) 0%,
+                     rgba(0, 0, 0, 0.7) 100%
+                  ),
+                  linear-gradient(
+                     195deg,
+                     #000 11.95%,
+                     rgba(0, 0, 0, 0.94) 27.24%,
+                     rgba(0, 0, 0, 0) 82.28%
+                  );
+            }
+         }
+
+         &.faq-saphere2 {
+            bottom: -80px;
+            right: -40px;
+            width: 150px;
+            height: 150px;
+            .video-box {
+               background: linear-gradient(
+                  195deg,
+                  #000 11.95%,
+                  rgba(0, 0, 0, 0.94) 27.24%,
+                  rgba(0, 0, 0, 0) 82.28%
+               );
+            }
+         }
+         video {
+            height: 100%;
+            width: 100%;
+            mix-blend-mode: color;
+         }
+
+      }
    }
 
    .contact {
@@ -51,17 +242,25 @@
          margin-bottom: 0px;
       }
 
+      margin-bottom: 3.5em;
       font-weight: 500;
-      padding-top: 24px;
+      font-size: 12px;
       display: flex;
       justify-content: center;
       gap: 5px;
+      flex-direction: column;
+      align-items: center;
       
-      @media (max-width: 768px) {
-         flex-direction: column;
-         align-items: center;
+      @media all and (min-width: 400px) {
+         font-size: 14px;
       }
-      
+
+      @media all and (min-width: 992px) {
+         font-size: 16px;
+         flex-direction: row;
+         gap: 10px;
+      }
+
       .contact:hover {
          text-decoration: underline;
          cursor: pointer;
@@ -69,134 +268,26 @@
    }
 }
 
-.faq-section .nav-card {
-   border-radius: 16px;
-   border: 1px solid #151729;
-   background: rgba(255, 255, 255, 0.01);
-   backdrop-filter: blur(10px);
-   cursor: pointer;
-   /* flex: 1; */
-   h6 {
-      color: #f2f2f2;
-      font-family: Manrope;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
-   }
-}
-.tab-content-inner-box {
-   gap: 32px;
-   display: flex;
-   flex-direction: column;
-   width: 100%;
-}
-.tab-content-text {
-   color: #f2f2f2;
-   font-family: Manrope;
-   font-size: 16px;
-   font-style: normal;
-   font-weight: 500;
-   line-height: 170%; /* 27.2px */
-}
-ul.tab-content-list li {
-   color: #f2f2f2;
-   font-family: Manrope;
-   font-size: 18px;
-   font-style: normal;
-   font-weight: 500;
-   line-height: 170%; /* 30.6px */
-}
-
-.tab-content-fade-text {
-   color: #fff;
-   font-family: Manrope;
-   font-size: 16px;
-   font-style: normal;
-   font-weight: 300;
-   line-height: 150%; /* 24px */
-   opacity: 0.5;
-}
-.faq-section .nav-card .tab-arrow {
-   opacity: 0.1;
-   width: 22px;
-   flex: 0 0 22px;
-}
-
-.faq-section .nav-card.active .tab-arrow {
-   opacity: 1;
-}
-
-.faq-section .nav-card.active {
-   background: rgba(255, 255, 255, 0.05);
-}
-
-.faq-saphere-box.faq-saphere1 {
-   top: -80px;
-   left: -80px;
-}
-.faq-saphere-box.faq-saphere2 {
-   bottom: -80px;
-   right: -80px;
-}
-.faq-saphere-box.faq-saphere1 .video-box {
-   background: linear-gradient(
-         0deg,
-         rgba(0, 0, 0, 0.7) 0%,
-         rgba(0, 0, 0, 0.7) 100%
-      ),
-      linear-gradient(
-         195deg,
-         #000 11.95%,
-         rgba(0, 0, 0, 0.94) 27.24%,
-         rgba(0, 0, 0, 0) 82.28%
-      );
-}
-
-.faq-saphere-box.faq-saphere2 .video-box {
-   background: linear-gradient(
-      195deg,
-      #000 11.95%,
-      rgba(0, 0, 0, 0.94) 27.24%,
-      rgba(0, 0, 0, 0) 82.28%
-   );
-}
-
-.faq-saphere-box {
-   position: absolute;
-   height: 250px;
-   width: 250px;
-   z-index: -1;
-   mix-blend-mode: screen;
-   transform: rotate3d(-1, 0, 0, 180deg);
-}
-
-.faq-saphere-box video {
-   height: 100%;
-   width: 100%;
-   mix-blend-mode: color;
-}
-
 @media only screen and (max-width: 767px) {
-   .tab-pane {
-      border-radius: 16px;
-      border: 1px solid rgba(44, 45, 61, 0);
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      padding: 32px;
-      margin-top: 12px;
-      /* flex: 1 1 auto; */
-   }
-   .faq-section .nav-card .tab-arrow svg {
-      transform: rotate(90deg);
-   }
-   .faq-section .nav-card.active .tab-arrow svg {
-      transform: rotate(-90deg);
-   }
-   .faq-section .faq-title {
-      font-size: 24px;
-   }
-   .faq-section .faq-sub-heading {
-      font-size: 12px;
-   }
+   // .tab-pane {
+   //    border-radius: 16px;
+   //    border: 1px solid rgba(44, 45, 61, 0);
+   //    background: rgba(255, 255, 255, 0.05);
+   //    backdrop-filter: blur(10px);
+   //    padding: 32px;
+   //    margin-top: 12px;
+   //    /* flex: 1 1 auto; */
+   // }
+   // .faq-section .nav-card .tab-arrow svg {
+   //    transform: rotate(90deg);
+   // }
+   // .faq-section .nav-card.active .tab-arrow svg {
+   //    transform: rotate(-90deg);
+   // }
+   // .faq-section .faq-title {
+   //    font-size: 24px;
+   // }
+   // .faq-section .faq-sub-heading {
+   //    font-size: 12px;
+   // }
 }
