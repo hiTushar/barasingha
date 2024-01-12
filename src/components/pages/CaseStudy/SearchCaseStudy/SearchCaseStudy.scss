@@ -1,9 +1,9 @@
 .search_container {
-   margin-block: 100px;
+   margin-block: 50px;
 
-   @media screen and (max-width: 768px) {
-      margin-block: 80px;
-   }
+   // @media screen and (max-width: 768px) {
+   //    margin-block: 80px;
+   // }
 
    .search {
       max-width: 705px;
@@ -16,22 +16,22 @@
 
    .projects {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       gap: 2rem;
-      margin-top: 3.5rem;
+      margin-top: 32px;
       position: relative;
-      @media (max-width: 768px) {
-         grid-template-columns: 1fr;
+      // @media (max-width: 768px) {
+      //    grid-template-columns: 1fr;
+      // }
+      @media all and (min-width: 768px) {
+         grid-template-columns: 1fr 1fr;
       }
-
       .project-card {
          display: flex;
-         padding: 56px;
+         padding: 32px;
          flex-direction: column;
          align-items: flex-start;
-         //gap: 32px;
          align-self: stretch;
-
          border-radius: 16px;
          border: 1px solid rgba(53, 58, 100, 0.3);
          background: linear-gradient(
@@ -41,8 +41,37 @@
          );
          backdrop-filter: blur(10px);
 
+         @media all and (min-width: 992px) {
+            padding: 48px;
+         }
+
+         .image-card {
+            img {
+               width: 48px;
+            }
+         }
          .heading {
-            width: 90%;
+            font-size: 16px;
+            max-width: 90%;
+
+            @media all and (min-width: 400px) {
+               font-size: 18px
+            }
+
+            @media all and (min-width: 992px) {
+               font-size: 20px;
+            }
+         }
+         .para {
+            font-size: 12px;
+
+            @media all and (min-width: 400px) {
+               font-size: 14px
+            }
+
+            @media all and (min-width: 992px) {
+               font-size: 16px;
+            }
          }
 
          .heading,
@@ -52,15 +81,23 @@
 
          a {
             color: #e5be20 !important;
-
+            font-size: 12px;
             &:hover {
                border-bottom: 1px solid;
             }
+
+            @media all and (min-width: 400px) {
+               font-size: 14px
+            }
+
+            @media all and (min-width: 992px) {
+               font-size: 16px;
+            }
          }
 
-         @media (max-width: 768px) {
-            grid-template-columns: 1fr;
-         }
+         // @media (max-width: 768px) {
+         //    grid-template-columns: 1fr;
+         // }
          .padding-32{
             padding-top:32px;
          }
@@ -70,8 +107,16 @@
       }
 
       .faq-saphere-box.faq-saphere2 {
-         right: -5%;
-         top: -5%;
+         position: absolute;
+         height: 150px;
+         width: 150px;
+         right: -30px;
+         top: -30px;
+         z-index: -5;
+         mix-blend-mode: screen;
+         video {
+            width: 100%;
+         }
       }
    }
 }

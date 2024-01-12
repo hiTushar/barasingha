@@ -1,23 +1,55 @@
-.casestudy {
-}
-
 .casestudy-title {
    text-align: center;
    max-width: 1008px;
    margin-inline: auto;
-   margin-block: 100px 140px;
+   padding-top: 12px;
 
-   @media screen and (max-width: 768px) {
-      margin-block: 80px 100px;
+   h6 {
+      font-size: 12px;
+
+      @media all and (min-width: 400px) {
+         font-size: 12px;
+      }
+
+      @media all and (min-width: 992px) {
+         margin-top: 50px;
+         font-size: 16px;
+      }
+   }
+
+   h1 {
+      font-size: 32px;
+
+      @media all and (min-width: 400px) {
+         font-size: 40px;
+      }
+
+      @media all and (min-width: 992px) {
+         font-size: 48px;
+         max-width: 800px;
+         margin-inline: auto;
+      }
    }
 
    .para {
-      margin-top: 2rem;
-      max-width: 469px;
+      margin-top: 30px;
+      font-size: 12px;
       margin-inline: auto;
+
+      @media all and (min-width: 400px) {
+         font-size: 14px;
+      }
+
+      @media all and (min-width: 992px) {
+         font-size: 16px;
+         max-width: 400px;
+      }
    }
 }
 
 .casestudy-search{
-   padding-bottom: 72px;
+
+   @media all and (min-width: 992px) {
+      padding-bottom: 56px;
+   }
 }
