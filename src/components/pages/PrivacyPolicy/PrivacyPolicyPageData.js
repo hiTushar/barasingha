@@ -1,6 +1,6 @@
 const PrivacyPolicyData = {
    title: "Privacy Policy",
-   date: "Last updated on 29th December, 2024 (Yesterday)",
+   date: "Last updated on 29th December, 2023",
    subtopics: [
      {
        title: "Why do you collect my data?",
