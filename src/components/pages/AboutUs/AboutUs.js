@@ -12,17 +12,17 @@ export default function AboutUs() {
    return (
       <>
          {/* Hero of the page */}
-         <section className="hero">
-            <div className="component-container">
-               <div className="title-wrapper">
-                  <div className="heading heading--fancy text-center">OUR STORY</div>
-                  <div className="heading heading--one text-gradient text-center">
-                  Revolution
+         <div className="component-container">
+            <section className="hero">
+                  <div className="title-wrapper">
+                     <div className="heading--fancy text-center">OUR STORY</div>
+                     <div className="heading--one text-gradient text-center">
+                     Revolution
+                     </div>
+                     <p className="para para--lg para--light text-center">NPAV offers comprehensive cyber security solutions across products</p>
                   </div>
-                  <p className="para para--lg para--light text-center">NPAV offers comprehensive cyber security solutions across products</p>
-               </div>
-            </div>
-         </section>
+            </section>
+         </div>
          <WhyHow />
          <Team />
       </>

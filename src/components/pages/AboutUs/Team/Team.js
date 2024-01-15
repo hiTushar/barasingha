@@ -45,27 +45,26 @@ function Team() {
       <div className="testimonials_container position-relative">
          <div className="testimonial_content_container">
             <div className="title-wrapper">
-               <h6 className="heading heading--fancy text-center">We believe teamwork</h6>
-               <h2 className="heading heading--two text-center my-2">Meet The Team</h2>
+               <p className="heading--fancy text-center">We believe teamwork</p>
+               <p className="heading--two text-center my-2">Meet The Team</p>
             </div>
-            <div className='about_carousel'>
-               <div className='component-container'>
+            <div className='component-container'>
+               <div className='about_carousel'>
                   <OwlCarousel
                      items={getCurrentDimension() ? 1 : 3}
                      className="owl-theme"
                      loop={false}
                      nav={getCurrentDimension() ? false : true}
                      dots={true}
-                     margin={10}
-                     //stagePadding={getCurrentDimension() ? 32 : 112} 
-                     >
+                     margin={getCurrentDimension() ? 10 : 20}
+                  >
                      {team.map((teammember, index) => (
                         <div className="testimonial-card" key={index}>
                            <div className='testimonial-person'>
                               <img className="image" src={`${teammember.team_member_image_url}`} alt={"logo"} />
-                              <div>
-                                 <h3 className='heading heading--three'>{teammember.team_member_name}</h3>
-                                 <p className='para para--sm para--light'>{teammember.team_member_position}</p>
+                              <div className='testimonial-text'>
+                                 <p>{teammember.team_member_name}</p>
+                                 <p>{teammember.team_member_position}</p>
                               </div>
                               <div className='rating'>
                                  {Array.apply(null, { length: teammember.team_member_about }).map((e, i) => (
@@ -76,7 +75,7 @@ function Team() {
                                  ))}
                               </div>
                            </div>
-                           <p className="para mt-4">{teammember.team_member_about}</p>
+                           <p className='testimonial-it-is'>{teammember.team_member_about}</p>
                         </div>
                      ))}
                   </OwlCarousel>
