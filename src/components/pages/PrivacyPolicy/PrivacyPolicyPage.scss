@@ -2,14 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 .PrivacyPolicy_container {
-   //margin-block: 100px;
    padding-bottom: 100px;
    width: 100%;
    background: linear-gradient(180deg, rgba(7, 14, 12, 0.00) 0%, #060D0B 100%);
-
-   @media screen and (max-width: 768px) {
-      margin-block: 80px;
-   }
 
    .PrivacyPolicy_main {
       .content {
