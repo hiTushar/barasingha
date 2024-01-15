@@ -1,197 +1,252 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
 
+.footer {
+  background: #000;
+  width: 100%
+}
 .footer_container {
   width: 100%;
-  overflow-x: hidden;position: relative;
+  // width: auto;
+  // overflow-x: hidden;
+  max-width: 1200px !important;
+  height: max-content;
+  position: relative;
   background: #000;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  .footer_main {
-    padding-inline: 2rem;
-    width: auto;
+  // margin-inline: auto;
+  color: white;
+  position: relative;
+  padding: 56px 32px 32px 32px;
+
+  @media all and (min-width: 992px) {
+    margin-inline: 0px;
+    
+  }
+
+  @media all and (min-width: 1200px) {
     margin-inline: auto;
-    max-width: 1200px !important;
+  }
+
+  .contents {
+    // box-sizing: border-box;
     width: 100%;
     display: flex;
     flex-direction: column;
-    color: white;
-    height: max-content;
-    position: relative;
-    overflow: hidden;
-    @media (max-width: 768px) {
-      max-width: 428px;
-      padding: 56px 32px 32px 32px;
-    }
-    .contents {
-      box-sizing: border-box;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      padding: 72px 0px;
-      align-items: flex-start;
-      @media (max-width: 768px) {
-        padding: 0px;
-        flex-direction: column;
-        align-items: center;
-        gap: 72px;
-      }
-      .section1 {
-        display: flex;
-        gap: 72px;
-        margin-right: 30px;
-        @media (max-width: 768px) {
-          flex-direction: column;
-          margin-right: 0px;
-          align-items: center;
-          text-align: center;
-        }
-        .footer_category {
-          .links_column {
-            color: #fff;
-            font-family: Manrope;
-            font-size: 18px;
-            font-weight: 500;
-            margin-bottom: 16px;
-            letter-spacing: 1px;
-          }
-          .links_container {
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-            .link {
-              color: rgba(255, 255, 255, 0.6) !important;
-              font-family: Manrope;
-              font-size: 16px;
-              font-weight: 400;
-              cursor: pointer;
-              letter-spacing: 0.5px;
-              @media (max-width: 768px) {
-                font-size: 14px;
-              }
-            }
-          }
-        }
-      }
-      .tweet_container {
-        max-width: 280px;
-        border-radius: 16px;
-        border: 1px solid #303030;
-        background: rgba(255, 255, 255, 0.1);
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 22px;
-        box-sizing: border-box;
-        @media (max-width: 768px) {
-          gap: 18px;
-        }
-        .tweet_sec_1 {
-          display: flex;
-          justify-content: space-between;
-          .user_details {
-            display: flex;
-            gap: 12px;
-            .profile_picture_container {
-              .ellipse {
-                width: 40px;
-                height: 40px;
-                position: relative;
-                .profile_pic {
-                  width: 100%;
-                  position: absolute;
-                  top: 0;
-                  display: flex;
-                  justify-content: center;
-                }
-              }
-            }
-            .user {
-              .name {
-                color: #fff;
-                font-family: Manrope;
-                font-size: 14px;
-                font-weight: 500;
-              }
-              .id {
-                color: #e5be20;
-                font-family: Manrope;
-                font-size: 12px;
-                font-weight: 400;
-              }
-            }
-          }
-          .x_icon {
-            width: 20px;
-            height: 20px;
-          }
-        }
-        .tweet_sec_2 {
-          color: #fff;
-          font-family: Manrope;
-          font-size: 14px;
-          font-weight: 400;
-          line-height: 20px;
-          @media (max-width: 768px) {
-            font-size: 12px;
-          }
-        }
-      }
+    justify-content: space-between;
+    align-items: center;
+    // padding: 72px 0px;
+    // align-items: flex-start;
+    gap: 72px;
+    
+
+    @media all and (min-width: 768px) {
+      flex-direction: row;
+      gap: 0px;
+      justify-content: space-around;
     }
 
-    .botton_bar {
-      margin-top: 100px;
-      margin-bottom: 40px;
-      @media (max-width: 768px) {
-        margin-top: 53px;
-        margin-bottom: 0px;
-        padding: 0px;
+    @media all and (min-width: 992px) {
+      justify-content: space-between;
+    }
+
+    .section1 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 72px;
+
+      @media all and (min-width: 576px) {
+        grid-template-columns: 1fr 1fr;
       }
-      .footer_line {
-        max-width: 1280px;
-        height: 1px;
-        opacity: 0.1;
-        background: #fff;
-        margin-bottom: 40px;
-        @media (max-width: 768px) {
+
+      @media all and (min-width: 768px) {
+        // margin-inline: auto
+      }
+
+      @media all and (min-width: 992px) {
+        grid-template-columns: repeat(4, minmax(auto, max-content));
+        gap: 40px;
+
+      }
+
+      @media all and (min-width: 1200px) {
+        margin-inline: 0px;
+      }
+
+      .footer_category {
+        .links_column {
+          color: #fff;
+          font-family: Manrope;
+          font-size: 18px;
+          font-weight: 500;
+          text-align: center;
           margin-bottom: 16px;
-        }
-      }
-      .footer {
-        display: flex;
-        max-width: 1280px;
-        justify-content: space-between;
-        align-items: center;
-        .barasingha {
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          cursor: pointer;
-          .year {
-            padding-top: 12px;
-            color: rgba(242, 242, 242, 0.8);
-            font-family: Manrope;
-            font-size: 16px;
-            font-weight: 600;
-            letter-spacing: 0.5px;
+          letter-spacing: 1px;
+
+          @media all and (min-width: 576px) {
+            text-align: left;
           }
         }
-        .social_logo {
+        .links_container {
           display: flex;
-          gap: 16px;
-          .social_icon {
-            border-radius: 100px;
-            border: 1px solid rgba(255, 255, 255, 0.24);
-            background: rgba(255, 255, 255, 0.1);
-            padding: 10px;
-            @media (max-width: 768px) {
-              padding: 6px;
-            }
+          flex-direction: column;
+          align-items: center;
+          gap: 18px;
+          .link {
+            color: rgba(255, 255, 255, 0.6) !important;
+            font-weight: 400;
             cursor: pointer;
-            .logo_container {
-              display: flex;
-              width: 20px;
-              height: 20px;
+            letter-spacing: 0.5px;
+            font-size: 14px;
+            @media all and (min-width: 992px) {
+              font-size: 16px;
             }
+          }
+
+          @media all and (min-width: 576px) {
+            align-items: flex-start;
+          }
+
+        }
+      }
+    }
+    .tweet_container {
+      max-width: 280px;
+      border-radius: 16px;
+      border: 1px solid #303030;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      box-sizing: border-box;
+      // @media (max-width: 768px) {
+        gap: 18px;
+      // }
+      .tweet_sec_1 {
+        display: flex;
+        justify-content: space-between;
+        .user_details {
+          display: flex;
+          gap: 12px;
+          .profile_picture_container {
+            .ellipse {
+              width: 40px;
+              height: 40px;
+              position: relative;
+              .profile_pic {
+                width: 100%;
+                position: absolute;
+                top: 0;
+                display: flex;
+                justify-content: center;
+              }
+            }
+          }
+          .user {
+            .name {
+              color: #fff;
+              font-family: Manrope;
+              font-size: 14px;
+              font-weight: 500;
+            }
+            .id {
+              color: #e5be20;
+              font-family: Manrope;
+              font-size: 12px;
+              font-weight: 400;
+            }
+          }
+        }
+        .x_icon {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      .tweet_sec_2 {
+        color: #fff;
+        font-family: Manrope;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        // @media (max-width: 768px) {
+          font-size: 12px;
+        // }
+      }
+    }
+  }
+
+  .botton_bar {
+    margin-top: 100px;
+    margin-bottom: 40px;
+    // @media (max-width: 768px) {
+      margin-top: 53px;
+      margin-bottom: 0px;
+      padding: 0px;
+    // }
+    .footer_line {
+      max-width: 1280px;
+      height: 1px;
+      opacity: 0.1;
+      background: #fff;
+      margin-bottom: 40px;
+      // @media (max-width: 768px) {
+        margin-bottom: 16px;
+      // }
+    }
+    .footer {
+      display: flex;
+      max-width: 1280px;
+      justify-content: space-between;
+      align-items: center;
+      .barasingha {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+
+        div {
+          img {
+            // @media all and (min-width: 400px) {
+              vertical-align: initial;
+            // }
+          }
+        }
+        .year {
+          // padding-top: 12px;
+          color: rgba(242, 242, 242, 0.8);
+          font-family: Manrope;
+          font-size: 12px;
+          font-weight: 600;
+          letter-spacing: 0.5px;
+
+          padding-top: 0px;
+          @media all and (min-width: 400px) {
+            font-size: 14px;
+          }
+
+          @media all and (min-width: 992px) {
+            font-size: 16px;
+          }
+        }
+      }
+      .social_logo {
+        display: flex;
+        gap: 16px;
+        .social_icon {
+          border-radius: 100px;
+          border: 1px solid rgba(255, 255, 255, 0.24);
+          background: rgba(255, 255, 255, 0.1);
+          padding: 10px;
+          // @media (max-width: 768px) {
+            padding: 6px;
+          // }
+          cursor: pointer;
+          .logo_container {
+            display: flex;
+            width: 20px;
+            height: 20px;
           }
         }
       }

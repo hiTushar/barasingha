@@ -10,8 +10,8 @@ import { Link } from "react-router-dom";
 
 export const Footer = ({ setShowContactUsModal = () => { } }) => {
   return (
-    <div className="footer_container">
-      <div className="footer_main">
+    <div className="footer">
+      <div className="footer_container">
         <div className="contents">
           <div className="section1">
             <div className="footer_category">
@@ -68,7 +68,6 @@ export const Footer = ({ setShowContactUsModal = () => { } }) => {
             </div>
           </div>
         </div>
-
         <div className="botton_bar">
           <div className="footer_line"></div>
           <div className="footer">
