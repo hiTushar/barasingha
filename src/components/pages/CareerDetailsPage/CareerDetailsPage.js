@@ -55,15 +55,15 @@ function CareerDetailsPage() {
    };
 
    return (
-      <div className="career_details_container">
-         <div className="component-container">
+      <div className="component-container">
+         <div className="career_details_container">
             <div className="title-wrapper">
                <div className='title-link-arrow' onClick={() => history.goBack()}>
                   <img src={LinkArrow} alt={'arrow'} />
                </div>
                <div className='title-header'>
-                  <h6 className="career_details_title">Available Career Positions</h6>
-                  <h2 className="career_details_join_team">Join our team and help us build a secure future</h2>
+                  <p className="career_details_title">Available Career Positions</p>
+                  <p className="career_details_join_team">Join our team and help us build a secure future</p>
                </div>
             </div>
 
@@ -119,11 +119,11 @@ function CareerDetailsPage() {
                                        </div>
                                     </div>
                                     <div className="jobtype">
-                                       <img src={position.jobType === 'fulltime' ? fulltime : remote} alt={"jobtype"} />{position.jobType}
+                                       <img src={position.jobType === 'full-time' ? fulltime : remote} alt={"jobtype"} />{position.jobType}
                                     </div>
                                     <input type="checkbox" id={`expend${i}`} />
                                     <div class="medium-12 small-12 columns smalldesc">
-                                       <p class="font16 ">{position.desc} </p>
+                                       <p class="jobdesc">{position.desc} </p>
                                     </div>
                                     <label for={`expend${i}`}>
                                        <div className={careerClassName}>
