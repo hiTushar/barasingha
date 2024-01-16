@@ -1,28 +1,62 @@
 @import "/src/styles/utils/mixins";
 
-.hero {
-   margin-block: 100px;
+.career-hero {
+   padding: 32px 5px 32px 10px;
 
-   @include responsive(md) {
-      margin-block: 80px;
+   @media all and (min-width: 768px) {
+      padding-bottom: 72px;
    }
 
-   .container {
-      .title-wrapper {
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         flex-direction: column;
+   .title-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      max-width: 1008px;
+      margin-inline: auto;
 
-         max-width: 1008px;
-         margin-inline: auto;
+      p {
+         margin-bottom: 0px;
+      }
 
-         p {
-            max-width: 464px;
+      p:nth-child(1) {
+         font-size: 12px;
+         margin-bottom: 8px;
+
+         @media all and (min-width: 400px) {}
+
+         @media all and (min-width: 992px) {
+            font-size: 16px;
+         }
+      }
+
+      p:nth-child(2) {
+         font-size: 32px;
+         margin-bottom: 30px;
+
+         @media all and (min-width: 400px) {
+            font-size: 40px;
+            max-width: 600px;
          }
 
-         .padding-24{
-            padding-top: 24px;
+         @media all and (min-width: 992px) {
+            font-size: 48px;
+            max-width: 800px;
+         }
+      }
+
+      p:nth-child(3) {
+         font-size: 12px;
+         text-align: center;
+         
+         @media all and (min-width: 400px) {
+            font-size: 14px;
+            max-width: 350px;
+         }
+
+         @media all and (min-width: 992px) {
+            font-size: 16px;
+            max-width: 400px;
          }
       }
    }

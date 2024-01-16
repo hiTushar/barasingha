@@ -14,17 +14,17 @@ export default function CareerPage() {
    return (
       <>
          {/* Hero of the page */}
-         <section className="hero">
-            <div className="component-container">
+         <div className="component-container">
+            <section className="career-hero">
                <div className="title-wrapper">
-                  <div className="heading heading--fancy text-center">CYBER SECURITY</div>
-                  <div className="heading heading--one text-gradient text-center">
+                  <p className="heading--fancy">CYBER SECURITY</p>
+                  <p className="heading--one text-gradient text-center">
                      Join our team and make a difference in the cybersecurity industry
-                  </div>
-                  <p className="para para--lg para--light text-center padding-24">NPAV offers comprehensive cyber security solutions across products</p>
+                  </p>
+                  <p className="para--lg para--light">NPAV offers comprehensive cyber security solutions across products</p>
                </div>
-            </div>
-         </section>
+            </section>
+         </div>
          <Position />
          <WhyHow />
          <Testimonials />

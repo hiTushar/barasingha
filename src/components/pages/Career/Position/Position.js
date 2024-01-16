@@ -45,8 +45,8 @@ function Position() {
             </div>
             <div className="apply-section">
                <div className="join-team">
-                  <div className="available-text">Available Career Positions</div>
-                  <div className="para para--lg para--light my-3 mb-4">Join our team and help us build a secure future</div>
+                  <p>Available Career Positions</p>
+                  <p className='para--light'>Join our team and help us build a secure future</p>
                   <Button buttonStyle='apply-now' onClick={() => setShowContactUsModal(true)}>APPLY NOW</Button>
                </div>
                {showContactUsModal && <WorkModal closeContactUsModal={closeContactUsModal}/>}

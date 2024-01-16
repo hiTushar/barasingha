@@ -7,11 +7,11 @@ import project4 from "../../../../media/career_project_4.webp";
 
 function Applications() {
    return (
-      <div className="career_project_container">
-         <div className="component-container">
+      <div className="component-container">
+         <div className="career_project_container">
             <div className="title-wrapper">
-               <h6 className="heading heading--fancy text-center">Projects</h6>
-               <h2 className="heading heading--two text-center my-2">Products You Get to Work on</h2>
+               <p className="heading--fancy text-center">Projects</p>
+               <p className="heading--two text-center my-2">Products You Get to Work on</p>
             </div>
 
             <div className="projects">

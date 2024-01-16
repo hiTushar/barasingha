@@ -2,59 +2,101 @@
    display: grid;
    place-content: center;
    height: initial !important;
-   margin-block: 160px;
-   @media screen and (max-width: 767px) {
-      width: auto;
-      flex-direction: column;
-      gap: 56px;
-      margin-block: 120px;
+   width: auto;
+   flex-direction: column;
+   gap: 56px;
+   margin-block: 20px 60px;
+
+   @media all and (min-width: 768px) {
+      margin-bottom: 120px;
    }
+
    .available-career-positions {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 56px;
-      @media screen and (max-width: 767px) {
-         padding: 0px;
-         flex-direction: column;
-         gap: 56px;
+      padding: 0px;
+      flex-direction: column;
+
+      @media all and (min-width: 768px) {
+         flex-direction: row;
       }
+
       .career-image {
          max-width: 450px;
          flex: 1;
-
          border-radius: 0px 16px 16px 0px;
-         // border: 1px solid #353a64;
-         // background: radial-gradient(
-         //    316.69% 130.58% at 118.36% -13.32%,
-         //    #131f27 0%,
-         //    #01121c 100%
-         // );
-         @media screen and (max-width: 767px) {
-            display: flex;
-            align-self: center;
+         align-self: center;
+         display: none;
+         
+         @media all and (min-width: 400px) {
+            display: block;
+            height: 100%;
          }
+
          img {
             width: 100%;
-            height: auto;
-            @media (max-width: 768px) {
-               max-width: 100%;
-               max-height: 100%;
+            height: 100%;
+            @media all and (min-width: 768px) {
+               object-fit: cover;
+               object-position: right;
             }
          }
       }
 
       .apply-section {
          flex: 1;
+         height: 100%;
          .join-team {
             font-family: Manrope;
-            .available-text {
-               color: #d9d9d9;
-               font-size: 40px;
-               font-style: normal;
-               font-weight: 400;
-               line-height: 120%; /* 48px */
+            text-align: center;
+
+            @media all and (min-width: 768px) {
+               text-align: left;
             }
+
+            p {
+               margin-bottom: 0px;
+            }
+
+            p:nth-child(1) {
+               color: #d9d9d9;
+               font-size: 20px;
+               font-style: normal;
+               font-weight: 700;
+               line-height: 120%;
+
+               @media all and (min-width: 400px) {
+                  font-size: 32px;
+               }
+
+               @media all and (min-width: 992px) {
+                  font-size: 40px;
+               }
+            }
+
+            p:nth-child(2) {
+               font-size: 12px;
+               margin-inline: auto;
+               margin-block: 5px 10px;
+               max-width: 200px;
+
+               @media all and (min-width: 400px) {
+                  font-size: 14px;
+               }
+
+               @media all and (min-width: 768px) {
+                  margin-left: 0px;
+               }
+
+               @media all and (min-width: 992px) {
+                  font-size: 16px;
+                  max-width: 100%;
+                  margin-bottom: 15px;
+               }
+            }
+
             .join-our-team {
                padding: 12px 0 24px 0;
                align-self: stretch;
@@ -62,9 +104,10 @@
                font-size: 20px;
                font-style: normal;
                font-weight: 300;
-               line-height: 150%; /* 30px */
+               line-height: 150%;
                opacity: 0.6;
             }
+
             .apply-button {
                padding-top: 24px;
                padding: 32px 8px 32px 8px;
@@ -77,31 +120,25 @@
             button {
                display: inline-block !important;
                padding: 8px 32px !important;
+
                span {
                   z-index: 5 !important;
                }
             }
 
-            @media screen and (max-width: 768px) {
-               text-align: center;
-
-               .available-text {
-                  font-size: 36px;
-               }
-
-               .apply-button {
-                  margin-inline: auto;
-               }
+            .apply-button {
+               margin-inline: auto;
             }
          }
+
          .job-positions {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             gap: 0 2rem;
             padding: 48px 0 24px 0;
 
-            @media screen and (max-width: 976px) {
-               grid-template-columns: 1fr;
+            @media screen and (min-width: 576px) {
+               grid-template-columns: 1fr 1fr;
             }
 
             .job-cards {
@@ -113,25 +150,22 @@
                gap: 16px;
                flex: 1 0 0;
                border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-               border-image: linear-gradient(
-                  0.1turn,
-                  rgba(190, 198, 198, 0.4),
-                  #bec6c61a,
-                  rgba(56, 2, 155, 0)
-               );
+               border-image: linear-gradient(0.1turn,
+                     rgba(190, 198, 198, 0.4),
+                     #bec6c61a,
+                     rgba(56, 2, 155, 0));
                border-image-slice: 1;
-
-               @media screen and (max-width: 768px) {
-                  max-width: initial;
-                  width: 100%;
-               }
+               max-width: initial;
+               width: 100%;
 
                .image {
                   width: 42px !important;
                   height: 42px !important;
                }
+
                .job-details {
                   float: left;
+
                   .job-title {
                      color: #f2f2f2;
                      text-align: center;
@@ -142,26 +176,55 @@
                      line-height: 150%;
                      text-align: left;
                      margin-bottom: 0.1rem;
+
+                     @media all and (min-width: 400px) {
+                        font-size: 18px;
+                     }
                   }
-                  .exp{
+
+                  .exp, .years {
                      opacity: 0.5;
+
+                     @media all and (min-width: 400px) {
+                        font-size: 14px;
+                     }
                   }
-                  .years{
-                     opacity: 0.5;
+
+                  .years {
+                     @media all and (min-width: 768px) {
+                        display: block;
+                        margin-left: 0px !important;
+                     }
+
+                     @media all and (min-width: 992px) {
+                        display: inline;
+                        margin-left: 3px !important;
+                     }
                   }
                }
             }
          }
+
          .see-all {
             * {
                color: #e5be20;
             }
+
             span {
                border-bottom: 1px solid transparent;
-               line-height: 150%; /* 24px */
+               line-height: 150%;
+               
+               @media all and (min-width: 400px) {
+                  font-size: 18px;
+               }
             }
+
             .arrow {
                padding-left: 10px;
+
+               @media all and (min-width: 400px) {
+                  height: 15px;
+               }
             }
 
             &:hover {

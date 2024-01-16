@@ -33,7 +33,7 @@ function Testimonials() {
    //  };
 
    function getCurrentDimension() {
-      if (window.innerWidth < 950) {
+      if (window.innerWidth < 768) {
          return true;
       }
       return false;
@@ -43,27 +43,26 @@ function Testimonials() {
       <div className="career_testimonials_container position-relative">
          <div className="testimonial_content_container">
             <div className="title-wrapper">
-               <h6 className="heading heading--fancy text-center">Testimonials</h6>
-               <h2 className="heading heading--two text-center my-2">What Our Employees Says?</h2>
+               <p className="heading--fancy text-center">Testimonials</p>
+               <p className="heading--two text-center my-2">What Our Employees Says?</p>
             </div>
-            <div className='career_carousel'>
-               <div className='component-container'>   
+            <div className='component-container'> 
+               <div className='career_carousel'>   
                   <OwlCarousel
                      items={getCurrentDimension() ? 1 : 3}
                      className="owl-theme"
                      loop={true}
                      nav={getCurrentDimension() ? false : true}
                      dots={true}
-                     margin={10}
-                     //stagePadding={getCurrentDimension() ? 32 : 112} 
-                     >
+                     margin={getCurrentDimension() ? 10 : 20} 
+                  >
                      {testimonials.map((testimonial, index) => (
                         <div className="career_testimonial-card" key={index}>
                            <div className='testimonial-person'>
                               <img className="image" src={`${testimonial.testimonial_image_url}`} alt={"logo"} />
-                              <div>
-                                 <h3 className='heading heading--three'>{testimonial.testimonial_name}</h3>
-                                 <p className='para para--sm para--light'>{testimonial.testimonial_position}</p>
+                              <div className='testimonial-text'>
+                                 <p>{testimonial.testimonial_name}</p>
+                                 <p>{testimonial.testimonial_position}</p>
                               </div>
                               <div className='rating'>
                                  {Array.apply(null, { length: testimonial.testimonial_rating }).map((e, i) => (
@@ -74,7 +73,7 @@ function Testimonials() {
                                  ))}
                               </div>
                            </div>
-                           <p className="para mt-4">{testimonial.testimonial_about}</p>
+                           <p className="testimonial-it-is">{testimonial.testimonial_about}</p>
                         </div>
                      ))}
                   </OwlCarousel>

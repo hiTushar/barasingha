@@ -12,7 +12,7 @@ import ContactUsModal from 'components/pages/Forms/ContactUs';
 function WhyHow() {
 
    function getCurrentDimension() {
-      if (window.innerWidth < 768) {
+      if (window.innerWidth <= 576) {
          return true;
       }
       return false;
@@ -26,8 +26,8 @@ function WhyHow() {
       <section className='why-barasingha-wrapper'>
          <div className="component-container">
             <div className="title-wrapper">
-               <h6 className="heading heading--fancy text-center">WHY & HOW</h6>
-               <h2 className="heading heading--two text-center my-2">Why Choose Barasingha?</h2>
+               <p className="heading heading--fancy text-center">WHY & HOW</p>
+               <p className="heading heading--two text-center my-2">Why Choose Barasingha?</p>
                <p className="para para--lg opacity-50 text-center">Discover the benefits of partnering with NPAV for your cyber security needs.</p>
             </div>
             {!getCurrentDimension()?<div className="benefits-container">
