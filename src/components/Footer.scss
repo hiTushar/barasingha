@@ -44,10 +44,6 @@
     @media all and (min-width: 768px) {
       flex-direction: row;
       gap: 0px;
-      justify-content: space-around;
-    }
-
-    @media all and (min-width: 992px) {
       justify-content: space-between;
     }
 
