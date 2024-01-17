@@ -83,6 +83,7 @@
          }
 
          .image-card {
+            overflow: hidden;
             img {
                width: 100%;
                max-height: 294px !important;
@@ -90,6 +91,21 @@
                object-fit: contain;
                aspect-ratio: 16/10;
                height: auto;
+
+
+               transform: scale(1.1);
+               object-position: -12px 10px;
+               @media all and (min-width: 768px) {
+                  object-position: -10px 10px;
+               }
+               // @media all and (min-width: 768px) {
+               //    object-position: -25px;
+               //    transform: scale(1.2);
+               // }
+
+               @media all and (min-width: 1200px) {
+                  object-position: -18px 15px;
+               }
             }
          }
 
@@ -116,7 +132,7 @@
             }
 
             @media all and (min-width: 992px) {
-               font-size: 16px;
+               // font-size: 16px;
             }
          }
 
