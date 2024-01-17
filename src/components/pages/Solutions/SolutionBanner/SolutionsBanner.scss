@@ -1,66 +1,133 @@
 @import "/src/styles/utils/mixins";
 
 .solutions_banner_container {
-   margin-block: 100px;
+   margin-block: 100px 0px;
    width: 100;
-
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   gap: 58px;
    padding-inline: 2rem;
    width: auto;
    margin-inline: auto;
    max-width: 1200px !important;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 58px;
+   flex-direction: column-reverse;
 
-   @media (max-width: 768px) {
-      flex-direction: column-reverse;
-      margin-block: 80px;
+   @media all and (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 100px;
    }
 
    .left_container {
-      @media (max-width: 768px) {
-         margin-left: 0px;
-      }
+      margin-left: 0px;
+
       .title-wrapper {
          max-width: 650px;
+
+         p {
+            margin-bottom: 0px;
+         }
+
+         p:nth-child(1) {
+            font-size: 12px;
+            margin-bottom: 8px;
+
+            @media all and (min-width: 400px) {}
+
+            @media all and (min-width: 992px) {
+               font-size: 16px;
+            }
+
+         }
+         
+         p:nth-child(2) {
+            font-size: 32px;
+            margin-bottom: 10px;
+            
+            @media all and (min-width: 400px) {
+               font-size: 40px;
+               max-width: 600px;
+            }
+            
+            @media all and (min-width: 768px) {
+               margin-bottom: 28px;
+            }
+            
+            @media all and (min-width: 992px) {
+               font-size: 48px;
+               max-width: 800px;
+            }
+
+            @media all and (min-width: 1200px) {
+               max-width: 400px;
+            }
+         }
+
+         p:nth-child(3) {
+            font-size: 12px;
+            
+            @media all and (min-width: 400px) {
+               font-size: 14px;
+               max-width: 350px;
+            }
+   
+            @media all and (min-width: 992px) {
+               font-size: 16px;
+               max-width: 400px;
+            }
+         }
       }
+
       .btn_container {
-         margin-top: 4rem;
+
          .btn_contact_sales {
             border-radius: 4px;
             border: 1px solid #e5be20;
             display: flex;
-            padding: 16px 32px;
+            gap: 10px;
             align-items: center;
-            font-family: Manrope;
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 600;
             line-height: 20px;
             letter-spacing: 0.14px;
             color: #e5be20;
             background: none;
             cursor: pointer;
-            gap:8px;
+            border-radius: 3px;
+            border: 0.75px solid #e5be20;
+            font-size: 10px;
+            line-height: 15px;
+            letter-spacing: 0.1px;
+            padding: 12px;
+            margin-block: 24px 48px;
 
-            @media (max-width: 768px) {
-               border-radius: 3px;
-               border: 0.75px solid #e5be20;
-               font-size: 16px !important;
-               line-height: 15px;
-               letter-spacing: 0.1px;
-               margin-bottom: 72px;
+            @media all and (min-width: 400px) {
+               font-size: 12px;
+               padding: 12px 24px;
+            }
+
+            @media all and (min-width: 1200px) {
+               font-size: 14px;
+               padding: 16px 28px;
+            }
+            
+            img {
+               @media all and (min-width: 1200px) {
+                  width: 16px;
+               }
+               
             }
          }
       }
    }
+
    .right_container {
       padding-top: 10px;
-      @media (max-width: 768px) {
-         img {
-            width: 100%;
-            height: auto;
-         }
+
+      img {
+         width: 100%;
+         height: auto;
       }
    }
 }
