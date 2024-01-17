@@ -31,32 +31,37 @@ function Audience() {
    //  };
    
    function getCurrentDimension() {
-      if (window.innerWidth < 769) {
+      if (window.innerWidth < 768) {
          return true;
       }
       return false;
    }
+
    return (
       <div className="audiences_container">
          <div className="audience_content_container component-container">
             <div className="title-wrapper">
-               <h6 className="heading heading--fancy text-center">Audience</h6>
-               <h2 className="heading heading--two text-center">What Do Our Clients Think?</h2>
+               <p className="heading--fancy text-center">Audience</p>
+               <p className="heading--two text-center">What Do Our Clients Think?</p>
             </div>
             <div className="products_carousel">
                <OwlCarousel
                   items={getCurrentDimension() ? 1 : 3}
                   className="owl-theme"
                   loop={true}
-                  nav={true}
+                  nav={getCurrentDimension() ? false : true}
                   dots={true}
-                  margin={10}
+                  margin={getCurrentDimension() ? 10 : 16}
                   navContainerClass="owl-nav" >
                   {audiences.map((audience, index) => (
                      <div className="audience-card" key={index}>
-                        <div className="left_content"><img className="audience_image" src={`${audience.audience_image_url}`} alt="audience_image" /></div>
+                        <div className="left_content">
+                           <img className="audience_image" src={`${audience.audience_image_url}`} alt="audience_image" />
+                        </div>
                         <div className="right_content">
-                           <div className="company_logo"><img className="company_logo" src={`${audience.audience_logo}`} alt="company_logo" /></div>
+                           <div className="company_logo">
+                              <img className="company_logo" src={`${audience.audience_logo}`} alt="company_logo" />
+                           </div>
                            <div className="audience_view">{audience.audience_view}</div>
                            <div className="audience_name">{audience.audience_name}</div>
                         </div>

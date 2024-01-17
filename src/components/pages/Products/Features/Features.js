@@ -77,8 +77,8 @@ function Features() {
       <div className="features_container">
          <div className="component-container position-relative">
             <div className="title-wrapper">
-               <h6 className="heading heading--fancy text-center">Details</h6>
-               <h2 className="heading heading--two text-center my-2">Features</h2>
+               <p className="heading--fancy text-center">Details</p>
+               <p className="heading--two text-center my-2">Features</p>
             </div>
 
             <div className='features'>
@@ -105,9 +105,9 @@ function Features() {
                         {currentTab === `${tab.id}` &&
                            <div className='tab-item'>
                               {/* Image */}
-                              {/* <div className="image-wrapper"> */}
+                              <div className="image-wrapper">
                                  <img src={placeholder3} alt="malware" />
-                              {/* </div> */}
+                              </div>
                               <div className="tab-content">
                                  <h2 className="heading heading--two">
                                     {tab.title}

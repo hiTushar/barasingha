@@ -3,14 +3,14 @@ import './ProductsBanner.scss';
 import download from '../../../../media/download.svg';
 import imgProductHero from '../../../../media/imgProductHero.svg';
 
-function SolutionsPage() {
+function ProductsBanner() {
    return (
-      <div className="solutions_banner_container">
+      <div className="product_banner_container">
          <div className="left_container">
             <div className="title-wrapper">
-               <h6 className="heading heading--fancy">net protection</h6>
-               <h1 className="heading heading--one text-gradient">Password Vault Manager</h1>
-               <p className="para para--lg para--light my-4">
+               <p className="heading--fancy">net protection</p>
+               <p className="heading--one text-gradient">Password Vault Manager</p>
+               <p className="para--light">
                   Protect patient data, accelerate performance, and offer employees and third parties secure access to internal systems with Cloudflare
                </p>
             </div>
@@ -25,4 +25,4 @@ function SolutionsPage() {
    );
 }
 
-export default SolutionsPage;
+export default ProductsBanner;
