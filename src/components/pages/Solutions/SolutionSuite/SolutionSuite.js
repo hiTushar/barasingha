@@ -11,8 +11,8 @@ function SolutionSuite() {
       <section className="solution_suite">
          <div className="solution_suite_container">
             <div className="title-wrapper">
-               <h6 className="heading heading--fancy text-center">WHY BARASINGHA</h6>
-               <h2 className="heading heading--two text-center">Solution Suite</h2>
+               <p className="heading--fancy text-center">WHY BARASINGHA</p>
+               <p className="heading--two text-center">Solution Suite</p>
             </div>
             <div className="card_section_1">
                <div className="feature_card">
