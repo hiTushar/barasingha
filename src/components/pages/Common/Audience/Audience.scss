@@ -1,7 +1,6 @@
 .audiences_container {
    background: linear-gradient(180deg, rgba(6, 13, 11, 0.00) 0%, #060D0B 78.54%);
    padding-bottom: 60px;
-   // margin-bottom: 60px;
 
    .title-wrapper {
       display: flex;
@@ -28,7 +27,6 @@
 
       p:nth-child(2) {
          font-size: 20px;
-         // margin-bottom: 30px;
 
          @media all and (min-width: 400px) {
             font-size: 24px;
@@ -46,33 +44,19 @@
       max-width: 1200px;
       width: 100%;
       margin-top: 3.5rem;
-      // width: 380px !important;
    }
-}
-
-.owl-item {
-   // width: 33%;
-
-   // @media screen and (max-width: 767px) {
-   // width: 100%;
-   // }
 }
 
 .audience-card {
    display: flex;
-   // width: 33%;
-   height: 150px;
+   height: 180px;
    border-radius: 16px;
    border: 1px solid #151729;
    background: linear-gradient(180deg,
          rgba(255, 255, 255, 0) -17.2%,
          rgba(255, 255, 255, 0.07) 140.9%);
    backdrop-filter: blur(10px);
-   // margin-right: 12px;
    overflow: hidden;
-   // @media screen and (max-width: 767px) {
-   // width: 100%;
-   // }
 
    @media all and (min-width: 576px) {
       height: 200px;
@@ -150,11 +134,7 @@
    }
 
    .owl-dots button.owl-dot {
-      margin-top: 1.5rem;
-
-      // @media screen and (max-width: 768px) {
       margin-top: 0.5rem;
-      // }
 
       span {
          width: 0.7rem;
@@ -192,15 +172,6 @@
       line-height: 20px;
    }
 
-   // .owl-nav .owl-prev {
-   //    left: 130px;
-   // }
-   // .owl-nav .owl-prev {
-   //    left: 130px;
-   // }
-   // .owl-nav .owl-next {
-   //    right: 130px;
-   // }
    .owl-nav .owl-prev {
       left: -20px;
       top: 75px;
