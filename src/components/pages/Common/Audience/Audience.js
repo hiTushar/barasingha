@@ -37,6 +37,19 @@ function Audience() {
       return false;
    }
 
+   function getNumberOfPanes() {
+      let width = window.innerWidth;
+      if(width < 567) {
+         return 1;
+      }
+      else if(width < 768) {
+         return 2;
+      }
+      else {
+         return 3;
+      }
+   }
+
    return (
       <div className="audiences_container">
          <div className="audience_content_container component-container">
@@ -46,7 +59,7 @@ function Audience() {
             </div>
             <div className="products_carousel">
                <OwlCarousel
-                  items={getCurrentDimension() ? 1 : 3}
+                  items={getNumberOfPanes()}
                   className="owl-theme"
                   loop={true}
                   nav={getCurrentDimension() ? false : true}
