@@ -200,6 +200,20 @@
             display: none;
          }
       }
+
+      .slick-track {
+         @media all and (max-width: 767px) {
+            height: 300px !important;
+         }
+      
+         @media all and (max-width: 400px) {
+            height: 250px !important;
+         }
+      }
+      
+      .slick-slide div {
+         height: 100%;
+      }
    }
 }
 .env_card {
@@ -373,16 +387,3 @@
    }
 }
 
-.slick-track {
-   @media all and (max-width: 767px) {
-      height: 300px !important;
-   }
-
-   @media all and (max-width: 400px) {
-      height: 250px !important;
-   }
-}
-
-.slick-slide div {
-   height: 100%;
-}
