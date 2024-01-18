@@ -26,6 +26,13 @@ const cardsData = [
    },
 ];
 
+const getSlides = () => {
+   const width = window.innerWidth;
+
+   if(width < 650) return 1;
+   else return 2
+}
+
 const Card = (props) => {
    return (
       <div className="env_card">
@@ -33,8 +40,8 @@ const Card = (props) => {
          <div className="env_card_contents_container justify-content-center">
             <div className='img_container'><img src={props.image} alt="password svg"></img></div>
             <div className="env_card_text_container">
-               <div className='heading heading--three text-center'>{props.heading}</div>
-               <div className="para para--light text-center">{props.desc}</div>
+               <p className='heading heading--three text-center'>{props.heading}</p>
+               <p className="para para--light text-center">{props.desc}</p>
             </div>
          </div>
       </div>
@@ -69,7 +76,7 @@ const Environment = (props) => {
       speed: 500,
       autoplay: true,
       autoplaySpeed: 5000,
-      slidesToShow: 1,
+      slidesToShow: getSlides(),
       slidesToScroll: 1,
       centerMode: true,
       nav: false,
@@ -102,11 +109,11 @@ const Environment = (props) => {
                   <div className="col">
                      <div className="content_container_left">
                         <div className="title-wrapper">
-                           <h6 className="heading heading--fancy">Environment</h6>
-                           <h2 className="heading heading--two">
+                           <p className="heading heading--fancy">Environment</p>
+                           <p className="heading heading--two">
                               A Radically Sensible Approach to Data Protection
-                           </h2>
-                           <p className="para para--lg para--light mt-4 mb-0">
+                           </p>
+                           <p className="para para--lg para--light">
                               Effortless implementation. Single pane of glass, one-click
                               management for all products
                            </p>
