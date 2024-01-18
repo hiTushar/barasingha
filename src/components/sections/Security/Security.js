@@ -43,10 +43,10 @@ function Security() {
             <div className="security_main_contents_container">
                <div className="content_container_left">
                   <div className="title-wrapper">
-                     <h6 className="heading heading--fancy">Security</h6>
-                     <h2 className="heading heading--two">
+                     <p className="heading heading--fancy">Security</p>
+                     <p className="heading heading--two">
                         Forecasting Trends in Cyber Security
-                     </h2>
+                     </p>
                   </div>
 
                </div>
