@@ -61,11 +61,6 @@ body::-webkit-scrollbar {
    width: auto;
    margin-inline: auto;
    max-width: 1200px !important;
-
-   @include responsive(md) {
-      max-width: 1200px !important;
-      margin-inline: auto;
-   }
 }
 
 // Hiding scrollbar
@@ -102,8 +97,8 @@ body::-webkit-scrollbar {
 
 .env_video_container {
    position: absolute;
-   top: 40px;
-   left: 100px;
+   top: 120px;
+   left: 50px;
    max-width: 350px;
    max-height: 350px;
    transform: rotate(180deg);
@@ -111,6 +106,17 @@ body::-webkit-scrollbar {
    margin-top: -100px;
    // bottom: -150px;
    z-index: -100;
+   transform: rotate(180deg) translate(60%, -2%);
+
+   @media all and (min-width: 768px) {
+      top: 0px;
+   }
+
+   @media all and (min-width: 992px) {
+      top: -50px;
+      left: 200px;
+   }
+
    video {
       width: 100%;
       mix-blend-mode: color;
@@ -118,7 +124,22 @@ body::-webkit-scrollbar {
 }
 .comet_image_container {
    position: absolute;
-   right: 380px
+   right: 120px;
+   top: -20px;
+   display: none;
+   
+   @media all and (min-width: 768px) {
+      display: block;
+   }
+
+   @media all and (min-width: 992px) {
+      right: 200px;
+      top: -60px;
+   }
+
+   img {
+      width: 130px;
+   }
 }
 
 .App {
@@ -175,26 +196,14 @@ body::-webkit-scrollbar {
 }
 
 @media screen and (max-width: 991px) {
-   .env_video_container {
-      max-width: 250px;
-      top: 6%;
-   }
    .custom-container {
       padding: 0 80px;
    }
 }
 
 @media screen and (max-width: 767px) {
-   .env_video_container {
-      margin-top: 0;
-      transform: rotate(180deg) translate(60%, -2%);
-      // margin-bottom: -650px;
-   }
    .custom-container {
       padding: 0 32px;
-   }
-   .comet_image_container {
-      display: none;
    }
 }
 

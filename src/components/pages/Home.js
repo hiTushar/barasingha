@@ -36,14 +36,16 @@ function Home({
          <Suspense fallback={<Loader />}>
             <Environment />
          </Suspense>
-         <div className='home_media_container'>
-            <div className="env_video_container">
-               <div className="env_video">
-                  <video disableRemotePlayback src={video} autoPlay loop muted playsInline></video>
+         <div className="component-container">
+            <div className='home_media_container'>
+               <div className="env_video_container">
+                  <div className="env_video">
+                     <video disableRemotePlayback src={video} autoPlay loop muted playsInline></video>
+                  </div>
+               </div >
+               <div className='comet_image_container'>
+                  <img src={cube} alt={'comet cube'} />
                </div>
-            </div >
-            <div className='comet_image_container'>
-               <img src={cube} alt={'comet cube'} />
             </div>
          </div>
          <Suspense fallback={<Loader />}>
