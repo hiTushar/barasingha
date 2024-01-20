@@ -37,23 +37,39 @@ function Partners() {
       return false;
    }
 
+   function getItemCount() {
+      const width = window.innerWidth;
+
+      if(width < 576) {
+         return 1;
+      }
+      else if(width < 992) {
+         return 2;
+      }
+      else {
+         return 3;
+      }
+   }
+
    return (
       <div className="partners_container position-relative">
          <div className="partner_content_container">
-            <div className="component-container">
-               <div className="heading">Collaboration</div>
-               <div className="sub_title">Our Partners</div>
+            <div className="title-wrapper">
+               <p className="heading heading--fancy">Collaboration</p>
+               <p className="heading heading--two">Our Partners</p>
             </div>
             <div className='partner-carousel-container'>
                <OwlCarousel
-                  items={getCurrentDimension() ? 1 : 3}
+                  items={getItemCount()}
                   className="owl-theme"
                   loop={true}
                   nav={false}
                   dots={true}
-                  margin={10}
+                  margin={5}
                   navContainerClass="owl-nav"
-                  stagePadding={getCurrentDimension() ? 0 : 120} >
+                  stagePadding={getCurrentDimension() ? 0 : 80}
+                  center={false}
+               >
                   {partners.map((partner, index) => (
                      <div className="partner-card" key={index}>
                         <img className="partner_logo" src={`${partner.partner_logo_url}`} alt={"logo"}/>
@@ -64,7 +80,6 @@ function Partners() {
                <div className='partner-carousel-overlay'></div>
             </div>
          </div>
-
       </div>
    )
 }
