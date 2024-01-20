@@ -1,66 +1,185 @@
 .solutions_container {
    padding-block: 100px;
    width: 100%;
-
-   @media screen and (max-width: 768px) {
-      padding-block: 80px;
-   }
+   padding-block: 80px;
    background: linear-gradient(180deg, #00111c 0%, #060d0b 21.02%);
 
    .solutions_content_container {
+      .title-wrapper {
+         margin-bottom: 20px;
+
+         @media all and (min-width: 768px) {
+            margin-bottom: 40px;
+         }
+
+         p {
+            margin-bottom: 5px;
+         }
+
+         p:nth-child(1) {
+            font-size: 12px;
+
+            @media all and (min-width: 992px) {
+               font-size: 16px;
+            }
+         }
+
+         p:nth-child(2) {
+            font-size: 20px;
+
+            @media all and (min-width: 400px) {
+               font-size: 24px;
+            }
+
+            @media all and (min-width: 992px) {
+               font-size: 32px;
+            }
+         }
+      }
+
       .problem_card {
          display: flex;
          gap: 56px;
-         padding-bottom: 96px;
+         margin-bottom: 50px;
+
+         
+         @media all and (min-width: 400px) {
+            margin-bottom: 72px;
+         }
+
          .problem_card__row {
             width: 100%;
             display: flex;
             justify-content: space-between;
+            gap: 10px;
+
+            @media all and (min-width: 576px) {
+               gap: 20px;
+            }
          }
+
          .left_card {
+            flex: 1;
             display: flex;
-            // padding: 100px 120px;
             min-height: 500px;
             align-items: center;
             justify-content: center;
             border-radius: 16px;
-            background: linear-gradient(
-               119deg,
-               rgba(0, 0, 0, 0) -55.58%,
-               rgba(226, 222, 241, 0.1) 100%
-            );
+            background: linear-gradient(119deg,
+                  rgba(0, 0, 0, 0) -55.58%,
+                  rgba(226, 222, 241, 0.1) 100%);
             backdrop-filter: blur(10px);
-            // img{
-            //     height: 300px;
-            //     width: 280px;
-            //     @media screen and (max-width:769px){
-            //         height: 100px;
-            //         width: 100px;
-            //     }
-            // }
-            // @media screen and (max-width:769px){
-            //     height: auto;
-            //     width: auto;
-            // }
+            min-height: 380px;
+            border-radius: 6px;
+
+            img {               
+               width: 90px;
+
+               @media all and (min-width: 576px) {
+                  width: 50%;
+               }
+
+               @media all and (min-width: 1200px) {
+                  width: 40%;
+               }
+            }
          }
+
          .right_card {
+            flex: 1;
             padding-top: 24px;
             display: grid;
-            gap:16px;
+            gap: 16px;
+            padding: 0;
+
+            .heading-img {
+               margin-bottom: 10px;
+            }
+
+            .heading {
+               font-size: 16px;
+               
+               @media all and (min-width: 400px) {
+                  font-size: 18px;
+               }
+
+               @media all and (min-width: 768px) {
+                  font-size: 20px;
+               }
+
+               @media all and (min-width: 992px) {
+                  font-size: 24px;
+               }
+            }
+
+            .para {
+               font-size: 12px;
+
+               @media all and (min-width: 400px) {
+                  font-size: 14px;
+               }
+
+               @media all and (min-width: 768px) {
+                  font-size: 16px;
+               }
+
+               @media all and (min-width: 992px) {
+                  font-size: 18px;
+               }
+            }
+
+            img {
+               width: 20px;
+            }
+
+            .problem_type {
+               font-size: 26px;
+               padding: 20px 0;
+            }
+
             .solution_link {
                color: var(--Linear, #e5be20) !important;
                width: fit-content;
-               min-width: 160px;
-               gap:8px;
-               display: flex; 
+               gap: 8px;
+               display: flex;
+               align-items: center;
+               min-width: 100px;
+               margin-top: 1rem !important;
+               font-size: 14px;
+
                &:hover {
                   border-bottom: 1px solid;
                }
-               
-               @media screen and (max-width: 430px) {
-                  min-width: 100px;
-                  .text {
-                     font-size: 12px;
+
+               .text {
+                  font-size: 12px;
+                  
+                  @media all and (min-width: 400px) {
+                     font-size: 14px;
+                  }
+   
+                  @media all and (min-width: 768px) {
+                     font-size: 16px;
+                  }
+
+                  @media all and (min-width: 992px) {
+                     font-size: 18px;
+                  }
+               }
+
+               img {
+                  width: 10px;
+
+                  @media all and (min-width: 400px) {
+                     width: 10px;
+                  }
+   
+                  @media all and (min-width: 768px) {
+                     width: 12px;
+                  }
+
+                  @media all and (min-width: 992px) {
+                     width: 14px;
                   }
                }
             }
@@ -70,104 +189,96 @@
 }
 
 @media screen and (max-width: 991px) {
-   .solutions_container
-      .solutions_content_container
-      .problem_card
-      .left_card
-      img {
-      width: 110px;
-   }
+   // .solutions_container .solutions_content_container .problem_card .left_card {
+   //    min-height: 380px;
+   //    border-radius: 6px;
+   // }
+   // .solutions_container
+   //    .solutions_content_container
+   //    .problem_card
+   //    .right_card
+   //    .problem_type {
+   //    font-size: 26px;
+   //    padding: 20px 0;
+   // }
+   // .solutions_container
+   // .solutions_content_container
+   // .problem_card
+   // .right_card
+   // .problem_desc {
+   // font-size: 16px;
+   // padding-bottom: 30px;
+   // }
+   // .solutions_container .solutions_content_container .padding {
+   //    padding-bottom: 100px;
+   // }
+   //    .solutions_container .solutions_content_container .problem_card .problem_card__row {
+   //       .col-5{
+   //          width: 51.67%;
+   //       }
+   //       .col-6{
+   //          width:41%;
+   //       }
 
-   .solutions_container .solutions_content_container .problem_card .left_card {
-      min-height: 380px;
-      border-radius: 6px;
-   }
-   .solutions_container
-      .solutions_content_container
-      .problem_card
-      .right_card
-      .problem_type {
-      font-size: 26px;
-      padding: 20px 0;
-   }
-   .solutions_container
-      .solutions_content_container
-      .problem_card
-      .right_card
-      .problem_desc {
-      font-size: 16px;
-      padding-bottom: 30px;
-   }
-   .solutions_container .solutions_content_container .padding {
-      padding-bottom: 100px;
-   }
-   .solutions_container .solutions_content_container .problem_card .problem_card__row {
-      .col-5{
-         width: 51.67%;
-      }
-      .col-6{
-         width:41%;
-      }
-      
-  }
+   //   }
 }
 
 @media screen and (max-width: 767px) {
-   .solutions_container .solutions_content_container .problem_line {
-      font-size: 24px;
-   }
-   .solutions_container .solutions_content_container .solutions_heading {
-      font-size: 12px;
-      padding-bottom: 10px;
-   }
-   .solutions_container .solutions_content_container .problem_card .right_card {
-      padding: 0;
-   }
-   .solutions_container
-      .solutions_content_container
-      .problem_card.reverse
-      .row {
-      flex-direction: column-reverse !important;
-   }
-   .solutions_container
-      .solutions_content_container
-      .problem_card
-      .right_card
-      .heading {
-      font-size: 1.2rem;
-      padding: 0;
-   }
-   .solutions_container
-      .solutions_content_container
-      .problem_card
-      .right_card
-      .para {
-      font-size: 12px;
-   }
-   .solutions_container
-      .solutions_content_container
-      .problem_card
-      .right_card
-      .solution_link {
-      margin-top: 1rem !important;
-      font-size: 14px;
-   }
-   .solutions_container
-      .solutions_content_container
-      .problem_card
-      .right_card
-      img {
-      width: 20px;
-   }
-   .solutions_container
-      .solutions_content_container
-      .problem_card
-      .right_card
-      .solution_link
-      img {
-      width: 10px;
-   }
-   .solutions_container .solutions_content_container .padding {
-      padding-bottom: 72px;
-   }
+   // .solutions_container .solutions_content_container .problem_line {
+   //    font-size: 24px;
+   // }
+   // .solutions_container .solutions_content_container .solutions_heading {
+   //    font-size: 12px;
+   //    padding-bottom: 10px;
+   // }
+   // .solutions_container .solutions_content_container .problem_card .right_card {
+   //    padding: 0;
+   // }
+   // .solutions_container
+   //    .solutions_content_container
+   //    .problem_card.reverse
+   //    .row {
+   //    flex-direction: column-reverse !important;
+   // }
+   // .solutions_container
+   //    .solutions_content_container
+   //    .problem_card
+   //    .right_card
+   //    .heading {
+   //    font-size: 1.2rem;
+   //    padding: 0;
+   // }
+   // .solutions_container
+   //    .solutions_content_container
+   //    .problem_card
+   //    .right_card
+   //    .para {
+   //    font-size: 12px;
+   // }
+   // .solutions_container
+   //    .solutions_content_container
+   //    .problem_card
+   //    .right_card
+   //    .solution_link {
+   //    margin-top: 1rem !important;
+   //    font-size: 14px;
+   // }
+   // .solutions_container
+   //    .solutions_content_container
+   //    .problem_card
+   //    .right_card
+   //    img {
+   //    width: 20px;
+   // }
+   // .solutions_container
+   //    .solutions_content_container
+   //    .problem_card
+   //    .right_card
+   //    .solution_link
+   //    img {
+   //    width: 10px;
+   // }
+   // .solutions_container .solutions_content_container .padding {
+   //    padding-bottom: 72px;
+   // }
 }
