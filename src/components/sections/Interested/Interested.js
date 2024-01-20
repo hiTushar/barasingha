@@ -7,7 +7,7 @@ function Interested({ setShowContactUsModal = () => { } }) {
    return (
       <div className="interested_container">
          <div className='bg'></div>
-         <div className="demo_content_container container">
+         <div className="demo_content_container component-container">
             <div className="left_content">
                <h2 className="heading heading--two">Interested in Our Products?</h2>
                <p className="para para--lg para--light">Get personalised Quotation for the products you need.</p>
