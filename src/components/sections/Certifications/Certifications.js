@@ -22,17 +22,40 @@ function Certifications() {
       return false;
    }
 
+   function getItemCount() {
+      let width = window.innerWidth;
+
+      if(width < 576) {
+         return 1;
+      }
+      else if (width < 992) {
+         return 2;
+      }
+      else {
+         return 3;
+      }
+   }
+
+   function checkCenter() {
+      let width = window.innerWidth;
+
+      if(width < 576) {
+         return true;
+      }
+      return false;
+   }
+
    return (
       <div className="certifications_container">
          <div className="component-container">
             <div className="certification_content_container">
                <div className="title-wrapper">
-                  <h6 className="heading heading--fancy text-center">Appreciations</h6>
-                  <h2 className="heading heading--two text-center">Our Certifications</h2>
+                  <p className="heading heading--fancy text-center">Appreciations</p>
+                  <p className="heading heading--two text-center">Our Certifications</p>
                </div>
                <div className="certificate-container">
                   {getCurrentDimension() && <OwlCarousel
-                     items={1}
+                     items={getItemCount()}
                      className="owl-theme text-center"
                      loop
                      speed={1000}
@@ -41,7 +64,8 @@ function Certifications() {
                      nav={false}
                      dots={true}
                      margin={8}
-                     center>
+                     center={checkCenter()}
+                     >
                      {certifications.map((certification, index) => (
                         <div className="certificate_card" key={index}>
                            <img className="certificate_image" src={certification.image} alt={certification.image} />
