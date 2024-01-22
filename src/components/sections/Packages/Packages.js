@@ -10,8 +10,6 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import greenshield from '../../../media/greenshield.svg';
 import SlikSlider from '../../SlikSlider';
-import IndividualPackage from './IndividualPackage';
-
 const slickMob = {
 
    infinite: true,
@@ -72,6 +70,39 @@ const subData = [
    }
 ]
 
+const dataTwo = [
+   {
+      sellType: 'FAST SELLING',
+      securityType: 'Premium Security',
+      title: 'Corporate web control',
+      desc: 'Corporate web control allows you to secure the network by blocking unwanted sites and limiting the network access.'
+   },
+   {
+      sellType: 'TOP SELLING',
+      securityType: 'Standard Security',
+      title: 'Firewall',
+      desc: 'Smart Network Manager is a tool for system admins to manage each Windows PC in the network without actually visiting.'     
+   },
+   {
+      sellType: 'TOP SELLING',
+      securityType: 'Standard Security',
+      title: 'End Point Security',
+      desc: 'Corporate web control allows you to secure the network by blocking unwanted sites and limiting the network access.'     
+   },
+   {
+      sellType: 'TOP SELLING',
+      securityType: 'Standard Security',
+      title: 'Secure RDP Manager',
+      desc: 'Smart Network Manager is a tool for system admins to manage each Windows PC in the network without actually visiting.'     
+   },
+   {
+      sellType: 'TOP SELLING',
+      securityType: 'Standard Security',
+      title: 'Windows Booster',
+      desc: 'Corporate web control allows you to secure the network by blocking unwanted sites and limiting the network access.'     
+   }
+]
+
 function Packages() {
    const owlCarouselRef = React.useRef(null);
 
@@ -94,7 +125,7 @@ function Packages() {
          return 53;
       }
       else {
-         return 50;
+         return 33;
       }
    }
 
@@ -109,6 +140,39 @@ function Packages() {
       }
       else {
          return 50;
+      }
+   }
+
+   function getStagePaddingIndividual() {
+      const width = window.innerWidth;
+
+      if(width >= 576) {
+         return 30;
+      }
+      else {
+         return 20;
+      }
+   }
+
+   function getMarginIndividual() {
+      const width = window.innerWidth;
+
+      if(width > 400) {
+         return 32;
+      }
+      else {
+         return 100;
+      }
+   }
+
+   function getItemCountIndividual() {
+      const width = window.innerWidth;
+
+      if(width > 400) {
+         return 2;
+      }
+      else {
+         return 1;
       }
    }
 
@@ -285,7 +349,7 @@ function Packages() {
          }
          <div className="individual_package_container">
             <OwlCarousel
-               items={getCurrentDimension() ? 1 : 2}
+               items={getItemCountIndividual()}
                loop
                nav={true}
                // infinite={true}
@@ -293,129 +357,40 @@ function Packages() {
                //autoplay={true}
                autoplaySpeed={1000}
                dots={true}
-               margin={getCurrentDimension() ? 100 : 32}
-               stagePadding={getCurrentDimension() ? 10 : 32}
+               margin={getMarginIndividual()}
+               stagePadding={getStagePaddingIndividual()}
+               navContainerClass='owl-nav-indv-custom'
             >
-               <div className="individual_package_card d-flex align-items-center">
-                  <div className='row align-items-center'>
-                     <div className='col-lg-3 col-12'>
-                        <div className="left_content">
-                           <img className="indiv_image" src={icon1} alt={"icon1"}></img>
-                        </div>
-                     </div>
-                     <div className='col-lg-7 col-12 text-center text-lg-start'>
-                        <div className="right_content ">
-                           <div className="fast_selling_block">FAST SELLING</div>
-                           <div className='d-flex pt-2 justify-content-center justify-content-lg-start'>
-                              <div className='d-flex'>
-                                 <img className="green_shield" src={greenshield} alt={"greenshield"} />
-                                 <img className="green_shield fade-shield" src={greenshield} alt={"greenshield"} />
-                                 <img className="green_shield fade-shield" src={greenshield} alt={"greenshield"} />
-                              </div>
-                              <div className="security_stage ms-2">Premium Security</div>
+               {
+                  dataTwo.map((dataPt, index)  => (
+                     <div className="individual_package_card" key={index}>
+                        {/* <div className='row'> */}
+                           <div className="left_content">
+                              <img className="indiv_image" src={icon1} alt={"icon1"}></img>
                            </div>
-                           <div className="indiv_feature mb-2">Corporate web control</div>
-                           <div className="para para--light">Corporate web control allows you to secure the network by blocking unwanted sites and limiting the network access.</div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div className="individual_package_card d-flex align-items-center">
-                  <div className='row align-items-center'>
-                     <div className='col-lg-3 col-12'>
-                        <div className="left_content">
-                           <img className="indiv_image" src={icon1} alt={"icon1"}></img>
-                        </div>
-                     </div>
-                     <div className='col-lg-7 col-12 text-center text-lg-start'>
-                        <div className="right_content ">
-                           <div className="top_selling_block">TOP SELLING</div>
-                           <div className='d-flex pt-2 justify-content-center justify-content-lg-start'>
-                              <div className='d-flex'>
-                                 <img className="green_shield" src={greenshield} alt={"greenshield"} />
-                                 <img className="green_shield" src={greenshield} alt={"greenshield"} />
-                                 <img className="green_shield fade-shield" src={greenshield} alt={"greenshield"} />
+                           <div className="right_content ">
+                              <div className="fast_selling_block">{dataPt.sellType}</div>
+                              <div className='pt-2 security_type'>
+                                 <div className='shield'>
+                                    <div>
+                                       <img className="green_shield" src={greenshield} alt={"greenshield"} />
+                                    </div>
+                                    <div>
+                                       <img className="green_shield fade-shield" src={greenshield} alt={"greenshield"} />
+                                    </div>
+                                    <div>
+                                       <img className="green_shield fade-shield" src={greenshield} alt={"greenshield"} />
+                                    </div>
+                                 </div>
+                                 <div className="security_stage">{dataPt.securityType}</div>
                               </div>
-                              <div className="security_stage ms-2">Standard Security</div>
+                              <div className="indiv_feature mb-2">{dataPt.title}</div>
+                              <div className="para para--light">{dataPt.desc}</div>
                            </div>
-                           <div className="indiv_feature mb-2">Firewall</div>
-                           <div className="para para--light">Smart Network Manager is a tool for system admins to manage each Windows PC in the network without actually visiting</div>
-                        </div>
+                        {/* </div> */}
                      </div>
-                  </div>
-               </div>
-               <div className="individual_package_card d-flex align-items-center">
-                  <div className='row align-items-center'>
-                     <div className='col-lg-3 col-12'>
-                        <div className="left_content">
-                           <img className="indiv_image" src={icon1} alt={"icon1"}></img>
-                        </div>
-                     </div>
-                     <div className='col-lg-7 col-12 text-center text-lg-start'>
-                        <div className="right_content ">
-                           <div className="top_selling_block">TOP SELLING</div>
-                           <div className='d-flex pt-2 justify-content-center justify-content-lg-start'>
-                              <div className='d-flex'>
-                                 <img className="green_shield" src={greenshield} alt={"greenshield"} />
-                                 <img className="green_shield" src={greenshield} alt={"greenshield"} />
-                                 <img className="green_shield fade-shield" src={greenshield} alt={"greenshield"} />
-                              </div>
-                              <div className="security_stage ms-2">Standard Security</div>
-                           </div>
-                           <div className="indiv_feature mb-2">End Point Security</div>
-                           <div className="para para--light">Corporate web control allows you to secure the network by blocking unwanted sites and limiting the network access.</div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div className="individual_package_card d-flex align-items-center">
-                  <div className='row align-items-center'>
-                     <div className='col-lg-3 col-12'>
-                        <div className="left_content">
-                           <img className="indiv_image" src={icon1} alt={"icon1"}></img>
-                        </div>
-                     </div>
-                     <div className='col-lg-7 col-12 text-center text-lg-start'>
-                        <div className="right_content ">
-                           <div className="top_selling_block">TOP SELLING</div>
-                           <div className='d-flex pt-2 justify-content-center justify-content-lg-start'>
-                              <div className='d-flex'>
-                                 <img className="green_shield" src={greenshield} alt={"greenshield"} />
-                                 <img className="green_shield" src={greenshield} alt={"greenshield"} />
-                                 <img className="green_shield fade-shield" src={greenshield} alt={"greenshield"} />
-                              </div>
-                              <div className="security_stage ms-2">Standard Security</div>
-                           </div>
-                           <div className="indiv_feature mb-2">Secure RDP Manager</div>
-                           <div className="para para--light">Smart Network Manager is a tool for system admins to manage each Windows PC in the network without actually visiting</div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div className="individual_package_card d-flex align-items-center">
-                  <div className='row align-items-center'>
-                     <div className='col-lg-3 col-12'>
-                        <div className="left_content">
-                           <img className="indiv_image" src={icon1} alt={"icon1"}></img>
-                        </div>
-                     </div>
-                     <div className='col-lg-7 col-12 text-center text-lg-start'>
-                        <div className="right_content ">
-                           <div className="top_selling_block">TOP SELLING</div>
-                           <div className='d-flex pt-2 justify-content-center justify-content-lg-start'>
-                              <div className='d-flex'>
-                                 <img className="green_shield" src={greenshield} alt={"greenshield"} />
-                                 <img className="green_shield" src={greenshield} alt={"greenshield"} />
-                                 <img className="green_shield fade-shield" src={greenshield} alt={"greenshield"} />
-                              </div>
-                              <div className="security_stage ms-2">Standard Security</div>
-                           </div>
-                           <div className="indiv_feature mb-2">Windows Booster</div>
-                           <div className="para para--light">Corporate web control allows you to secure the network by blocking unwanted sites and limiting the network access.</div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+                  ))
+               }
             </OwlCarousel>
          </div>
       </section >
