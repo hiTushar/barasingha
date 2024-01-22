@@ -36,98 +36,97 @@ const slickInnerMob = {
    centerMode: true
 }
 
+function getCurrentDimension() { return window.innerWidth < 992 }
+
+function getStagePaddingOne() {
+   const width = window.innerWidth;
+
+   if(width >= 1500) {
+      return 180;
+   }
+   else if(width >= 1400) {
+      return 130;
+   }
+   else if(width >= 1300) {
+      return 80;
+   }
+   else if(width > 1200) {
+      return 53;
+   }
+   else {
+      return 33;
+   }
+}
+
+function getMarginOne() {
+   const width = window.innerWidth;
+
+   if(width >= 1400) {
+      return 0;
+   }
+   else if (width >= 1200) {
+      return 30;
+   }
+   else {
+      return 50;
+   }
+}
+
+function getStagePaddingTwo() {
+   const width = window.innerWidth;
+
+   if(width >= 576) {
+      return 30;
+   }
+   else {
+      return 20;
+   }
+}
+
+function getMarginTwo() {
+   const width = window.innerWidth;
+
+   if(width > 400) {
+      return 32;
+   }
+   else {
+      return 100;
+   }
+}
+
+function getItemCountTwo() {
+   const width = window.innerWidth;
+
+   if(width > 400) {
+      return 2;
+   }
+   else {
+      return 1;
+   }
+}
+
+function handleCarouselChange(event) {
+   const currentIndex = event.item.index
+   const prevActiveIndex = currentIndex ? event.item.index - 1 : event.item.count - 1;
+   const nextActiveIndex = event.item.index + 1
+
+   const currentItem = document.querySelectorAll('.owl-item')[currentIndex]
+   const prevItem = document.querySelectorAll('.owl-item')[prevActiveIndex]
+   const nextItem = document.querySelectorAll('.owl-item')[nextActiveIndex]
+
+   if(currentItem) {
+      currentItem.style.transform = '';
+   }
+   if(prevItem) {
+      prevItem.style.transform = 'perspective(1000px) rotateY(20deg) translate(130px, 0) scale3d(1, 0.9, 1)';
+   }
+   if(nextItem) {
+      nextItem.style.transform = 'perspective(1000px) rotateY(-20deg) translate(-130px, 0) scale3d(1, 0.9, 1)';
+   }
+}
+
 function Packages() {
    const owlCarouselRef = React.useRef(null);
-
-
-   function getCurrentDimension() { return window.innerWidth < 992 }
-
-   function getStagePadding() {
-      const width = window.innerWidth;
-
-      if(width >= 1500) {
-         return 180;
-      }
-      else if(width >= 1400) {
-         return 130;
-      }
-      else if(width >= 1300) {
-         return 80;
-      }
-      else if(width > 1200) {
-         return 53;
-      }
-      else {
-         return 33;
-      }
-   }
-
-   function getMargin() {
-      const width = window.innerWidth;
-
-      if(width >= 1400) {
-         return 0;
-      }
-      else if (width >= 1200) {
-         return 30;
-      }
-      else {
-         return 50;
-      }
-   }
-
-   function getStagePaddingIndividual() {
-      const width = window.innerWidth;
-
-      if(width >= 576) {
-         return 30;
-      }
-      else {
-         return 20;
-      }
-   }
-
-   function getMarginIndividual() {
-      const width = window.innerWidth;
-
-      if(width > 400) {
-         return 32;
-      }
-      else {
-         return 100;
-      }
-   }
-
-   function getItemCountIndividual() {
-      const width = window.innerWidth;
-
-      if(width > 400) {
-         return 2;
-      }
-      else {
-         return 1;
-      }
-   }
-
-   function handleCarouselChange(event) {
-      const currentIndex = event.item.index
-      const prevActiveIndex = currentIndex ? event.item.index - 1 : event.item.count - 1;
-      const nextActiveIndex = event.item.index + 1
-
-      const currentItem = document.querySelectorAll('.owl-item')[currentIndex]
-      const prevItem = document.querySelectorAll('.owl-item')[prevActiveIndex]
-      const nextItem = document.querySelectorAll('.owl-item')[nextActiveIndex]
-
-      if(currentItem) {
-         currentItem.style.transform = '';
-      }
-      if(prevItem) {
-         prevItem.style.transform = 'perspective(1000px) rotateY(20deg) translate(130px, 0) scale3d(1, 0.9, 1)';
-      }
-      if(nextItem) {
-         nextItem.style.transform = 'perspective(1000px) rotateY(-20deg) translate(-130px, 0) scale3d(1, 0.9, 1)';
-      }
-   }
 
    React.useEffect(() => {
       // const items = document.querySelectorAll('.owl-item')
@@ -154,8 +153,8 @@ function Packages() {
                   loop
                   nav={true}
                   dots={false}
-                  margin={getMargin()}
-                  stagePadding={getStagePadding()}
+                  margin={getMarginOne()}
+                  stagePadding={getStagePaddingOne()}
                   responsiveClass={true}
                   onChanged={handleCarouselChange}
                   navContainerClass='owl-nav-custom'
@@ -282,7 +281,7 @@ function Packages() {
          }
          <div className="individual_package_container">
             <OwlCarousel
-               items={getItemCountIndividual()}
+               items={getItemCountTwo()}
                loop
                nav={true}
                // infinite={true}
@@ -290,8 +289,8 @@ function Packages() {
                //autoplay={true}
                autoplaySpeed={1000}
                dots={true}
-               margin={getMarginIndividual()}
-               stagePadding={getStagePaddingIndividual()}
+               margin={getMarginTwo()}
+               stagePadding={getStagePaddingTwo()}
                navContainerClass='owl-nav-indv-custom'
             >
                {
