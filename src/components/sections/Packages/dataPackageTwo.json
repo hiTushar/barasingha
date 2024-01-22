@@ -1,0 +1,32 @@
+[
+    {
+       "sellType": "FAST SELLING",
+       "securityType": "Premium Security",
+       "title": "Corporate web control",
+       "desc": "Corporate web control allows you to secure the network by blocking unwanted sites and limiting the network access."
+    },
+    {
+       "sellType": "TOP SELLING",
+       "securityType": "Standard Security",
+       "title": "Firewall",
+       "desc": "Smart Network Manager is a tool for system admins to manage each Windows PC in the network without actually visiting."     
+    },
+    {
+       "sellType": "TOP SELLING",
+       "securityType": "Standard Security",
+       "title": "End Point Security",
+       "desc": "Corporate web control allows you to secure the network by blocking unwanted sites and limiting the network access."     
+    },
+    {
+       "sellType": "TOP SELLING",
+       "securityType": "Standard Security",
+       "title": "Secure RDP Manager",
+       "desc": "Smart Network Manager is a tool for system admins to manage each Windows PC in the network without actually visiting."     
+    },
+    {
+       "sellType": "TOP SELLING",
+       "securityType": "Standard Security",
+       "title": "Windows Booster",
+       "desc": "Corporate web control allows you to secure the network by blocking unwanted sites and limiting the network access."     
+    }
+]

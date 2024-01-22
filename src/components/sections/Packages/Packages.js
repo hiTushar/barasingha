@@ -10,6 +10,10 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import greenshield from '../../../media/greenshield.svg';
 import SlikSlider from '../../SlikSlider';
+import dataOne from './dataPackageOne.json';
+import subDataOne from './subDataPackageOne';
+import dataTwo from './dataPackageTwo.json';
+
 const slickMob = {
 
    infinite: true,
@@ -31,77 +35,6 @@ const slickInnerMob = {
    slidesToScroll: 1,
    centerMode: true
 }
-
-const data = [
-   {
-      title: 'End Point Security Package 0',
-      desc: 'Corporate web control allows you to secure the network by block ingunwanted sites and limiting the network access.'
-   },
-   {
-      title: 'End Point Security Package 1',
-      desc: 'Corporate web control allows you to secure the network by block ingunwanted sites and limiting the network access.'
-   },
-   {
-      title: 'End Point Security Package 2',
-      desc: 'Corporate web control allows you to secure the network by block ingunwanted sites and limiting the network access.'
-   },
-]
-
-const subData = [
-   {
-      icon: icon1,
-      title: 'Corporate web control',
-      desc: ['Windows, Mac & Android', 'Sensitive data encryption', 'Detailed and Summary Report']
-   },
-   {
-      icon: icon2,
-      title: 'Firewall Security Control',
-      desc: ['Windows, Mac & Android', 'Sensitive data encryption', 'Detailed and Summary Report']
-   },
-   {
-      icon: icon3,
-      title: 'Password Vault Manager',
-      desc: ['Windows, Mac & Android', 'Sensitive data encryption', 'Detailed and Summary Report']
-   },
-   {
-      icon: icon4,
-      title: 'End Point Security',
-      desc: ['Windows, Mac & Android', 'Sensitive data encryption', 'Detailed and Summary Report']
-   }
-]
-
-const dataTwo = [
-   {
-      sellType: 'FAST SELLING',
-      securityType: 'Premium Security',
-      title: 'Corporate web control',
-      desc: 'Corporate web control allows you to secure the network by blocking unwanted sites and limiting the network access.'
-   },
-   {
-      sellType: 'TOP SELLING',
-      securityType: 'Standard Security',
-      title: 'Firewall',
-      desc: 'Smart Network Manager is a tool for system admins to manage each Windows PC in the network without actually visiting.'     
-   },
-   {
-      sellType: 'TOP SELLING',
-      securityType: 'Standard Security',
-      title: 'End Point Security',
-      desc: 'Corporate web control allows you to secure the network by blocking unwanted sites and limiting the network access.'     
-   },
-   {
-      sellType: 'TOP SELLING',
-      securityType: 'Standard Security',
-      title: 'Secure RDP Manager',
-      desc: 'Smart Network Manager is a tool for system admins to manage each Windows PC in the network without actually visiting.'     
-   },
-   {
-      sellType: 'TOP SELLING',
-      securityType: 'Standard Security',
-      title: 'Windows Booster',
-      desc: 'Corporate web control allows you to secure the network by blocking unwanted sites and limiting the network access.'     
-   }
-]
 
 function Packages() {
    const owlCarouselRef = React.useRef(null);
@@ -293,7 +226,7 @@ function Packages() {
             : <div className="package_details_container_mobile">
                <SlikSlider {...slickMob} dots={false}>
                   {
-                     data.map((dataPt, index) => (
+                     dataOne.map((dataPt, index) => (
                         <div className='mobile_package_card' key={index}>
                            <div className="noise-img"></div>
                            <div className="ellipse ellipse-two"></div>
@@ -302,7 +235,7 @@ function Packages() {
                            <div className='all-items'>
                               <div>
                                  {
-                                    subData.map((dataPt, index) => (
+                                    subDataOne.map((dataPt, index) => (
                                        <div className="item-mob" key={index   }>
                                           <div className="row">
                                              <div className="col-12 feature-img">
@@ -323,7 +256,7 @@ function Packages() {
                            <div className='slider-items'>
                               <SlikSlider {...slickInnerMob} dots={true}>
                                  {
-                                    subData.map((dataPt, index) => (
+                                    subDataOne.map((dataPt, index) => (
                                        <div className="item-mob" key={index   }>
                                           <div className="row">
                                              <div className="col-12">
