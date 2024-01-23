@@ -142,17 +142,17 @@
                width: fit-content;
                gap: 8px;
                display: flex;
-               align-items: center;
+               align-items: flex-end;
                min-width: 100px;
                margin-top: 1rem !important;
                font-size: 14px;
 
-               &:hover {
-                  border-bottom: 1px solid;
-               }
-
                .text {
                   font-size: 12px;
+
+                  &:hover {
+                     border-bottom: 1px solid;
+                  }
                   
                   @media all and (min-width: 400px) {
                      font-size: 14px;
@@ -169,6 +169,7 @@
 
                img {
                   width: 10px;
+                  padding-bottom: 6px;
 
                   @media all and (min-width: 400px) {
                      width: 10px;
