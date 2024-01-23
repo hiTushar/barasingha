@@ -67,7 +67,7 @@ function Navbar({ showBackdrop = () => { }, hideBackdrop = () => { }, backdropIs
                      <div className="menu-container">
                         <div className="menu-row">
                            <div className='menu-column'>
-                              <div className='mb-3 menu-content'>
+                              <div className='menu-content'>
                                  <Link to="/productspage">
                                     <div className='menu-content-link'>
                                        <img src={globe} alt="globe" title="globe" />
@@ -83,7 +83,7 @@ function Navbar({ showBackdrop = () => { }, hideBackdrop = () => { }, backdropIs
                               </div>
                            </div>
                            <div className='menu-column'>
-                              <div className='menu-content mb-3'>
+                              <div className='menu-content'>
                                  <img src={creditcard} alt="creditcard" title="creditcard" />
                                  <span className="heading heading--three">End Point Security</span>
                                  <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
@@ -95,7 +95,7 @@ function Navbar({ showBackdrop = () => { }, hideBackdrop = () => { }, backdropIs
                               </div>
                            </div>
                            <div className='menu-column'>
-                              <div className='menu-content mb-3'>
+                              <div className='menu-content'>
                                  <img src={hacker} alt="hacker" title="hacker" />
                                  <span className="heading heading--three">Secure RDP Manager</span>
                                  <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
@@ -134,7 +134,7 @@ function Navbar({ showBackdrop = () => { }, hideBackdrop = () => { }, backdropIs
                            <div className="menu-column">
                               <div className="menu-sub-row">
                                  <div className='menu-column'>
-                                    <Link to='/solutionspage' className='menu-content mb-3'>
+                                    <Link to='/solutionspage' className='menu-content'>
                                        <div className='menu-content-link'>
                                           <img src={sirine} alt="sirine" title="sirine" />
                                           <div className='heading heading--three'>Threat hunting and blocking</div>
@@ -148,7 +148,7 @@ function Navbar({ showBackdrop = () => { }, hideBackdrop = () => { }, backdropIs
                                     </div>
                                  </div>
                                  <div className='menu-column'>
-                                    <div activeClassName="active" to="" className='menu-content mb-3'>
+                                    <div activeClassName="active" to="" className='menu-content'>
                                        <img src={website} alt="website" title="website" />
                                        <div className='heading heading--three'>Behaviour detection and repeat offenders</div>
                                        <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
