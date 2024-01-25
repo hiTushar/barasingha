@@ -18,6 +18,13 @@
 ::after,
 ::before {
    box-sizing: border-box;
+   /* Hide scrollbar for IE, Edge and Firefox */
+   -ms-overflow-style: none;  /* IE and Edge */
+   scrollbar-width: none;  /* Firefox */
+}
+
+*::-webkit-scrollbar {
+   display: none;
 }
 
 body {
@@ -28,15 +35,6 @@ body {
       ),
       #022439 !important;
    color: #d9d9d9 !important;
-   
-   /* Hide scrollbar for IE, Edge and Firefox */
-   -ms-overflow-style: none;  /* IE and Edge */
-   scrollbar-width: none;  /* Firefox */
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-body::-webkit-scrollbar {
-   display: none;
 }
 
 .main-container {
