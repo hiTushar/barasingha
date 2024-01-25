@@ -97,7 +97,7 @@ function getMarginTwo() {
 function getItemCountTwo() {
    const width = window.innerWidth;
 
-   if(width > 400) {
+   if(width > 540) {
       return 2;
    }
    else {
@@ -137,7 +137,7 @@ function Packages() {
       // }
    }, [])
 
-   console.log('reloaded');
+   // console.log('reloaded');
    return (
       <section className="package_container">
          <div className="title-wrapper">
