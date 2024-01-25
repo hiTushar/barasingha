@@ -39,16 +39,16 @@
          margin-inline: auto;
          border-bottom: 1px solid rgba($color: #fff, $alpha: 0.1);
 
-         &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 200px;
-            height: 100%;
-            background: linear-gradient(to left, #01121c 0%, #01121c00 100%);
-            pointer-events: none;
-         }
+         // &::after {
+         //    content: "";
+         //    position: absolute;
+         //    top: 0;
+         //    right: 0;
+         //    width: 200px;
+         //    height: 100%;
+         //    background: linear-gradient(to left, #01121c 0%, #01121c00 100%);
+         //    pointer-events: none;
+         // }
 
          .tabs-btn {
             display: flex;
