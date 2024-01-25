@@ -2,14 +2,10 @@ import React, { useState } from 'react';
 import './FAQ.scss';
 import video from "../../../../media/ball.webm";
 import video2 from "../../../../media/faq-ball.webm";
-import ContactUsModal from 'components/pages/Forms/ContactUs';
 import tabArrow from './tabArrow.svg';
 
-function Faq() {
+function Faq({ setShowContactUsModal = () => { } }) {
    // Define the tab data with titles and contents
-   const[showContactUsModal, setShowContactUsModal] =useState(false);
-
-   const closeContactUsModal = () => setShowContactUsModal(false);
 
    const tabData = [
       {
@@ -102,7 +98,6 @@ function Faq() {
 
            
          </div>
-         {showContactUsModal && <ContactUsModal closeContactUsModal={closeContactUsModal}/>}
       </div>
    );
 }

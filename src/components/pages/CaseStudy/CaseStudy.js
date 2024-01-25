@@ -3,7 +3,7 @@ import './CaseStudy.scss';
 import Faq from '../Common/FAQ/FAQ';
 import Search from "../CaseStudy/SearchCaseStudy/SearchCaseStudy";
 
-export default function CaseStudy() {
+export default function CaseStudy({ setShowContactUsModal = () => { } }) {
 
    useEffect(() => {
       window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -29,7 +29,7 @@ export default function CaseStudy() {
                </div>
             </section>
          </main>
-         <Faq />
+         <Faq setShowContactUsModal={setShowContactUsModal} />
       </>
    );
 }

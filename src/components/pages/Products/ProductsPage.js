@@ -21,7 +21,7 @@ function ProductsPage({ setShowContactUsModal = () => { } }) {
          <SuitePricing />
          <Audience />
          <Demo setShowContactUsModal={setShowContactUsModal} />
-         <Faq />
+         <Faq setShowContactUsModal={setShowContactUsModal} />
       </>
    );
 }
