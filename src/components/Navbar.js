@@ -48,11 +48,16 @@ function Navbar({ showBackdrop = () => { }, hideBackdrop = () => { }, backdropIs
       }
    }
 
+   const goHome = () => {
+      hideBackdrop();
+      setClick(false);
+   }
+
    return (
       <>
          <nav className='navbar sticky-top'>
             <div className='component-container position-relative d-flex w-100 justify-content-between align-items-center'>
-               <Link onClick={handleClick} activeClassName="active" to="/" className='navbar-logo'>
+               <Link onClick={goHome} activeClassName="active" to="/" className='navbar-logo'>
                   <img src={logo} className='navbar-logo-image' alt='logo'></img>
                   <img src={brandName} className='navbar-logo-brandname' alt='brandname'></img>
                </Link>
