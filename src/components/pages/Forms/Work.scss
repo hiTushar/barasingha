@@ -11,9 +11,14 @@
        rgba(0, 0, 0, 0.6) 100%
     );
     backdrop-filter: blur(5px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 20px;
+    overflow: auto;
+    
+    @media all and (min-width: 992px) {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
 }
 
 .work_container {
@@ -26,8 +31,9 @@
    position: relative;
    @media (max-width: 768px) {
       flex-direction: column;
-      margin: 40px;
-      height: calc(100% - 80px);
+      // margin: 40px;
+      height: auto;
+      width: 100%;
    }
    .info {
       padding: 56px;
@@ -60,6 +66,7 @@
          color: rgba(255, 255, 255, 0.6);
          font-size: 14px;
          font-weight: 200;
+         margin-bottom: 0px;
          @media (max-width: 768px) {
             text-align: center;
             font-size: 12px;
