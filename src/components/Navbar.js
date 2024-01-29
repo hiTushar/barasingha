@@ -24,6 +24,10 @@ import LinkArrow from '../media/arrow.svg';
 function Navbar({ showBackdrop = () => { }, hideBackdrop = () => { }, backdropIsVisible = false, setShowContactUsModal = () => { }, ...props }) {
 
    const [click, setClick] = useState(false);
+   const [navbarMenu, setNavbarMenu] = useState({
+      product: 'close',
+      solution: 'close'
+   })
 
    const handleClick = () => {
       if (backdropIsVisible) {
@@ -33,7 +37,7 @@ function Navbar({ showBackdrop = () => { }, hideBackdrop = () => { }, backdropIs
       };
       setClick(!click);
       if (window.innerWidth > 768) {
-         window.location.reload();
+         // window.location.reload();
       }
    }
 
@@ -44,13 +48,29 @@ function Navbar({ showBackdrop = () => { }, hideBackdrop = () => { }, backdropIs
          showBackdrop()
       }
       if (window.innerWidth > 768) {
-         window.location.reload();
+         // window.location.reload();
       }
    }
 
    const goHome = () => {
       hideBackdrop();
       setClick(false);
+   }
+
+   const menuOpen = (navOption) => {
+      showBackdrop();
+      setNavbarMenu(navbarMenu => ({ ...navbarMenu, [navOption]: 'open' }));
+      let productMenuOption = document.getElementById(navOption);
+      productMenuOption.getElementsByTagName('span')[0].style = 'color: #e5be20 !important';
+      productMenuOption.getElementsByTagName('i')[0].style = 'color:  #e5be20 !important; transform: rotate(180deg); padding-top: 0px';
+   }
+
+   const menuClose = (navOption) => {
+      hideBackdrop();
+      setNavbarMenu(navbarMenu => ({ ...navbarMenu, [navOption]: 'close' }));
+      let solutionMenuOption = document.getElementById(navOption);
+      solutionMenuOption.getElementsByTagName('span')[0].style = 'color: #c8c8c8 !important';
+      solutionMenuOption.getElementsByTagName('i')[0].style = 'color:  #c8c8c8 !important; transform: rotate(0deg); padding-top: 0px';
    }
 
    return (
@@ -64,110 +84,118 @@ function Navbar({ showBackdrop = () => { }, hideBackdrop = () => { }, backdropIs
                <div className='menu-icon'>
                </div>
                <ul className={click ? 'nav-menu active' : 'nav-menu mb-0'}>
-                  <li className='menu' onClick={toggleBackdrop} onMouseEnter={showBackdrop} onMouseLeave={hideBackdrop}>
-                     <div className='nav-links'>
+                  <li className='menu' onClick={toggleBackdrop} onMouseEnter={() => menuOpen('product')} onMouseLeave={() => menuClose('product')}>
+                     <div className='nav-links' id='product'>
                         <span>Products</span>
                         <i className="pi pi-angle-down ms-1" style={{ paddingTop: '2px' }}></i>
                      </div>
-                     <div className="menu-container">
-                        <div className="menu-row">
-                           <div className='menu-column'>
-                              <div className='menu-content'>
-                                 <Link to="/productspage">
-                                    <div className='menu-content-link'>
-                                       <img src={globe} alt="globe" title="globe" />
-                                       <span className="heading heading--three">Corporate Web Control</span>
-                                    </div>
-                                    <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
-                                 </Link>
-                              </div>
-                              <div className='menu-content'>
-                                 <img src={broken} alt="broken" title="broken" />
-                                 <span className="heading heading--three">Windows Booster</span>
-                                 <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
-                              </div>
-                           </div>
-                           <div className='menu-column'>
-                              <div className='menu-content'>
-                                 <img src={creditcard} alt="creditcard" title="creditcard" />
-                                 <span className="heading heading--three">End Point Security</span>
-                                 <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
-                              </div>
-                              <div className='menu-content'>
-                                 <img src={safebox} alt="safebox" title="safebox" />
-                                 <span className="heading heading--three">Password Vault Manager</span>
-                                 <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
-                              </div>
-                           </div>
-                           <div className='menu-column'>
-                              <div className='menu-content'>
-                                 <img src={hacker} alt="hacker" title="hacker" />
-                                 <span className="heading heading--three">Secure RDP Manager</span>
-                                 <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
-                              </div>
-                              <div className='menu-content'>
-                                 <img src={server} alt="server" title="server" />
-                                 <span className="heading heading--three">Firewall</span>
-                                 <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </li>
-                  <li className='menu' onClick={toggleBackdrop} onMouseEnter={showBackdrop} onMouseLeave={hideBackdrop}>
-                     <div className='nav-links'>
-                        <span>Solutions</span>
-                        <i className="pi pi-angle-down ms-1" onMouseEnter={showBackdrop} style={{ paddingTop: '2px' }}></i>
-                     </div>
-                     <div className="menu-container solutions">
-                        <div className="menu-row">
-                           <div className='menu-column'>
-                              <div className='menu-column2'>
-                                 <div className='title'>Industry</div>
-                                 <div className='subtitle1'>Healthcare</div>
-                                 <div className='subtitle'>Information Technology</div>
-                                 <div className='subtitle'>Automobile</div>
-                                 <div className='subtitle'>Government</div>
-                                 <div className='seperator'></div>
-                                 <div className='title'>Business Goals</div>
-                                 <div className='subtitle'>Department Control</div>
-                                 <div className='subtitle'>Information Technology</div>
-                                 <div className='subtitle'>Access Management</div>
-                                 <div className='subtitle'>Protecting Infra</div>
-                              </div>
-                           </div>
-                           <div className="menu-column">
-                              <div className="menu-sub-row">
+                     {
+                        navbarMenu.product === 'open' ? (
+                           <div className="menu-container">
+                              <div className="menu-row">
                                  <div className='menu-column'>
-                                    <Link to='/solutionspage' className='menu-content'>
-                                       <div className='menu-content-link'>
-                                          <img src={sirine} alt="sirine" title="sirine" />
-                                          <div className='heading heading--three'>Threat hunting and blocking</div>
+                                    <Link to="/productspage">
+                                       <div className='menu-content' onClick={() => menuClose('product')}>
+                                          <div className='menu-content-link'>
+                                             <img src={globe} alt="globe" title="globe" />
+                                             <span className="heading heading--three">Corporate Web Control</span>
+                                          </div>
                                           <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
                                        </div>
                                     </Link>
                                     <div className='menu-content'>
-                                       <img src={hacker2} alt="hacker2" title="hacker2" />
-                                       <div className='heading heading--three'>Protecting personally identifiable data</div>
+                                       <img src={broken} alt="broken" title="broken" />
+                                       <span className="heading heading--three">Windows Booster</span>
                                        <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
                                     </div>
                                  </div>
                                  <div className='menu-column'>
-                                    <div activeClassName="active" to="" className='menu-content'>
-                                       <img src={website} alt="website" title="website" />
-                                       <div className='heading heading--three'>Behaviour detection and repeat offenders</div>
+                                    <div className='menu-content'>
+                                       <img src={creditcard} alt="creditcard" title="creditcard" />
+                                       <span className="heading heading--three">End Point Security</span>
                                        <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
                                     </div>
-                                    <div activeClassName="active" to="" className='menu-content'>
-                                       <img src={protection} alt="protection" title="protection" />
-                                       <div className='heading heading--three'>New forms of ransomware</div>
+                                    <div className='menu-content'>
+                                       <img src={safebox} alt="safebox" title="safebox" />
+                                       <span className="heading heading--three">Password Vault Manager</span>
+                                       <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
+                                    </div>
+                                 </div>
+                                 <div className='menu-column'>
+                                    <div className='menu-content'>
+                                       <img src={hacker} alt="hacker" title="hacker" />
+                                       <span className="heading heading--three">Secure RDP Manager</span>
+                                       <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
+                                    </div>
+                                    <div className='menu-content'>
+                                       <img src={server} alt="server" title="server" />
+                                       <span className="heading heading--three">Firewall</span>
                                        <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
                                     </div>
                                  </div>
                               </div>
                            </div>
-                        </div>
+                        ) : null
+                     }
+                  </li>
+                  <li className='menu' onClick={toggleBackdrop} onMouseEnter={() => menuOpen('solution')} onMouseLeave={() => menuClose('solution')}>
+                     <div className='nav-links' id='solution'>
+                        <span>Solutions</span>
+                        <i className="pi pi-angle-down ms-1" style={{ paddingTop: '2px' }}></i>
                      </div>
+                     {
+                        navbarMenu.solution === 'open' ? (
+                           <div className="menu-container solutions">
+                              <div className="menu-row">
+                                 <div className='menu-column'>
+                                    <div className='menu-column2'>
+                                       <div className='title'>Industry</div>
+                                       <div className='subtitle1'>Healthcare</div>
+                                       <div className='subtitle'>Information Technology</div>
+                                       <div className='subtitle'>Automobile</div>
+                                       <div className='subtitle'>Government</div>
+                                       <div className='seperator'></div>
+                                       <div className='title'>Business Goals</div>
+                                       <div className='subtitle'>Department Control</div>
+                                       <div className='subtitle'>Information Technology</div>
+                                       <div className='subtitle'>Access Management</div>
+                                       <div className='subtitle'>Protecting Infra</div>
+                                    </div>
+                                 </div>
+                                 <div className="menu-column">
+                                    <div className="menu-sub-row">
+                                       <div className='menu-column'>
+                                          <Link to='/solutionspage' className='menu-content' onClick={() => menuClose('solution')}>
+                                             <div className='menu-content-link'>
+                                                <img src={sirine} alt="sirine" title="sirine" />
+                                                <div className='heading heading--three'>Threat hunting and blocking</div>
+                                                <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
+                                             </div>
+                                          </Link>
+                                          <div className='menu-content'>
+                                             <img src={hacker2} alt="hacker2" title="hacker2" />
+                                             <div className='heading heading--three'>Protecting personally identifiable data</div>
+                                             <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
+                                          </div>
+                                       </div>
+                                       <div className='menu-column'>
+                                          <div activeClassName="active" to="" className='menu-content'>
+                                             <img src={website} alt="website" title="website" />
+                                             <div className='heading heading--three'>Behaviour detection and repeat offenders</div>
+                                             <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
+                                          </div>
+                                          <div activeClassName="active" to="" className='menu-content'>
+                                             <img src={protection} alt="protection" title="protection" />
+                                             <div className='heading heading--three'>New forms of ransomware</div>
+                                             <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        ) : null
+                     }
                   </li>
                   <li className='menu'>
                      <NavLink activeClassName="active" to="/casestudy" className='nav-links'>

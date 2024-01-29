@@ -7,7 +7,7 @@ function MobileMenuContentItem({ item, handleClick }) {
    return (
       <>
          <div className='menu-item-content'>
-            <span><NavLink activeClassName='active' onClick={handleClick} to={item.path}>{item.title}</NavLink></span>
+            <NavLink activeClassName='active' onClick={handleClick} to={item.path}>{item.title}</NavLink>
          </div>
       </>
    )

@@ -1,11 +1,10 @@
 .mobile-menu-container {
    display: flex;
    position: absolute;
-
    top: 55px;
    left: 0;
    right: 0;
-   width: calc(100% - 2rem);
+   width: 100%;
    height: calc(100vh - 80px);
    overflow: auto;
    padding: 1rem;
@@ -13,10 +12,28 @@
    flex-direction: column;
    transition: 0.3s ease-in-out;
 
+   .menu-title {
+      font-size: 16px;
+      font-weight: 600;
+
+      @media all and (min-width: 576px) {
+         font-size: 18px;
+      }
+   }
+   
+   .btn--primary {
+      display: block !important;
+      margin: 20px auto;
+      width: calc(100% - 2rem);
+   }
+
    a {
       color: #c8c8c8 !important;
       width: 88%;
       border-radius: 3px;
+      padding-inline: 1rem;
+      margin-top: 1rem;
+      text-decoration: none;
    }
 
    border-radius: var(--layout-marking-none, 0px);
@@ -45,28 +62,153 @@
       border-radius: 10px 10px 0 0;
    }
    .menu-item-content {
-      font-size: 16px;
-      font-style: normal;
+      font-size: 14px;
       font-weight: 400;
       line-height: 130%; /* 20.8px */
+      letter-spacing: 0.5px;
+      // padding: 16px 12px;
+      overflow: hidden;
+      display: block;
+      cursor: pointer;
+      
+      @media all and (min-width: 576px) {
+         font-size: 16px;
+      }
+
+      a, span {
+         padding-inline: 0;
+         display: inline-block;
+         width: 100%;
+         padding: 16px 12px;
+         margin-top: 0px;
+      }
+
+      a.active {
+         color: #e5be20 !important;
+      }
+
+   }
+   
+   .menu-item-content:hover {
+      color: #e5be20;
+      background: #11202b;
+      border-radius: 3px;
+      
+      a {
+         color: #e5be20 !important;
+      }
+   }
+
+   .menu-item-category {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 130%; /* 20.8px */
+      color: #E4DEAE;
       letter-spacing: 0.5px;
       padding: 16px 12px;
       overflow: hidden;
       display: block;
 
-      a.active {
-         color: #e5be20 !important;
+      @media all and (min-width: 576px) {
+         font-size: 18px;
       }
    }
-   .menu-item-content:hover {
-      color: #e5be20;
-      background: #11202b;
-      border-radius: 3px;
-   }
+
    .pi {
       position: absolute;
       right: 0;
       top: calc(50% - 11px);
+   }
+
+   .seperator {
+      height: 1.5px;
+      margin: 20px 0;
+      align-self: stretch;
+      border-radius: 16px;
+      background: rgba(2, 36, 57, 0.5);
+   }
+
+   .menu-item-nested:last-child {
+      .seperator {
+         display: none;
+      }
+   }
+
+   .sub-menu-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+
+      .sub-options {
+         border: 1px solid rgba(255, 255, 255, 0.05);
+         border-radius: 10px;
+         padding: 24px;
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+         position: relative;
+         min-height: 230px;
+
+         @media all and (min-width: 576px) {
+            gap: 15px;
+         }
+
+         .sub-options-icon {
+            width: 40px;
+
+            @media all and (min-width: 576px) {
+               width: 60px;
+            }
+         }
+
+         .menu-content-arrow {
+            width: 14px;
+            position: absolute;
+            right: 24px;
+            bottom: 24px;
+            display: none;
+         }
+
+         .heading {
+            font-size: 14x;
+
+            @media all and (min-width: 576px) {
+               font-size: 16px;
+            }
+         }
+
+         &:hover {
+            background: rgba(255, 255, 255, 0.03) !important;
+            .menu-content-arrow {
+               display: block;
+            }
+         }
+      }
+
+      a {
+         padding: 0px;
+         margin: 0px;
+         display: block;
+         width: 100%;
+      }
+
+   }
+
+   .back-button {
+      margin-bottom: 10px;
+      font-size: 14x;
+
+      @media all and (min-width: 576px) {
+         font-size: 16px;
+      }
+      
+      span:nth-child(1) {
+         cursor: pointer;
+      }
+
+      span:nth-child(2) {
+         color: #e5be20;
+      }
    }
 }
 

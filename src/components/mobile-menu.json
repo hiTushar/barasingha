@@ -1,64 +1,99 @@
 [
-    {
-       "title": "Products",
-       "children": [
-          {
-             "title": "Corporate web control",
-             "path": "/productspage"
-          },
-          {
-             "title": "Window Booster",
-             "path": "/productspage1"
-          },
-          {
-             "title": "End Point Security",
-             "path": "/productspage2"
-          },
-          {
-             "title": "Password Vault Manager",
-             "path": "/productspage3"
-          },
-          {
-             "title": "Secure RPD MAnager",
-             "path": "/productspage4"
-          },
-          {
-             "title": "Firewall",
-             "path": "/productspage5"
-          }
-       ]
-    },
-    {
-       "title": "Solutions",
-       "children": [
-          {
-             "title": "Healthcare",
-             "path": "/solutionspage"
-          },
-          {
-             "title": "Information Technology",
-             "path": "/solutionspage1"
-          },
-          {
-             "title": "Automobile",
-             "path": "/solutionspage2"
-          },
-          {
-             "title": "Government",
-             "path": "/solutionspage3"
-          }
-       ]
-    },
-    {
-       "title": "Case Studies",
-       "path": "/casestudy"
-    },
-    {
-       "title": "About",
-       "path": "/about"
-    },
-    {
-       "title": "Career",
-       "path": "/career"
-    }
- ]
+   {
+      "title": "Products",
+      "children": [
+         {
+            "title": "Corporate web control",
+            "path": "/productspage"
+         },
+         {
+            "title": "Window Booster",
+            "path": "/productspage1"
+         },
+         {
+            "title": "End Point Security",
+            "path": "/productspage2"
+         },
+         {
+            "title": "Password Vault Manager",
+            "path": "/productspage3"
+         },
+         {
+            "title": "Secure RPD MAnager",
+            "path": "/productspage4"
+         },
+         {
+            "title": "Firewall",
+            "path": "/productspage5"
+         }
+      ]
+   },
+   {
+      "title": "Solutions",
+      "categories": ["Industry", "Business Goals"],
+      "children": [
+         {
+            "title": "Healthcare",
+            "category": "Industry",
+            "children": [
+               {
+                  "title": "Threat hunting and blocking",
+                  "path": "/solutionspage"
+               },
+               {
+                  "title": "Protecting personally identifiable data",
+                  "path": "/solutionspage"
+               },
+               {
+                  "title": "Behaviour detection and repeat offenders",
+                  "path": "/solutionspage"
+               },
+               {
+                  "title": "New forms of ransomware",
+                  "path": "/solutionspage"
+               }
+            ]
+         },
+         {
+            "title": "Information Technology",
+            "category": "Industry"
+         },
+         {
+            "title": "Automobile",
+            "category": "Industry"
+         },
+         {
+            "title": "Government",
+            "category": "Industry"
+         },
+         {
+            "title": "Department Control",
+            "category": "Business Goals"
+         },
+         {
+            "title": "Information Technology",
+            "category": "Business Goals"
+         },
+         {
+            "title": "Access Management",
+            "category": "Business Goals"
+         },
+         {
+            "title": "Protecting Infra",
+            "category": "Business Goals"
+         }
+      ]
+   },
+   {
+      "title": "Case Studies",
+      "path": "/casestudy"
+   },
+   {
+      "title": "About",
+      "path": "/about"
+   },
+   {
+      "title": "Careers",
+      "path": "/career"
+   }
+]
