@@ -1,5 +1,6 @@
 import './Page404.scss';
 import error404 from '../../../../media/Error404.svg';
+import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
 
 const Page404 = ({ closePage404 }) => {
 
@@ -16,7 +17,11 @@ const Page404 = ({ closePage404 }) => {
           <div>Sorry, the page you are looking for cannot be found. It may have been moved,</div>
           <div>deleted, or never existed in the first place.</div>
         </div>
-        <button className="close_button" onClick={closePage404}>Back To Home</button>
+        <button className="close_button" onClick={closePage404}>
+          <NavLink to='/'>
+            Back To Home
+          </NavLink>
+        </button>
       </div>
     </div>
   );
