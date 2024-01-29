@@ -60,8 +60,8 @@ function Security() {
                                  <ellipse cx="195.968" cy="86.801" rx="100.808" ry="100.516" fill="#7BBA9C"></ellipse>
                               </g>
                               <defs>
-                                 <filter id="filter0_f_1048_1601" x="-114.919" y="-223.794" width="621.774" height="621.19" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                    <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                                 <filter id="filter0_f_1048_1601" x="-114.919" y="-223.794" width="621.774" height="621.19" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                                    <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
                                     <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
                                     <feGaussianBlur stdDeviation="105.04" result="effect1_foregroundBlur_1048_1601"></feGaussianBlur>
                                  </filter>

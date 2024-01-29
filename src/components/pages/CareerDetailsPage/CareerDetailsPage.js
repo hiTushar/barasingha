@@ -7,6 +7,7 @@ import './CareerDetailsPage.scss';
 import positionDetailsData from "../../data/positionDetails.json";
 import LinkArrow from '../../../media/arrow.svg';
 import WorkModal from '../Forms/Work';
+import { v4 as uuidv4 } from 'uuid';
 
 function CareerDetailsPage() {
 
@@ -71,12 +72,12 @@ function CareerDetailsPage() {
                <div className="tabs-wrapper">
                   <div className='tabs' ref={careerNav}>
                      {tabs.map((tab, i) =>
-                        <>
-                           <button key={i} id={tab.id} disabled={currentTab === `${tab.id}`} onClick={(handleTabClick)}>{tab.tabTitle}({tab.positions.length}) </button>
+                        <div className='tab-item' key={uuidv4()}>
+                           <button id={tab.id} disabled={currentTab === `${tab.id}`} onClick={(handleTabClick)}>{tab.tabTitle}({tab.positions.length}) </button>
                            <div className='saperator-wrapper'>
                               <span className="saperator"></span>
                            </div>
-                        </>
+                        </div>
                      )}
                   </div>
 
@@ -122,10 +123,10 @@ function CareerDetailsPage() {
                                        <img src={position.jobType === 'full-time' ? fulltime : remote} alt={"jobtype"} />{position.jobType}
                                     </div>
                                     <input type="checkbox" id={`expend${i}`} />
-                                    <div class="medium-12 small-12 columns smalldesc">
-                                       <p class="jobdesc">{position.desc} </p>
+                                    <div className="medium-12 small-12 columns smalldesc">
+                                       <p className="jobdesc">{position.desc} </p>
                                     </div>
-                                    <label for={`expend${i}`}>
+                                    <label htmlFor={`expend${i}`}>
                                        <div className={careerClassName}>
                                           <span className='all'>See All Description</span>
                                           <span className='less'>Show Less Description</span>

@@ -6,6 +6,7 @@ import './testimonials.scss';
 import StarFilled from "../../../../media/StarFilled.svg";
 import StarOutlined from "../../../../media/StarOutlined.svg";
 import testimonialsData from "../../../data/testimonial.json";
+import { v4 as uuidv4 } from 'uuid';
 
 function Testimonials() {
 
@@ -56,8 +57,8 @@ function Testimonials() {
                      dots={true}
                      margin={getCurrentDimension() ? 10 : 20} 
                   >
-                     {testimonials.map((testimonial, index) => (
-                        <div className="career_testimonial-card" key={index}>
+                     {testimonials.map((testimonial) => (
+                        <div className="career_testimonial-card" key={uuidv4()}>
                            <div className='testimonial-person'>
                               <img className="image" src={`${testimonial.testimonial_image_url}`} alt={"logo"} />
                               <div className='testimonial-text'>
@@ -65,11 +66,11 @@ function Testimonials() {
                                  <p>{testimonial.testimonial_position}</p>
                               </div>
                               <div className='rating'>
-                                 {Array.apply(null, { length: testimonial.testimonial_rating }).map((e, i) => (
-                                    <img className="image" src={StarFilled} alt={"⭐️"} />
+                                 {Array.apply(null, { length: testimonial.testimonial_rating }).map((e) => (
+                                    <img key={uuidv4()} className="image" src={StarFilled} alt={"⭐️"} />
                                  ))}
-                                 {Array.apply(null, { length: 5 - testimonial.testimonial_rating }).map((e, i) => (
-                                    <img className="image" src={StarOutlined} alt={"⭐️"} />
+                                 {Array.apply(null, { length: 5 - testimonial.testimonial_rating }).map((e) => (
+                                    <img key={uuidv4()} className="image" src={StarOutlined} alt={"⭐️"} />
                                  ))}
                               </div>
                            </div>

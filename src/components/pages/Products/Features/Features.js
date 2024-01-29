@@ -85,12 +85,12 @@ function Features() {
                <div className="tabs-wrapper">
                   <div className='tabs' ref={featuresNav}>
                      {tabs.map((tab, i) =>
-                        <>
-                           <button key={i} id={tab.id} disabled={currentTab === `${tab.id}`} onClick={(handleTabClick)}>{tab.tabTitle}</button>
+                        <div key={i} className='tab-entry'>
+                           <button id={tab.id} disabled={currentTab === `${tab.id}`} onClick={(handleTabClick)}>{tab.tabTitle}</button>
                            <div className='saperator-wrapper'>
                               <span className="saperator"></span>
                            </div>
-                        </>
+                        </div>
                      )}
                   </div>
 

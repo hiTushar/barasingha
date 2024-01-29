@@ -26,7 +26,7 @@ function MobileMenu({ handleClick, openContactUs }) {
                            <div className='heading'>Threat hunting and blocking</div>
                            <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
                         </Link>
-                        <div activeClassName="active" to="" className='sub-options'>
+                        <div className='sub-options'>
                            <img className='sub-options-icon' src={website} alt="website" title="website" />
                            <div className='heading'>Behaviour detection and repeat offenders</div>
                            <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
@@ -36,7 +36,7 @@ function MobileMenu({ handleClick, openContactUs }) {
                            <div className='heading'>Protecting personally identifiable data</div>
                            <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
                         </div>
-                        <div activeClassName="active" to="" className='sub-options'>
+                        <div className='sub-options'>
                            <img className='sub-options-icon' src={protection} alt="protection" title="protection" />
                            <div className='heading'>New forms of ransomware</div>
                            <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />

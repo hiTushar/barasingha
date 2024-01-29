@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { v4 as uuidv4 } from 'uuid';
 import "./PostDetailPage.scss";
 import caseStudyData from "./PostDetailPageData.js";
 import cyber from "../../../media/cyber_attack.webp";
@@ -30,13 +31,13 @@ export const PostDetailPage = () => {
                      <div className="points_container">
                         {caseStudyData &&
                            caseStudyData.subtopics.map((topic, index) => (
-                              <div className="points">
+                              <div className="points" key={uuidv4()}>
                                  {topic && topic.title !== "" && (
                                     <h2 className="subtopic_title">{topic && topic.title}</h2>
                                  )}
                                  <ul>
                                     {topic &&
-                                       topic.points.map((point, index) => <li>{point}</li>)}
+                                       topic.points.map((point, index) => <li key={uuidv4()}>{point}</li>)}
                                  </ul>
                                  {index === 0 && (
                                     <img

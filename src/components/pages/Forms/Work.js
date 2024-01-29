@@ -81,7 +81,7 @@ const WorkModal = ({ closeContactUsModal }) => {
                                         Résumé / Portfolio / Link<span className='mandatory'>*</span>
                                     </p>
                                     <div className='form-field-attachment'>
-                                        <label for={'resume'} ref={fileLabelRef}>
+                                        <label htmlFor={'resume'} ref={fileLabelRef}>
                                             <img className='attachment-icon' src={attach} alt={'attament icon'} />
                                             <p>{fileName ? fileName : 'Drag and drop or attach your resume here'}</p>
                                         </label>

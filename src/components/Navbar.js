@@ -77,10 +77,10 @@ function Navbar({ showBackdrop = () => { }, hideBackdrop = () => { }, backdropIs
       <>
          <nav className='navbar sticky-top'>
             <div className='component-container position-relative d-flex w-100 justify-content-between align-items-center'>
-               <Link onClick={goHome} activeClassName="active" to="/" className='navbar-logo'>
+               <NavLink onClick={goHome} activeClassName="active" to="/" className='navbar-logo'>
                   <img src={logo} className='navbar-logo-image' alt='logo'></img>
                   <img src={brandName} className='navbar-logo-brandname' alt='brandname'></img>
-               </Link>
+               </NavLink>
                <div className='menu-icon'>
                </div>
                <ul className={click ? 'nav-menu active' : 'nav-menu mb-0'}>
@@ -179,12 +179,12 @@ function Navbar({ showBackdrop = () => { }, hideBackdrop = () => { }, backdropIs
                                           </div>
                                        </div>
                                        <div className='menu-column'>
-                                          <div activeClassName="active" to="" className='menu-content'>
+                                          <div className='menu-content'>
                                              <img src={website} alt="website" title="website" />
                                              <div className='heading heading--three'>Behaviour detection and repeat offenders</div>
                                              <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />
                                           </div>
-                                          <div activeClassName="active" to="" className='menu-content'>
+                                          <div className='menu-content'>
                                              <img src={protection} alt="protection" title="protection" />
                                              <div className='heading heading--three'>New forms of ransomware</div>
                                              <img className='menu-content-arrow' src={LinkArrow} alt={'arrow icon'} />

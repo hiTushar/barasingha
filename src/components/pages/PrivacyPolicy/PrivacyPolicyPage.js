@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
 import ContactUsModal from "../Forms/ContactUs";
 import "./PrivacyPolicyPage.scss";
 import PrivacyPolicyData from "./PrivacyPolicyPageData";
@@ -38,13 +39,13 @@ export const PrivacyPolicyPage = () => {
                         </div>
                      {data.subtopics &&
                         data.subtopics.map((subtopics) => (
-                           <div className="details">
+                           <div className="details" key={uuidv4()}>
                               <h2 className="heading heading--three">{subtopics.title}</h2>
 
                               {subtopics &&
                                  subtopics.points &&
                                  subtopics.points.map((item) => (
-                                    <div className="subtopics">
+                                    <div className="subtopics" key={uuidv4()}>
                                        {item && item.subtitle !== "" && (
                                           <h3 className="subtitle">{item.subtitle}</h3>
                                        )}

@@ -44,7 +44,7 @@ const ContactUsModal = ({ closeContactUsModal }) => {
                                     <p className='form-field-title'>
                                         Message
                                     </p>
-                                    <textarea className='form-field-textarea' placeholder='Type your message here' maxlength='500'></textarea>
+                                    <textarea className='form-field-textarea' placeholder='Type your message here' maxLength='500'></textarea>
                                     <p className='form-field-input-subtext'>Maximum 500 characters</p>
                                 </div>
                                 <div className='form-field-submit'>

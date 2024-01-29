@@ -18,8 +18,8 @@ function Search() {
             </div>
          </div>
          <div className="projects">
-         {caseStudy.map((study) => (
-            <div className="project-card">
+         {caseStudy.map((study, index) => (
+            <div className="project-card" key={index + study.case_study_title}>
                <div className="image-card">
                   <img src={`${study.case_study_icon_url}`} className="align" alt="globe" />
                </div>
