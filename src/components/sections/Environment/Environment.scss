@@ -296,6 +296,21 @@
    }
 }
 
+.custom-container {
+   .slick-track {
+      display: flex;
+      height: 280px;
+
+      .slick-slide > div {
+         height: 100%;
+      }
+      
+      .env_card {
+         height: 100%;
+      }
+   }
+}
+
 @media (max-width: 992px) {
    // .env_card{min-height: 250px;}
    .env_card .env_card_contents_container {

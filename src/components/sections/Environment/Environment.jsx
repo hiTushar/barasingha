@@ -84,7 +84,7 @@ const Environment = (props) => {
    }
 
    const handleSliderWheel = (e) => {
-      e.preventDefault()
+      // e.preventDefault()
       if (e.deltaY > 0) {
          sliderRef.current.slickNext()
       } else {
