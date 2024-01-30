@@ -41,16 +41,16 @@ function Navbar({ showBackdrop = () => { }, hideBackdrop = () => { }, backdropIs
       }
    }
 
-   const toggleBackdrop = () => {
-      if (backdropIsVisible) {
-         hideBackdrop();
-      } else {
-         showBackdrop()
-      }
-      if (window.innerWidth > 768) {
-         // window.location.reload();
-      }
-   }
+   // const toggleBackdrop = () => {
+   //    if (backdropIsVisible) {
+   //       hideBackdrop();
+   //    } else {
+   //       showBackdrop()
+   //    }
+   //    if (window.innerWidth > 768) {
+   //       // window.location.reload();
+   //    }
+   // }
 
    const goHome = () => {
       hideBackdrop();
