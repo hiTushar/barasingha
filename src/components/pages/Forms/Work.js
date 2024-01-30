@@ -2,54 +2,81 @@
 import './Work.scss';
 import head from '../../../media/ExtractedHead3.webp';
 import attach from '../../../media/attachment.svg';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import SuccessModal from './Success';
 
 const BYTES_IN_ONE_MB = 1024 * 1024;
 const MAX_FILE_SIZE_IN_MB = 5;
+const EMAIL_REGEX = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+const NAME_REGEX = /^[a-zA-Z\s]+$/
 
 const WorkModal = ({ closeContactUsModal }) => {
     const [showSuccessModal, setShowSuccessModal] = useState(false);
-    const [showContactModal, setShowContactModal] = useState(true);
-    const [fileName, setFileName] = useState('');
-    const [uploadError, setUploadError] = useState('');
-    const [fileSizeError, setFileSizeError] = useState('');
+    // const [fileInputKey, setFileInputKey] = useState(0);
     const fileRef = useRef(null);
     const fileLabelRef = useRef(null);
+    
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        file: null
+    });
 
-    const submitForm = (event) => {
-        event.preventDefault();
-        console.log('submitted');
-        setShowSuccessModal(true);
-    }
+    const [formErrors, setFormErrors] = useState({
+        name: '',
+        email: '',
+        file: ''
+    });
 
-    const checkAttachment = () => {
-        if(!fileRef.current.files.length) {
-            fileLabelRef.current.classList.add('label-focus');
+    const nameChange = (event) => {
+        setFormData(prev => ({ ...prev, name: val }))
+        setFormErrors(prev => ({ ...prev, name: '' }));
+        let val = event.target.value.trim()
+        if(val) {
+            if(!val.match(NAME_REGEX)) {
+                setFormErrors(prev => ({ ...prev, name: 'Error: Enter Valid Name'}))
+            }
         }
     }
 
-
-        
+    const emailChange = (event) => {
+        setFormData(prev => ({ ...prev, email: event.target.value }));
+        setFormErrors(prev => ({ ...prev, email: '' }));
+        let val = event.target.value.trim() 
+        if(val) {
+            if(!val.match(EMAIL_REGEX)) {
+                setFormErrors(prev => ({ ...prev, email: 'Error: Enter Valid Email' }));
+            }
+        }
+    }
 
     const fileUpload = () => {
         let file = fileRef.current.files[0];
         if(file) {
-            console.log(file);
-            if(file.size / BYTES_IN_ONE_MB > MAX_FILE_SIZE_IN_MB) {
-                setFileSizeError(true);
-                setTimeout(() => {
-                    setFileSizeError(false);
-                }, 3000);
-                return;
+            if(file.size / BYTES_IN_ONE_MB <= MAX_FILE_SIZE_IN_MB) {
+                setFormData(prev => ({ ...prev, file: file }));
+                setFormErrors(prev => ({ ...prev, file: '' }));
+                // setFileInputKey(fileInputKey => !fileInputKey); // this rerenders the component so that file input field is reset
             }
-            setFileName(file.name);
-            if(fileLabelRef.current.classList.contains('label-focus')) {
-                fileLabelRef.current.classList.remove('label-focus');
+            else {
+                setFormErrors(prev => ({ ...prev, file: 'Error: File Size > 5MB'}));
+                setFormData(prev => ({ ...prev, file: null }));
+                setTimeout(() => {
+                    setFormErrors(prev => ({ ...prev, file: '' }));
+                }, 3000)
             }
         }
     }
 
+    const checkSubmitDisabled = () => formErrors.name.length || formErrors.email.length || formErrors.file.length || !formData.name.length || !formData.email.length || !formData.file;
+
+    const submitForm = (event) => {
+        event.preventDefault();
+        setShowSuccessModal(true);
+    }
+
+    console.log(formData, formErrors);
+    
     return (
         <div className='work_wrapper'>
             {
@@ -64,26 +91,42 @@ const WorkModal = ({ closeContactUsModal }) => {
                         </div>
                         <div className='form'>
                             <form onSubmit={submitForm}>
-                                <div className='form-field'>
+                                <div className={`form-field`}>
                                     <p className='form-field-title'>
                                         Name<span className='mandatory'>*</span>
                                     </p>
-                                    <input className='form-field-input' type='text' placeholder='Enter your name' required></input>
+                                    <input onChange={nameChange} className={`form-field-input ${formErrors.name ? 'error-outline' : ''}`} type='text' placeholder='Enter your name'></input>
+                                    {
+                                        formErrors.name ? (
+                                            <p className='form-field-subtext error-subtext'>
+                                                {formErrors.name}
+                                            </p>
+                                        ) : null
+                                    }
                                 </div>
-                                <div className='form-field'>
+                                <div className={`form-field ${formErrors.email ? 'error-outline' : ''}`}>
                                     <p className='form-field-title'>
                                         Email<span className='mandatory'>*</span>
                                     </p>
-                                    <input className='form-field-input' type='email' placeholder='Enter your email' required></input>
+                                    <input onChange={emailChange} className={`form-field-input ${formErrors.email ? 'error-outline' : ''}`} type='email' placeholder='Enter your email'></input>
+                                    {
+                                        formErrors.email ? (
+                                            <p className='form-field-subtext error-subtext'>
+                                                {formErrors.email}
+                                            </p>
+                                        ) : null
+                                    }
                                 </div>
-                                <div className='form-field'>
+                                <div className={`form-field ${formErrors.file ? 'error-outline' : ''}`}>
                                     <p className='form-field-title'>
                                         Résumé / Portfolio / Link<span className='mandatory'>*</span>
                                     </p>
-                                    <div className='form-field-attachment'>
-                                        <label htmlFor={'resume'} ref={fileLabelRef}>
-                                            <img className='attachment-icon' src={attach} alt={'attament icon'} />
-                                            <p>{fileName ? fileName : 'Drag and drop or attach your resume here'}</p>
+                                    <div className={`form-field-attachment `}>
+                                        <label htmlFor={'resume'} ref={fileLabelRef} className={formErrors.file ? 'error-outline' : ''}>
+                                            <div>
+                                                <img className='attachment-icon' src={attach} alt={'attament icon'} />
+                                                <div className={`attachment-text${formData.file ? '-name' : '-placeholder'}`}>{formData.file ? formData.file.name : 'Drag and drop or attach your resume here'}</div>
+                                            </div>
                                         </label>
                                         <input
                                             type={'file'}
@@ -92,14 +135,22 @@ const WorkModal = ({ closeContactUsModal }) => {
                                             className='form-field-input-file' 
                                             placeholder='Drag and drop or attach your resume here'
                                             onChange={fileUpload}
-                                            required
                                             ref={fileRef}
+                                            // key={fileInputKey}
                                         />
                                     </div>
-                                    <p className='form-field-input-subtext'>{ !fileSizeError ? 'Maximum Size 5MB' : <span className='form-field-warning'>File limit exceeded</span>} </p>
+                                    {
+                                        formErrors.file ? (
+                                            <p className='form-field-subtext error-subtext'>
+                                                {formErrors.file}
+                                            </p>
+                                        ) : (
+                                            <p className='form-field-subtext'>Maximum Size 5MB</p>
+                                        )
+                                    }
                                 </div>
                                 <div className='form-field-submit'>
-                                    <button type='submit' onClick={checkAttachment}>SEND MESSAGE</button>
+                                    <button disabled={checkSubmitDisabled()} type='submit'>SEND MESSAGE</button>
                                 </div>
                             </form>
                         </div>
