@@ -84,7 +84,7 @@ function Navbar({ showBackdrop = () => { }, hideBackdrop = () => { }, backdropIs
                <div className='menu-icon'>
                </div>
                <ul className={click ? 'nav-menu active' : 'nav-menu mb-0'}>
-                  <li className='menu' onClick={toggleBackdrop} onMouseEnter={() => menuOpen('product')} onMouseLeave={() => menuClose('product')}>
+                  <li className='menu' onMouseEnter={() => menuOpen('product')} onMouseLeave={() => menuClose('product')}>
                      <div className='nav-links' id='product'>
                         <span>Products</span>
                         <i className="pi pi-angle-down ms-1" style={{ paddingTop: '2px' }}></i>
@@ -138,7 +138,7 @@ function Navbar({ showBackdrop = () => { }, hideBackdrop = () => { }, backdropIs
                         ) : null
                      }
                   </li>
-                  <li className='menu' onClick={toggleBackdrop} onMouseEnter={() => menuOpen('solution')} onMouseLeave={() => menuClose('solution')}>
+                  <li className='menu' onMouseEnter={() => menuOpen('solution')} onMouseLeave={() => menuClose('solution')}>
                      <div className='nav-links' id='solution'>
                         <span>Solutions</span>
                         <i className="pi pi-angle-down ms-1" style={{ paddingTop: '2px' }}></i>
