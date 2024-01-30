@@ -139,7 +139,7 @@
 
          .tab-title {
             font-size: 16px;
-
+            pointer-events: none; // so that tabRef stores the tab-pane only and hence we get consistent value to scroll up to
             @media all and (min-width: 400px) {
                font-size: 18px;
             }
@@ -148,6 +148,7 @@
             width: 22px;
             flex: 0 0 22px;
             align-self: center;
+            pointer-events: none; // so that tabRef stores the tab-pane only and hence we get consistent value to scroll up to
             img {
                opacity: 0.1;
                transform: rotate(90deg);
@@ -163,11 +164,19 @@
          background: rgba(255, 255, 255, 0.05);
          backdrop-filter: blur(10px);
          padding: 32px;
-         margin-top: 12px;
+         margin-top: 6px;
+         font-size: 12px;
+
+         @media all and (min-width: 400px) {
+            font-size: 14px;
+         }
+         
          @media all and (min-width: 992px) {
+            font-size: 16px;
+            margin-top: 0px;
             position: absolute;
             right: 0px;
-            top: -12px;
+            top: 0px;
             width: calc(50% - 12px);
             height: 100%;
          }
@@ -266,28 +275,4 @@
          cursor: pointer;
       }
    }
-}
-
-@media only screen and (max-width: 767px) {
-   // .tab-pane {
-   //    border-radius: 16px;
-   //    border: 1px solid rgba(44, 45, 61, 0);
-   //    background: rgba(255, 255, 255, 0.05);
-   //    backdrop-filter: blur(10px);
-   //    padding: 32px;
-   //    margin-top: 12px;
-   //    /* flex: 1 1 auto; */
-   // }
-   // .faq-section .nav-card .tab-arrow svg {
-   //    transform: rotate(90deg);
-   // }
-   // .faq-section .nav-card.active .tab-arrow svg {
-   //    transform: rotate(-90deg);
-   // }
-   // .faq-section .faq-title {
-   //    font-size: 24px;
-   // }
-   // .faq-section .faq-sub-heading {
-   //    font-size: 12px;
-   // }
 }
