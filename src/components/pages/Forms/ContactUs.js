@@ -4,15 +4,62 @@ import head from '../../../media/ExtractedHead3.webp';
 import { useState } from 'react';
 import SuccessModal from './Success';
 
+const EMAIL_REGEX = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+const NAME_REGEX = /^[a-zA-Z\s]+$/
+
 const ContactUsModal = ({ closeContactUsModal }) => {
     const [showSuccessModal, setShowSuccessModal] = useState(false);
-    const [showContactModal, setShowContactModal] = useState(true);
+
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+
+    const [formErrors, setFormErrors] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+
+    const [charLeft, setCharLeft] = useState(500);
+
+    const nameChange = (event) => {
+        let val = event.target.value;
+        setFormData(prev => ({ ...prev, name: val }));
+        setFormErrors(prev => ({ ...prev, name: '' }));
+        if(val.trim()) {
+            if(!val.match(NAME_REGEX)) {
+                setFormErrors(prev => ({ ...prev, name: 'Error: Enter Valid Name'}))
+            }
+        }
+    }
+
+    const messageChange = (event) => {
+        let val = event.target.value;
+        setFormData(prev => ({ ...prev, message: val }));
+        setCharLeft(500 - val.length)
+    }
+
+    const emailChange = (event) => {
+        let val = event.target.value; 
+        setFormData(prev => ({ ...prev, email: val }));
+        setFormErrors(prev => ({ ...prev, email: '' }));
+        if(val.trim()) {
+            if(!val.match(EMAIL_REGEX)) {
+                setFormErrors(prev => ({ ...prev, email: 'Error: Enter Valid Email' }));
+            }
+        }
+    }
+
+    const checkSubmitDisabled = () => formErrors.name.length || formErrors.email.length || formErrors.message.length || !formData.name.length || !formData.email.length || !formData.message.length;
 
     const submitForm = (event) => {
         event.preventDefault();
-        console.log('submitted');
         setShowSuccessModal(true);
     }
+
+    console.log(formData, formErrors);
 
     return (
         <div className='contact_us_wrapper'>
@@ -28,27 +75,41 @@ const ContactUsModal = ({ closeContactUsModal }) => {
                         </div>
                         <div className='form'>
                             <form onSubmit={submitForm}>
-                                <div className='form-field'>
+                                <div className={`form-field`}>
                                     <p className='form-field-title'>
                                         Name<span className='mandatory'>*</span>
                                     </p>
-                                    <input className='form-field-input' type='text' placeholder='Enter your name' required></input>
+                                    <input onChange={nameChange} className={`form-field-input ${formErrors.name ? 'error-outline' : ''}`} type='text' placeholder='Enter your name'></input>
+                                    {
+                                        formErrors.name ? (
+                                            <p className='form-field-subtext error-subtext'>
+                                                {formErrors.name}
+                                            </p>
+                                        ) : null
+                                    }
                                 </div>
-                                <div className='form-field'>
+                                <div className={`form-field ${formErrors.email ? 'error-outline' : ''}`}>
                                     <p className='form-field-title'>
                                         Email<span className='mandatory'>*</span>
                                     </p>
-                                    <input className='form-field-input' type='email' placeholder='Enter your email' required></input>
+                                    <input onChange={emailChange} className={`form-field-input ${formErrors.email ? 'error-outline' : ''}`} type='email' placeholder='Enter your email'></input>
+                                    {
+                                        formErrors.email ? (
+                                            <p className='form-field-subtext error-subtext'>
+                                                {formErrors.email}
+                                            </p>
+                                        ) : null
+                                    }
                                 </div>
                                 <div className='form-field'>
                                     <p className='form-field-title'>
-                                        Message
+                                        Message<span className='mandatory'>*</span>
                                     </p>
-                                    <textarea className='form-field-textarea' placeholder='Type your message here' maxLength='500'></textarea>
-                                    <p className='form-field-input-subtext'>Maximum 500 characters</p>
+                                    <textarea onChange={messageChange} value={formData.message} className={`form-field-textarea ${formErrors.message ? 'error-outline' : ''}`} placeholder='Type your message here' maxLength='500'></textarea>
+                                    <p className='form-field-subtext'>Max {charLeft} characters left</p>
                                 </div>
                                 <div className='form-field-submit'>
-                                    <button type='submit'>SEND MESSAGE</button>
+                                    <button disabled={checkSubmitDisabled()} type='submit'>SEND MESSAGE</button>
                                 </div>
                             </form>
                         </div>
