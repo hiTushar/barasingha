@@ -215,7 +215,7 @@ function Navbar({ showBackdrop = () => { }, hideBackdrop = () => { }, backdropIs
                </ul>
                <Button buttonStyle='btn--primary' className="btn desktop-btn"  onClick={() => setShowContactUsModal(true)}> INTERESTED?</Button>
 
-               <div className='mobile-menu' onClick={handleClick} onMouseEnter={hideBackdrop}>
+               <div className='mobile-menu' onClick={handleClick}>
                   {click ? <img src={cross} alt={cross} title={cross}></img>
                      : <img src={bars} alt={bars} title={bars}></img>}
                </div>
