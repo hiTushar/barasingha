@@ -41,16 +41,16 @@ function getCurrentDimension() { return window.innerWidth < 992 }
 function getStagePaddingOne() {
    const width = window.innerWidth;
 
-   if(width >= 1500) {
+   if (width >= 1500) {
       return 180;
    }
-   else if(width >= 1400) {
+   else if (width >= 1400) {
       return 130;
    }
-   else if(width >= 1300) {
+   else if (width >= 1300) {
       return 80;
    }
-   else if(width > 1200) {
+   else if (width > 1200) {
       return 53;
    }
    else {
@@ -61,7 +61,7 @@ function getStagePaddingOne() {
 function getMarginOne() {
    const width = window.innerWidth;
 
-   if(width >= 1400) {
+   if (width >= 1400) {
       return 0;
    }
    else if (width >= 1200) {
@@ -75,7 +75,7 @@ function getMarginOne() {
 function getStagePaddingTwo() {
    const width = window.innerWidth;
 
-   if(width >= 576) {
+   if (width >= 576) {
       return 30;
    }
    else {
@@ -86,7 +86,7 @@ function getStagePaddingTwo() {
 function getMarginTwo() {
    const width = window.innerWidth;
 
-   if(width > 400) {
+   if (width > 400) {
       return 32;
    }
    else {
@@ -97,7 +97,7 @@ function getMarginTwo() {
 function getItemCountTwo() {
    const width = window.innerWidth;
 
-   if(width > 540) {
+   if (width > 540) {
       return 2;
    }
    else {
@@ -114,13 +114,13 @@ function handleCarouselChange(event) {
    const prevItem = document.querySelectorAll('.owl-item')[prevActiveIndex]
    const nextItem = document.querySelectorAll('.owl-item')[nextActiveIndex]
 
-   if(currentItem) {
+   if (currentItem) {
       currentItem.style.transform = '';
    }
-   if(prevItem) {
+   if (prevItem) {
       prevItem.style.transform = 'perspective(1000px) rotateY(20deg) translate(130px, 0) scale3d(1, 0.9, 1)';
    }
-   if(nextItem) {
+   if (nextItem) {
       nextItem.style.transform = 'perspective(1000px) rotateY(-20deg) translate(-130px, 0) scale3d(1, 0.9, 1)';
    }
 }
@@ -232,31 +232,29 @@ function Packages() {
                            <div className="mobile_feature_name">{dataPt.title}</div>
                            <div className="mobile_feature_desc para para--light text-center mt-2">{dataPt.desc}</div>
                            <div className='all-items'>
-                              <div>
-                                 {
-                                    subDataOne.map((dataPt, index) => (
-                                       <div className="item-mob" key={index   }>
-                                          <div className="row">
-                                             <div className="col-12 feature-img">
-                                                <img src={dataPt.icon} alt={dataPt.icon} className="" />
-                                             </div>
-                                             <div className="col-12 feature">
-                                                <div className="heading heading--three mb-2">{dataPt.title}</div>
-                                                <div className="para"><img className="shield me-2" src={shield} alt={"shield"} /><span>{dataPt.desc[0]}</span></div>
-                                                <div className="para pt-2"><img className="shield me-2" src={shield} alt={"shield"} /><span>{dataPt.desc[1]}</span></div>
-                                                <div className="para pt-2"><img className="shield me-2" src={shield} alt={"shield"} /><span>{dataPt.desc[2]}</span></div>
-                                             </div>
+                              {
+                                 subDataOne.map((dataPt, index) => (
+                                    <div className="item-mob" key={index}>
+                                       <div className="row">
+                                          <div className="col-12 feature-img">
+                                             <img src={dataPt.icon} alt={dataPt.icon} className="" />
+                                          </div>
+                                          <div className="col-12 feature">
+                                             <div className="heading heading--three mb-2">{dataPt.title}</div>
+                                             <div className="para"><img className="shield me-2" src={shield} alt={"shield"} /><span>{dataPt.desc[0]}</span></div>
+                                             <div className="para pt-2"><img className="shield me-2" src={shield} alt={"shield"} /><span>{dataPt.desc[1]}</span></div>
+                                             <div className="para pt-2"><img className="shield me-2" src={shield} alt={"shield"} /><span>{dataPt.desc[2]}</span></div>
                                           </div>
                                        </div>
-                                    ))
-                                 }
-                              </div>
+                                    </div>
+                                 ))
+                              }
                            </div>
                            <div className='slider-items'>
                               <SlikSlider {...slickInnerMob} dots={true}>
                                  {
                                     subDataOne.map((dataPt, index) => (
-                                       <div className="item-mob" key={index   }>
+                                       <div className="item-mob" key={index}>
                                           <div className="row">
                                              <div className="col-12">
                                                 <img src={dataPt.icon} alt={dataPt.icon} className="mx-auto" />
@@ -294,31 +292,31 @@ function Packages() {
                navContainerClass='owl-nav-indv-custom'
             >
                {
-                  dataTwo.map((dataPt, index)  => (
+                  dataTwo.map((dataPt, index) => (
                      <div className="individual_package_card" key={index}>
                         {/* <div className='row'> */}
-                           <div className="left_content">
-                              <img className="indiv_image" src={icon1} alt={"icon1"}></img>
-                           </div>
-                           <div className="right_content ">
-                              <div className="fast_selling_block">{dataPt.sellType}</div>
-                              <div className='pt-2 security_type'>
-                                 <div className='shield'>
-                                    <div>
-                                       <img className="green_shield" src={greenshield} alt={"greenshield"} />
-                                    </div>
-                                    <div>
-                                       <img className="green_shield fade-shield" src={greenshield} alt={"greenshield"} />
-                                    </div>
-                                    <div>
-                                       <img className="green_shield fade-shield" src={greenshield} alt={"greenshield"} />
-                                    </div>
+                        <div className="left_content">
+                           <img className="indiv_image" src={icon1} alt={"icon1"}></img>
+                        </div>
+                        <div className="right_content ">
+                           <div className="fast_selling_block">{dataPt.sellType}</div>
+                           <div className='pt-2 security_type'>
+                              <div className='shield'>
+                                 <div>
+                                    <img className="green_shield" src={greenshield} alt={"greenshield"} />
                                  </div>
-                                 <div className="security_stage">{dataPt.securityType}</div>
+                                 <div>
+                                    <img className="green_shield fade-shield" src={greenshield} alt={"greenshield"} />
+                                 </div>
+                                 <div>
+                                    <img className="green_shield fade-shield" src={greenshield} alt={"greenshield"} />
+                                 </div>
                               </div>
-                              <div className="indiv_feature mb-2">{dataPt.title}</div>
-                              <div className="para para--light">{dataPt.desc}</div>
+                              <div className="security_stage">{dataPt.securityType}</div>
                            </div>
+                           <div className="indiv_feature mb-2">{dataPt.title}</div>
+                           <div className="para para--light">{dataPt.desc}</div>
+                        </div>
                         {/* </div> */}
                      </div>
                   ))
