@@ -24,11 +24,9 @@ function Solutions() {
                         <img src={problem1} alt={problem1} title={problem1} />
                      </div>
                      <div className="right_card">
-                        <div>
-                           <img className='heading-img' src={cube} alt={cube} title={cube} />
-                           <div className="heading heading--two">Ransomware cyber threat at its worst</div>
-                        </div>
-                        <div className="para para--lg para--light my-2">While ransomware has been a nuisance for more than a decade, the scope for ransomware has expanded throughout the period of digital intensification brought by the COVID-19 pandemic.</div>
+                        <img className='heading-img' src={cube} alt={cube} title={cube} />
+                        <div className="heading heading--two">Ransomware cyber threat at its worst</div>
+                        <div className="para para--lg para--light">While ransomware has been a nuisance for more than a decade, the scope for ransomware has expanded throughout the period of digital intensification brought by the COVID-19 pandemic.</div>
                         <Link to="/solutionspage" className="solution_link">
                            <span className='text'>Need a Solution?</span>
                            <img src={arrow} alt={arrow} /></Link>
@@ -36,20 +34,18 @@ function Solutions() {
                   </div>
                </div>
 
-               <div className="problem_card my-5">
+               <div className="problem_card">
                   <div className="problem_card__row">
                      <div className="right_card pe-lg-4">
-                        <div>
-                           <img className='heading-img' src={krook} alt={krook} title={krook} />
-                           <div className="heading heading--two">KrØØk: Serious vulnerability affected encryption of billion+ Wi‑Fi devices</div>
-                        </div>
-                        <div className="para para--lg para--light my-2">KrØØk affects devices with Wi-Fi chips by Broadcom and Cypress that haven’t yet been patched. These are the most common Wi-Fi chips used in contemporary Wi-Fi capable devices such as smartphones, tablets, laptops, and IoT gadgets</div>
+                        <img className='heading-img' src={krook} alt={krook} title={krook} />
+                        <div className="heading heading--two">KrØØk: Serious vulnerability affected encryption of billion+ Wi‑Fi devices</div>
+                        <div className="para para--lg para--light">KrØØk affects devices with Wi-Fi chips by Broadcom and Cypress that haven’t yet been patched. These are the most common Wi-Fi chips used in contemporary Wi-Fi capable devices such as smartphones, tablets, laptops, and IoT gadgets</div>
                         <Link to="/solutionspage" className="solution_link">
                            <span className='text'>Need a Solution?</span>
                            <img src={arrow} alt={arrow} />
                         </Link>
                      </div>
-                     <div className="left_card">
+                     <div className="left_card flip-bg">
                         <img src={problem2} alt={problem2} title={problem2} />
                      </div>
                   </div>
@@ -61,11 +57,9 @@ function Solutions() {
                         <img src={problem3} alt={problem3} title={problem3} />
                      </div>
                      <div className="right_card ps-lg-4">
-                        <div>
-                           <img className='heading-img' src={operation} alt={operation} title={operation} />
-                           <div className="heading heading--two">Operation Ghost: The Dukes aren’t back – they never left</div>
-                        </div>
-                        <div className="para para--lg para--light my-2">The Dukes have been in the spotlight after their suspected involvement in the breach of the Democratic National Committee in the run-up to the 2016 US elections.</div>
+                        <img className='heading-img' src={operation} alt={operation} title={operation} />
+                        <div className="heading heading--two">Operation Ghost: The Dukes aren’t back – they never left</div>
+                        <div className="para para--lg para--light">The Dukes have been in the spotlight after their suspected involvement in the breach of the Democratic National Committee in the run-up to the 2016 US elections.</div>
                         <Link to="/solutionspage" className="solution_link">
                            <span className='text'>Need a Solution?</span>
                            <img src={arrow} alt={arrow} />
