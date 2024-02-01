@@ -41,7 +41,7 @@
    height: 100%;
    width: auto;
    margin: 0 2px;
-   padding: 12px;
+   padding: 28px;
    text-align: center;
    gap: 25px;
    border: 1px solid rgba(255, 255, 255, 0.05);
@@ -50,10 +50,6 @@
          rgba(255, 255, 255, 0) -17.2%,
          rgba(255, 255, 255, 0.07) 140.9%);
    backdrop-filter: blur(10px);
-
-   @media all and (min-width: 400px) {
-      padding: 20px;
-   }
 
    @media all and (min-width: 1200px) {
       padding: 40px;
@@ -69,10 +65,6 @@
       margin-top: 0.8rem;
       @media all and (min-width: 400px) {
          font-size: 14px
-      }
-
-      @media all and (min-width: 992px) {
-         font-size: 16px;
       }
    }
 

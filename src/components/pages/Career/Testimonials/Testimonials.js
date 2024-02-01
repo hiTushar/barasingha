@@ -56,6 +56,7 @@ function Testimonials() {
                      nav={getCurrentDimension() ? false : true}
                      dots={true}
                      margin={getCurrentDimension() ? 10 : 20} 
+                     dotsEach={true}
                   >
                      {testimonials.map((testimonial) => (
                         <div className="career_testimonial-card" key={uuidv4()}>
