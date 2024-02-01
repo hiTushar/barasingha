@@ -4,6 +4,7 @@ import placeholder1 from "../../../../media/placeholder_img_2.webp";
 import placeholder2 from "../../../../media/placeholder_img_1.webp";
 import placeholder3 from "../../../../media/placeholder_img_33.png";
 import placeholder4 from "../../../../media/placeholder_img_4.webp";
+import noisePng from "../../../../media/noise.webp";
 
 function Applications() {
    return (
@@ -16,6 +17,7 @@ function Applications() {
 
             <div className="projects">
                <div className="project-card">
+               <img className="project-card-dot-img" src={noisePng} alt="texture"/>
                   <p className="heading heading--three padding-16">Protect patient data from malicious bots</p>
                   <p className="para para--light">Accurately identify bots by applying behavioural analysis, machine learning and fingerprinting.</p>
                   <div className="image-card">
@@ -23,6 +25,7 @@ function Applications() {
                   </div>
                </div>
                <div className="project-card">
+               <img className="project-card-dot-img" src={noisePng} alt="texture"/>
                   <p className="heading heading--three padding-16">Secure remote access for teachers and students</p>
                   <p className="para para--light">Give physicians, administrators, developers, and contractors secure and streamlined access to internal systems.</p>
                   <div className="image-card">
@@ -30,6 +33,7 @@ function Applications() {
                   </div>
                </div>
                <div className="project-card">
+                  <img className="project-card-dot-img" src={noisePng} alt="texture"/>
                   <p className="heading heading--three padding-16">Remediation</p>
                   <p className="para para--light">Accurately identify bots by applying behavioural analysis, machine.</p>
                   <div className="image-card">
@@ -38,6 +42,7 @@ function Applications() {
 
                </div>
                <div className="project-card">
+                  <img className="project-card-dot-img" src={noisePng} alt="texture"/>
                   <p className="heading heading--three padding-16">Root cause analysis</p>
                   <p className="para para--light">Give physicians, administrators, developers</p>
                   <div className="image-card">
