@@ -60,17 +60,17 @@ function Navbar({ showBackdrop = () => { }, hideBackdrop = () => { }, backdropIs
    const menuOpen = (navOption) => {
       showBackdrop();
       setNavbarMenu(navbarMenu => ({ ...navbarMenu, [navOption]: 'open' }));
-      let productMenuOption = document.getElementById(navOption);
-      productMenuOption.getElementsByTagName('span')[0].style = 'color: #e5be20 !important';
-      productMenuOption.getElementsByTagName('i')[0].style = 'color:  #e5be20 !important; transform: rotate(180deg); padding-top: 0px';
+      let menuOption = document.getElementById(navOption);
+      menuOption.getElementsByTagName('span')[0].classList.add('hover-color');
+      menuOption.getElementsByTagName('i')[0].classList.add('hover-color', 'hover-rotate');
    }
 
    const menuClose = (navOption) => {
       hideBackdrop();
       setNavbarMenu(navbarMenu => ({ ...navbarMenu, [navOption]: 'close' }));
-      let solutionMenuOption = document.getElementById(navOption);
-      solutionMenuOption.getElementsByTagName('span')[0].style = 'color: #c8c8c8 !important';
-      solutionMenuOption.getElementsByTagName('i')[0].style = 'color:  #c8c8c8 !important; transform: rotate(0deg); padding-top: 0px';
+      let menuOption = document.getElementById(navOption);
+      menuOption.getElementsByTagName('span')[0].classList.remove('hover-color');
+      menuOption.getElementsByTagName('i')[0].classList.remove('hover-color', 'hover-rotate');
    }
 
    return (
