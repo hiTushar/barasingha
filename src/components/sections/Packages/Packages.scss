@@ -84,53 +84,35 @@
    line-height: 20px;
 }
 
-.package_details_container .owl-nav-custom .owl-prev {
-   left: 15px;
-
-   @media all and (min-width: 1300px) {
-      left: 60px;
+.package_details_container .owl-nav-custom { 
+   max-width: 1200px;
+   margin: 0 auto;
+   position: relative;
+   .owl-prev {
+      left: 16px !important;
+      top: -285px;
    }
 
-   @media all and (min-width: 1400px) {
-      left: 110px;
-   }
-
-   @media all and (min-width: 1440px) {
-      // left: 130px;
-   }
-
-   @media all and (min-width: 1500px) {
-      left: 160px;
+   .owl-next {
+      right: 16px !important;
+      top: -285px;
    }
 }
 
-.package_details_container .owl-nav-custom .owl-next {
-   right: 15px;
-
-   @media all and (min-width: 1300px) {
-      right: 60px;
-   }
-
-   @media all and (min-width: 1400px) {
-      right: 110px;
-   }
-
-   @media all and (min-width: 1440px) {
-      // right: 120px;
-   }
-
-   @media all and (min-width: 1500px) {
-      right: 160px;
+.package_details_container {
+   .owl-item {
+      transition: transform 0.5s;
    }
 }
+.individual_package_container .owl-nav-indv-custom {
+   .owl-prev {
+      left: 12px !important;
+   }
 
-.individual_package_container .owl-nav-indv-custom .owl-prev {
-   left: 12px !important;
-}
-
-.individual_package_container .owl-nav-indv-custom .owl-next {
-   right: 12px !important;
-}
+   .owl-next {
+      right: 12px !important;
+   }
+} 
 
 .individual_package_container .owl-dots button,
 .package_details_container_mobile .slick-dots button {
@@ -153,6 +135,10 @@
    /* border-radius: 1px; */
    background: #e5be20;
    opacity: 1;
+}
+
+.individual_package_container .owl-dots {
+   padding-top: 15px;
 }
 
 .package_details_container_mobile .slick-dots button:before {
@@ -250,7 +236,14 @@
       margin: 0 auto;
       position: relative;
 
+      .owl-item {
+         display: flex;
+         justify-content: center;
+         // max-width: calc(1200px - 2rem);
+      }
+
       .package_card {
+         width: 100%;
          display: flex;
          overflow: hidden;
          position: relative;

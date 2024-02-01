@@ -38,40 +38,6 @@ const slickInnerMob = {
 
 function getCurrentDimension() { return window.innerWidth < 992 }
 
-function getStagePaddingOne() {
-   const width = window.innerWidth;
-
-   if (width >= 1500) {
-      return 180;
-   }
-   else if (width >= 1400) {
-      return 130;
-   }
-   else if (width >= 1300) {
-      return 80;
-   }
-   else if (width > 1200) {
-      return 53;
-   }
-   else {
-      return 33;
-   }
-}
-
-function getMarginOne() {
-   const width = window.innerWidth;
-
-   if (width >= 1400) {
-      return 0;
-   }
-   else if (width >= 1200) {
-      return 30;
-   }
-   else {
-      return 50;
-   }
-}
-
 function getStagePaddingTwo() {
    const width = window.innerWidth;
 
@@ -87,7 +53,7 @@ function getMarginTwo() {
    const width = window.innerWidth;
 
    if (width > 400) {
-      return 32;
+      return 35;
    }
    else {
       return 100;
@@ -118,10 +84,10 @@ function handleCarouselChange(event) {
       currentItem.style.transform = '';
    }
    if (prevItem) {
-      prevItem.style.transform = 'perspective(1000px) rotateY(20deg) translate(130px, 0) scale3d(1, 0.9, 1)';
+      prevItem.style.transform = 'perspective(1000px) rotateY(20deg) translate(130px, 0) scale3d(1, 1, 1)';
    }
    if (nextItem) {
-      nextItem.style.transform = 'perspective(1000px) rotateY(-20deg) translate(-130px, 0) scale3d(1, 0.9, 1)';
+      nextItem.style.transform = 'perspective(1000px) rotateY(-20deg) translate(-130px, 0) scale3d(1, 1, 1)';
    }
 }
 
@@ -137,7 +103,7 @@ function Packages() {
       // }
    }, [])
 
-   // console.log('reloaded');
+   console.log('reloaded');
    return (
       <section className="package_container">
          <div className="title-wrapper">
@@ -153,11 +119,20 @@ function Packages() {
                   loop
                   nav={true}
                   dots={false}
-                  margin={getMarginOne()}
-                  stagePadding={getStagePaddingOne()}
                   responsiveClass={true}
                   onChanged={handleCarouselChange}
                   navContainerClass='owl-nav-custom'
+                  responsive={{
+                     0: {
+                        stagePadding: 30
+                     },
+                     1201: {
+                        stagePadding: 60 + (window.innerWidth - 1250) * 0.5
+                     },
+                     1501: {
+                        stagePadding: 185
+                     }
+                  }}
                >
                   {[...Array(10)].map((list, key) => (
                      <div className="package_card" key={key}>
@@ -284,6 +259,7 @@ function Packages() {
                nav={true}
                // infinite={true}
                speed={1000}
+               dotsEach={true}
                //autoplay={true}
                autoplaySpeed={1000}
                dots={true}
