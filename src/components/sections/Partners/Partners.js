@@ -64,11 +64,16 @@ function Partners() {
                   className="owl-theme"
                   loop={true}
                   nav={false}
-                  dots={true}
+                  dots={false}
                   margin={5}
                   navContainerClass="owl-nav"
                   stagePadding={getCurrentDimension() ? 0 : 80}
-                  center={false}
+                  center={true}
+                  autoplay={true}
+                  slideTransition={'linear'}
+                  autoplayTimeout={3000}
+                  autoplaySpeed={3000}
+                  autoplayHoverPause={true}
                >
                   {partners.map((partner, index) => (
                      <div className="partner-card" key={index}>
