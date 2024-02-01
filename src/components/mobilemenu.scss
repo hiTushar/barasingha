@@ -10,7 +10,14 @@
    padding: 1rem;
    font-family: Manrope;
    flex-direction: column;
-   transition: 0.3s ease-in-out;
+   // transition: 0.3s ease-in-out;
+   border-radius: var(--layout-marking-none, 0px);
+   background: linear-gradient(180deg, #011118 0%, rgba(1, 17, 24, 0) 100%);
+   backdrop-filter: blur(6px);
+
+   &.submenu {
+      background: rgba(17, 32, 43, 1);
+   }
 
    .menu-title {
       font-size: 16px;
@@ -36,9 +43,6 @@
       text-decoration: none;
    }
 
-   border-radius: var(--layout-marking-none, 0px);
-   background: linear-gradient(180deg, #011118 0%, rgba(1, 17, 24, 0) 100%);
-   backdrop-filter: blur(6px);
    .menu-item {
       // display: flex;
       font-style: normal;

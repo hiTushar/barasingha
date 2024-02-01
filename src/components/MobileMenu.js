@@ -17,7 +17,7 @@ function MobileMenu({ handleClick, openContactUs }) {
       <>
          {
             submenu.length ? (
-               <div className='mobile-menu-container'>
+               <div className='mobile-menu-container submenu'>
                   <div className="">
                      <div className="back-button"><span onClick={() => setSubMenu([])}>Solution / Industry / </span><span>Healthcare</span></div>
                      <div className="sub-menu-content">
