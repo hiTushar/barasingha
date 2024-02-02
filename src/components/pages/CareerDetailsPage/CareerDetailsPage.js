@@ -18,12 +18,16 @@ function CareerDetailsPage() {
    const history = useHistory();
 
    const [currentTab, setCurrentTab] = useState('1');
+   const [showNavButtons, setShowNavButtons] = useState(true);
+   const [showWorkWithUsModal, setShowWorkWithUsModal] = useState(false);
    const careerNav = useRef(null);
 
-   const [showWorkWithUsModal, setShowWorkWithUsModal] = useState(false);
 
    const closeWorkWithUsModal = () => setShowWorkWithUsModal(false);
 
+   useEffect(() => {
+      setShowNavButtons(careerNav.current.scrollWidth > careerNav.current.clientWidth);
+   }, [])
    // const [tabs, setTabData] = useState([]);
 
 // useEffect(() => {
@@ -73,18 +77,26 @@ function CareerDetailsPage() {
                   <div className='tabs' ref={careerNav}>
                      {tabs.map((tab, i) =>
                         <div className='tab-item' key={uuidv4()}>
-                           <button id={tab.id} disabled={currentTab === `${tab.id}`} onClick={(handleTabClick)}>{tab.tabTitle}({tab.positions.length}) </button>
-                           <div className='saperator-wrapper'>
-                              <span className="saperator"></span>
-                           </div>
+                           <button id={tab.id} disabled={currentTab === `${tab.id}`} onClick={(handleTabClick)}>{tab.tabTitle} ({tab.positions.length}) </button>
+                           {
+                              i !== tabs.length - 1 ? (
+                                 <div className='saperator-wrapper'>
+                                    <span className="saperator"></span>
+                                 </div>
+                              ) : null
+                           }
                         </div>
                      )}
                   </div>
 
-                  <div className="tabs-btn">
-                     <button className='btn btn-prev' onClick={() => scroll(-150)}><i className="pi pi-chevron-left"></i></button>
-                     <button className='btn btn-next' onClick={() => scroll(150)}><i className="pi pi-chevron-right"></i></button>
-                  </div>
+                  {
+                     showNavButtons ? (
+                        <div className="tabs-btn">
+                           <button className='btn btn-prev' onClick={() => scroll(-150)}><i className="pi pi-chevron-left"></i></button>
+                           <button className='btn btn-next' onClick={() => scroll(150)}><i className="pi pi-chevron-right"></i></button>
+                        </div>
+                     ) : null
+                  }
                </div>
                <div className="padding_48"></div>
                <div className='career_detail_tabs_content'>
