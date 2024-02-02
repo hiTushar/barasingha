@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import placeholder3 from "../../../../media/placeholder_img_3.webp";
 import PlayFilled from "../../../../media/PlayFilled.svg";
 import './Features.scss';
@@ -7,6 +7,7 @@ import pattern from '../../../../media/pattern1.webp';
 function Features() {
    const [currentTab, setCurrentTab] = useState('1');
    const featuresNav = useRef(null);
+   const currentTabRef = useRef(null);
 
    const tabs = [
       {
@@ -66,9 +67,20 @@ function Features() {
          image: placeholder3
       },
    ];
+
+   useEffect(() => {
+      if(featuresNav.current && currentTabRef.current) {
+         let featureTabsStartLeftOffset = featuresNav.current.getBoundingClientRect().left;
+         let tabSelectedLeftOffset = currentTabRef.current.getBoundingClientRect().left;
+         scroll(tabSelectedLeftOffset - featureTabsStartLeftOffset);
+      }
+   }, [currentTab])
+
    const handleTabClick = (e) => {
+      currentTabRef.current = e.target;
       setCurrentTab(e.target.id);
    }
+
    const scroll = (scrollOffset) => {
       featuresNav.current.scrollLeft += scrollOffset;
    };
@@ -87,9 +99,13 @@ function Features() {
                      {tabs.map((tab, i) =>
                         <div key={i} className='tab-entry'>
                            <button id={tab.id} disabled={currentTab === `${tab.id}`} onClick={(handleTabClick)}>{tab.tabTitle}</button>
-                           <div className='saperator-wrapper'>
-                              <span className="saperator"></span>
-                           </div>
+                           {
+                              i !== tabs.length - 1 ? (
+                                 <div className='saperator-wrapper'>
+                                    <span className="saperator"></span>
+                                 </div>
+                              ) : null
+                           }
                         </div>
                      )}
                   </div>
@@ -115,7 +131,7 @@ function Features() {
                                  <p className="para para--light">
                                     {tab.description}
                                  </p>
-                                 <div className='link'>
+                                 <div className='link' onClick={() => scroll(-150)}>
                                     <span>Watch Video</span>
                                     <img src={PlayFilled} alt="play" />
                                  </div>
