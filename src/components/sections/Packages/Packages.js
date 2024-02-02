@@ -29,7 +29,7 @@ const slickMob = {
 const slickInnerMob = {
    infinite: true,
    speed: 1000,
-   autoplay: false,
+   autoplay: true,
    autoplaySpeed: 5000,
    slidesToShow: 2,
    slidesToScroll: 1,
@@ -122,7 +122,7 @@ function Packages() {
                   responsiveClass={true}
                   onChanged={handleCarouselChange}
                   navContainerClass='owl-nav-custom'
-                  responsive={{
+                                    responsive={{
                      0: {
                         stagePadding: 30,
                         margin: 30
@@ -261,7 +261,7 @@ function Packages() {
                // infinite={true}
                speed={1000}
                dotsEach={true}
-               //autoplay={true}
+               autoplay={true}
                autoplaySpeed={1000}
                dots={true}
                margin={getMarginTwo()}

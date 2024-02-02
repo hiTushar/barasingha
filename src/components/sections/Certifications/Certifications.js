@@ -60,11 +60,13 @@ function Certifications() {
                      loop
                      speed={1000}
                      autoplay={true}
-                     autoplaySpeed={1000}
+                     autoplaySpeed={3000}
+                     autoplayTimeout={3000}
                      nav={false}
-                     dots={true}
+                     dots={false}
                      margin={8}
                      center={checkCenter()}
+                     autoplayHoverPause={true}
                      >
                      {certifications.map((certification, index) => (
                         <div className="certificate_card" key={index}>
