@@ -53,9 +53,13 @@ function Team() {
                   <OwlCarousel
                      items={getCurrentDimension() ? 1 : 3}
                      className="owl-theme"
-                     loop={false}
+                     loop={true}
                      nav={getCurrentDimension() ? false : true}
                      dots={true}
+                     dotsEach={true}
+                     autoPlay={true}
+                     autoplaySpeed={3000}
+                     autoplayTimeout={3000}
                      margin={getCurrentDimension() ? 10 : 20}
                   >
                      {team.map((teammember, index) => (
