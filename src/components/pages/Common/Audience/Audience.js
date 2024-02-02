@@ -64,8 +64,13 @@ function Audience() {
                   loop={true}
                   nav={getCurrentDimension() ? false : true}
                   dots={true}
+                  dotsEach={true}
                   margin={getCurrentDimension() ? 10 : 16}
-                  navContainerClass="owl-nav" >
+                  navContainerClass="owl-nav"
+                  autoplay={true}
+                  autoplaySpeed={3000}
+                  autoplayTimeout={3000}
+               >
                   {audiences.map((audience, index) => (
                      <div className="audience-card" key={index}>
                         <div className="left_content">
