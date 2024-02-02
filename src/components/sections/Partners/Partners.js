@@ -82,7 +82,11 @@ function Partners() {
                      </div>
                   ))}
                </OwlCarousel>
-               <div className='partner-carousel-overlay'></div>
+               {
+                  window.innerWidth >= 576 ?
+                     <div className='partner-carousel-overlay'></div> :
+                     null
+               }
             </div>
          </div>
       </div>
