@@ -24,8 +24,8 @@ function WhyHow() {
    const closeContactUsModal = () => setShowContactUsModal(false);
 
    return (
-      <div className="component-container">
-         <section className='about_why-barasingha-wrapper'>
+      <section className='about_why-barasingha-wrapper'>
+         <div className="component-container">
             <img className="cubeImage" src={cube} alt="cube"/>
             <div className="title-wrapper">
                <p className="heading--fancy text-center">WHY & HOW</p>
@@ -110,9 +110,9 @@ function WhyHow() {
                   </div>
                </div>
                </OwlCarousel></div>}
-         </section>
+         </div>
          {showContactUsModal && <ContactUsModal closeContactUsModal={closeContactUsModal}/>}
-      </div>
+      </section>
    );
 }
 

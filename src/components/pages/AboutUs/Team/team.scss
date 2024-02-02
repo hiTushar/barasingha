@@ -1,9 +1,7 @@
 .testimonials_container {
    margin-block: 0 !important;
-   padding-top: 100px !important;background: rgb(1,18,28);
-   background: -moz-linear-gradient(180deg, rgba(1,18,28,1) 0%, rgba(5,12,11,1) 14%);
-   background: -webkit-linear-gradient(180deg, rgba(1,18,28,1) 0%, rgba(5,12,11,1) 14%);
-   background: linear-gradient(180deg, rgba(1,18,28,1) 0%, rgba(5,12,11,1) 14%);
+   padding-top: 100px !important;
+   background: rgba(5, 12, 11, 1);
    padding-bottom: 80px;
 
    .testimonial_content_container {
