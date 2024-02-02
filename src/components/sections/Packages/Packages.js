@@ -103,7 +103,7 @@ function Packages() {
       // }
    }, [])
 
-   console.log('reloaded');
+   // console.log('reloaded');
    return (
       <section className="package_container">
          <div className="title-wrapper">
@@ -124,7 +124,8 @@ function Packages() {
                   navContainerClass='owl-nav-custom'
                   responsive={{
                      0: {
-                        stagePadding: 30
+                        stagePadding: 30,
+                        margin: 30
                      },
                      1201: {
                         stagePadding: 60 + (window.innerWidth - 1250) * 0.5
