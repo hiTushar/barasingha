@@ -16,13 +16,13 @@ function CareerDetailsPage() {
    }, [])
 
    const history = useHistory();
+   const tabs = positionDetailsData.results;
 
    const [currentTab, setCurrentTab] = useState('1');
    const [showNavButtons, setShowNavButtons] = useState(true);
    const [showWorkWithUsModal, setShowWorkWithUsModal] = useState(false);
    const careerNav = useRef(null);
-
-
+   // const currentTabRef = useRef(null);
    const closeWorkWithUsModal = () => setShowWorkWithUsModal(false);
 
    useEffect(() => {
@@ -49,9 +49,14 @@ function CareerDetailsPage() {
 //    }
 //  };
 
-   const tabs = positionDetailsData.results;
-
-   const handleTabClick = (e) => {
+   const handleTabClick = (e) => { 
+      // useeffect approach of scroll tab into view after tab selection was not working here unlike 
+      // the features section on product page where interestingly this approach of scrolling and set(ting) 
+      // the current tab, simultaneously in one function, synchronously, was not working
+      let CareerTabsStartOffset = careerNav.current.getBoundingClientRect().left;
+      let tabSelectedOffset = e.target.getBoundingClientRect().left;;
+      scroll(tabSelectedOffset - CareerTabsStartOffset);
+      
       setCurrentTab(e.target.id);
    }
 
@@ -77,7 +82,7 @@ function CareerDetailsPage() {
                   <div className='tabs' ref={careerNav}>
                      {tabs.map((tab, i) =>
                         <div className='tab-item' key={uuidv4()}>
-                           <button id={tab.id} disabled={currentTab === `${tab.id}`} onClick={(handleTabClick)}>{tab.tabTitle} ({tab.positions.length}) </button>
+                           <button id={tab.id} className={currentTab === `${tab.id}` ? 'active' : ''} onClick={(handleTabClick)}>{tab.tabTitle} ({tab.positions.length}) </button>
                            {
                               i !== tabs.length - 1 ? (
                                  <div className='saperator-wrapper'>
@@ -141,7 +146,7 @@ function CareerDetailsPage() {
                                     <label htmlFor={`expend${i}`}>
                                        <div className={careerClassName}>
                                           <span className='all'>See All Description</span>
-                                          <span className='less'>Show Less Description</span>
+                                          <span className='less'>Show Less Description</span>{' '}
                                           <img className="image" src={arrowDown} alt={arrowDown} />
                                        </div>
                                     </label>
