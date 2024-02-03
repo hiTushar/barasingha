@@ -101,6 +101,7 @@
             display: flex;
             // background: lightgray -1.245px -1.315px / 101.709% 104.102% no-repeat;
             mix-blend-mode: luminosity;
+            filter: grayscale(1);
          }
       }
 
