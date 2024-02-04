@@ -84,6 +84,7 @@
             border-radius: 16px;
             border: 1px solid rgba(21, 23, 41, 1);
             backdrop-filter: blur(10px);
+            transform: translateZ(0);
             min-height: 250px;
             // padding: 32px;
             background-image: url('../../../../media/hatching.svg');
@@ -206,6 +207,7 @@
                border: 1px solid rgba(255, 255, 255, 0.03);
                background: rgba(0, 0, 0, 0.20);
                backdrop-filter: blur(10px);
+               transform: translateZ(0);
 
                .benefits_content {
                   padding: 20px;
@@ -380,6 +382,7 @@
             background-image: url('../../../../media/hatching.svg'), linear-gradient(180deg, #1A2933 0%, #0C1C25 100%);
             background-size: contain;
             backdrop-filter: blur(10px);
+            transform: translateZ(0);
             padding-bottom: 10px;
             float: left;
             display: flex;
@@ -517,6 +520,7 @@
                border: 1px solid rgba(255, 255, 255, 0.03);
                background: rgba(0, 0, 0, 0.3);
                backdrop-filter: blur(10px);
+               transform: translateZ(0);
 
                .benefits_content {
                   padding: 20px;
@@ -756,6 +760,7 @@
       background-color: rgba(#fff, 0.2);
       border-radius: 100%;
       backdrop-filter: blur(5px);
+      transform: translateZ(0);
       position: absolute;
    }
 

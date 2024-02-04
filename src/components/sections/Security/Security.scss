@@ -8,6 +8,7 @@
    z-index: -1;
    opacity: 0.1;
    filter: opacity(0.4);
+   transform: translateZ(0);
    transition: 0.3s;
 }
 .blog-card img.head-img {
@@ -42,6 +43,7 @@
 .blog-card:hover .dot-img {
    opacity: 0.1;
    filter: opacity(0.3);
+   transform: translateZ(0);
 }
 .blog-card:hover .head-shield {
    opacity: 0.4;
@@ -53,6 +55,7 @@
       #022032 100%
    ) !important;
    backdrop-filter: blur(10px) !important;
+   transform: translateZ(0);
 }
 //     .blog-card.a2{
 // background:  linear-gradient(180deg, rgba(255, 255, 255, 0.00) -17.2%, rgba(255, 255, 255, 0.07) 115.79%),radial-gradient(185.16% 185.16% at 50% 0%, rgba(0, 31, 41, 0.75) 0%, #022032 100%);
@@ -175,6 +178,7 @@
             border: 1px solid #151729ab;
             -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
+            transform: translateZ(0);
             background: linear-gradient(
                180deg,
                rgba(255, 255, 255, 0) -17.2%,

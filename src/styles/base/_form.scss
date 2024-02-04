@@ -3,6 +3,7 @@
     border-radius: 1rem;
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(10px);
+    transform: translateZ(0);
     width: 100%;
  
     &.form-icon img {

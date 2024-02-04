@@ -58,6 +58,7 @@
       width: 100%;
       bottom: 0;
       filter: blur(100px);
+      transform: translateZ(0);
       
       @media all and (min-width: 150px) {
          filter: blur(150px);

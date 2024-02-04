@@ -17,6 +17,7 @@
    z-index: -1;
    opacity: 0.1;
    filter: opacity(0.3);
+   transform: translateZ(0);
 }
 
 .package_card .ellipse,
@@ -27,7 +28,7 @@
    border-radius: 838.998px;
    mix-blend-mode: difference;
    filter: blur(105.03971862792969px);
-
+   transform: translateZ(0);
    z-index: -1;
 }
 
@@ -71,6 +72,7 @@
    background: #101d24 !important;
    box-shadow: 0px 0px 250px 0px rgba(0, 0, 0, 0.2);
    backdrop-filter: blur(10px);
+   transform: translateZ(0);
    margin: 0 !important;
    position: absolute;
    top: calc(50% - 30px);
@@ -261,6 +263,7 @@
             0px 212px 85px 0px rgba(0, 0, 0, 0.03),
             0px 331px 93px 0px rgba(0, 0, 0, 0);
          backdrop-filter: blur(10px);
+         transform: translateZ(0);
 
          .title-wrapper {
             display: flex;
@@ -389,6 +392,7 @@
             0px 212px 85px 0px rgba(0, 0, 0, 0.03),
             0px 331px 93px 0px rgba(0, 0, 0, 0);
          backdrop-filter: blur(10px);
+         transform: translateZ(0);
 
          @media all and (min-width: 576px) {
             padding: 32px;
@@ -584,6 +588,7 @@
          background-color: #081923;
          -webkit-backdrop-filter: blur(10px);
          backdrop-filter: blur(10px);
+         transform: translateZ(0);
          padding: 12px 32px 24px;
 
          display: flex;

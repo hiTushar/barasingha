@@ -176,6 +176,7 @@ body {
    height: -webkit-fill-available;
    -webkit-backdrop-filter: blur(10px);
    backdrop-filter: blur(10px);
+   transform: translateZ(0);
    background: linear-gradient(
       180deg,
       rgba(1, 18, 29, 0.7) 0%,

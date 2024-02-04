@@ -32,6 +32,7 @@
    opacity: 0.6;
    background: linear-gradient(180deg, #c49a2d 26.22%, #28443b 160.5%);
    filter: blur(82px);
+   transform: translateZ(0);
    width: 200.95px;
    height: 250.706px;
    position: absolute;
@@ -224,6 +225,7 @@
    margin: 16px 0;
    transition: 0.2s;
    backdrop-filter: blur(10px);
+   transform: translateZ(0);
    .env_card_noise {
       position: absolute;
       width: 100%;
