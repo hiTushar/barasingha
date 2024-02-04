@@ -1,9 +1,9 @@
 import React from 'react';
 import './Packages.scss';
-import icon1 from '../../../media/net.svg';
-import icon2 from '../../../media/icon-1.svg';
-import icon3 from '../../../media/icon-2.svg';
-import icon4 from '../../../media/icon-3.svg';
+import icon1 from '../../../media/globeIcon.png';
+import icon2 from '../../../media/serverIcon.png';
+import icon3 from '../../../media/lockerIcon.png';
+import icon4 from '../../../media/keyIcon.png';
 import shield from '../../../media/shield.svg';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
@@ -30,7 +30,7 @@ const slickInnerMob = {
    infinite: true,
    speed: 1000,
    autoplay: true,
-   autoplaySpeed: 5000,
+   autoplaySpeed: 2000,
    slidesToShow: 2,
    slidesToScroll: 1,
    centerMode: true
@@ -276,7 +276,7 @@ function Packages() {
                            <img className="indiv_image" src={icon1} alt={"icon1"}></img>
                         </div>
                         <div className="right_content ">
-                           <div className="fast_selling_block">{dataPt.sellType}</div>
+                           <div className={dataPt.sellType === 'TOP SELLING' ? 'top_selling_block' : 'fast_selling_block'}>{dataPt.sellType}</div>
                            <div className='pt-2 security_type'>
                               <div className='shield'>
                                  <div>

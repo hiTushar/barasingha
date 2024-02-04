@@ -1,7 +1,7 @@
-import icon1 from '../../../media/net.svg';
-import icon2 from '../../../media/icon-1.svg';
-import icon3 from '../../../media/icon-2.svg';
-import icon4 from '../../../media/icon-3.svg';
+import icon1 from '../../../media/globeIcon.png';
+import icon2 from '../../../media/serverIcon.png';
+import icon3 from '../../../media/lockerIcon.png';
+import icon4 from '../../../media/keyIcon.png';
 
 const data = [
     {
